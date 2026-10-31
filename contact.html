@@ -1,0 +1,2468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0756c9">
+
+<title>Contact & Payment | Pihu Creators</title>
+
+<meta name="description" content="Contact Pihu Creators for website development, graphic design, video editing and social media services. Explore project advance payment options and sample requests.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="CSS%20FOLDER/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================
+   NAVBAR AND FOOTER - SAME AS INDEX
+===================================== */
+
+.pc-header, .pc-header *, .pc-footer, .pc-footer * {
+  box-sizing: border-box;
+}
+
+.pc-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid #dce8f8;
+  box-shadow: 0 5px 25px rgba(14,48,95,.07);
+  backdrop-filter: blur(18px);
+  font-family: "DM Sans", sans-serif;
+}
+
+.pc-header-inner {
+  width: min(1320px,92%);
+  min-height: 82px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.pc-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pc-logo img {
+  display: block;
+  width: 145px;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.pc-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.pc-navigation a, .pc-dropdown-toggle {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.pc-nav-link, .pc-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 12px 13px;
+  color: #10213a;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease;
+}
+
+.pc-nav-link:hover,
+.pc-dropdown-toggle:hover,
+.pc-dropdown.open > .pc-dropdown-toggle {
+  color: #0756c9;
+  background: #edf5ff;
+}
+
+.pc-dropdown {
+  position: relative;
+}
+
+.pc-chevron {
+  font-size: 18px;
+  transition: transform .2s ease;
+}
+
+.pc-dropdown.open .pc-chevron {
+  transform: rotate(180deg);
+}
+
+.pc-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 10000;
+  width: 315px;
+  padding: 9px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(7px);
+  pointer-events: none;
+  background: #fff;
+  border: 1px solid #e2eaf5;
+  border-radius: 15px;
+  box-shadow: 0 18px 50px rgba(13,45,89,.16);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+
+.pc-dropdown:hover > .pc-dropdown-menu,
+.pc-dropdown:focus-within > .pc-dropdown-menu,
+.pc-dropdown.open > .pc-dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pc-dropdown-menu > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 10px;
+  color: #10213a;
+  border-radius: 10px;
+}
+
+.pc-dropdown-menu > a:hover {
+  background: #edf5ff;
+}
+
+.pc-dropdown-menu > a > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pc-dropdown-menu strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pc-dropdown-menu small {
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.pc-menu-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  color: #0756c9;
+  background: #eaf3ff;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.pc-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-left: 7px;
+  padding: 13px 16px;
+  color: #fff !important;
+  background: linear-gradient(135deg,#0756c9,#087fe0);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(7,86,201,.2);
+  transition: transform .2s ease;
+}
+
+.pc-header-cta:hover {
+  transform: translateY(-2px);
+}
+
+.pc-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 43px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid #e2eaf5;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pc-menu-toggle span {
+  width: 21px;
+  height: 2px;
+  background: #07377f;
+  border-radius: 4px;
+  transition: .2s;
+}
+
+.pc-menu-toggle.active span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.pc-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.pc-menu-toggle.active span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* FOOTER */
+
+.pc-footer {
+  color: #dce8fb;
+  background: radial-gradient(circle at 12% 0%,#123d79 0,transparent 36%),
+              linear-gradient(135deg,#07152d,#061023 65%,#0a1d3c);
+  font-family: "DM Sans",sans-serif;
+}
+
+.pc-footer-main {
+  width: min(1320px,90%);
+  margin: auto;
+  padding: 68px 0 52px;
+  display: grid;
+  grid-template-columns: 1.4fr .8fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.pc-footer-logo {
+  display: inline-flex;
+  margin-bottom: 15px;
+}
+
+.pc-footer-logo img {
+  display: block;
+  width: 160px;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+.pc-footer-brand > p {
+  max-width: 340px;
+  color: #aebed7;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.pc-footer-brand .pc-tagline {
+  color: #70d4ff;
+  font-weight: 800;
+}
+
+.pc-social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.pc-social-links a {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  background: #ffffff12;
+  border: 1px solid #ffffff22;
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.pc-social-links a:hover {
+  background: #0756c9;
+  transform: translateY(-3px);
+}
+
+.pc-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.pc-footer-column h3 {
+  margin: 7px 0 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.pc-footer-column > a {
+  color: #b6c5dc;
+  font-size: 12px;
+  line-height: 1.8;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.pc-footer-column > a:hover {
+  color: #71d7ff;
+}
+
+.pc-footer-contact > a:not(.pc-footer-cta) {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.pc-footer-contact > a > span {
+  color: #64cfff;
+  font-weight: 800;
+}
+
+.pc-footer-cta {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 11px 15px;
+  color: #fff !important;
+  background: #0756c9;
+  border-radius: 9px;
+}
+
+.pc-footer-bottom {
+  width: min(1320px,90%);
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-top: 1px solid #ffffff20;
+}
+
+.pc-footer-bottom p {
+  margin: 0;
+  color: #9aacc8;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE NAVBAR */
+
+@media (max-width: 1050px) {
+
+  .pc-header-inner {
+    width: 94%;
+    min-height: 74px;
+  }
+
+  .pc-logo img {
+    width: 130px;
+  }
+
+  .pc-menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .pc-navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    max-height: calc(100vh - 74px);
+    overflow-y: auto;
+    padding: 17px 5% 24px;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 5px;
+    background: #fff;
+    border-top: 1px solid #e2eaf5;
+    box-shadow: 0 18px 28px #0d2d591f;
+  }
+
+  .pc-navigation.open {
+    display: flex;
+  }
+
+  .pc-nav-link, .pc-dropdown-toggle {
+    width: 100%;
+    min-height: 45px;
+    justify-content: space-between;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .pc-dropdown {
+    width: 100%;
+  }
+
+  .pc-dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    margin: 0 0 8px;
+    padding: 7px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    box-shadow: none;
+    background: #f9fbff;
+  }
+
+  .pc-dropdown.open > .pc-dropdown-menu {
+    display: block;
+  }
+
+  .pc-dropdown:hover > .pc-dropdown-menu {
+    display: none;
+  }
+
+  .pc-dropdown.open:hover > .pc-dropdown-menu {
+    display: block;
+  }
+
+  .pc-header-cta {
+    min-height: 45px;
+    margin: 9px 0 0;
+  }
+
+  .pc-footer-main {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 35px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .pc-header-inner {
+    min-height: 68px;
+  }
+
+  .pc-logo img {
+    width: 115px;
+    max-height: 53px;
+  }
+
+  .pc-navigation {
+    max-height: calc(100vh - 68px);
+  }
+
+  .pc-footer-main {
+    width: 90%;
+    padding: 48px 0 34px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pc-footer-brand > p {
+    max-width: 100%;
+  }
+
+  .pc-footer-bottom {
+    width: 90%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+
+/* =====================================
+   CONTACT PAGE DESIGN
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans",sans-serif;
+  color: #10213a;
+  background: #f6f9ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact-hero {
+  padding: 90px 6% 75px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 15% 20%,#dcecff 0,transparent 35%),
+    radial-gradient(circle at 85% 70%,#d6efff 0,transparent 35%),
+    linear-gradient(135deg,#fff,#edf5ff);
+}
+
+.contact-hero-inner {
+  max-width: 850px;
+  margin: auto;
+}
+
+.contact-tag {
+  display: inline-block;
+  padding: 9px 17px;
+  color: #0756c9;
+  background: #e5f0ff;
+  border: 1px solid #c8ddff;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.contact-hero h1 {
+  margin: 22px 0 15px;
+  color: #0b1b35;
+  font-size: clamp(38px,6vw,63px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.contact-hero h1 span {
+  color: #0756c9;
+}
+
+.contact-hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-main {
+  padding: 75px 6% 95px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.contact-heading span {
+  color: #0756c9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.contact-heading h2 {
+  margin: 12px 0;
+  color: #0b1b35;
+  font-size: clamp(28px,4vw,40px);
+  font-weight: 800;
+}
+
+.contact-heading p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* MAIN GRID */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.35fr .85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-form-card,
+.contact-info-card,
+.payment-card,
+.calculator-card,
+.terms-card {
+  border: 1px solid #e0eaf7;
+  border-radius: 20px;
+  background: rgba(255,255,255,.91);
+  box-shadow: 0 12px 40px rgba(20,62,115,.06);
+}
+
+.contact-form-card {
+  padding: 35px;
+}
+
+.contact-form-card h3 {
+  margin: 0 0 9px;
+  color: #10213a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.form-intro {
+  margin-bottom: 28px;
+  color: #718198;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 19px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #253b58;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-height: 49px;
+  padding: 12px 14px;
+  color: #10213a;
+  font-family: inherit;
+  font-size: 13px;
+  background: #f8fbff;
+  border: 1px solid #dce7f5;
+  border-radius: 9px;
+  outline: none;
+  transition: .2s;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0756c9;
+  box-shadow: 0 0 0 3px #0756c915;
+  background: #fff;
+}
+
+.form-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 20px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.form-note i {
+  margin-top: 3px;
+  color: #0756c9;
+}
+
+.contact-submit {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  background: linear-gradient(135deg,#0756c9,#087fe0);
+  border: 0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contact-submit:hover {
+  background: #0646a4;
+  transform: translateY(-2px);
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info-card {
+  padding: 32px;
+  background: linear-gradient(145deg,#092e6a,#0756c9);
+  color: white;
+}
+
+.contact-info-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.contact-info-card > p {
+  color: #d4e5ff;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.contact-info-icon {
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #ffffff20;
+  border: 1px solid #ffffff25;
+  border-radius: 12px;
+}
+
+.contact-info-item strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.contact-info-item a,
+.contact-info-item small {
+  display: block;
+  color: #d7e8ff;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contact-info-item a:hover {
+  color: white;
+}
+
+.contact-info-divider {
+  border-top: 1px solid #ffffff30;
+  margin: 25px 0;
+}
+
+.contact-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  color: #0756c9;
+  background: #fff;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .3s;
+}
+
+.contact-whatsapp:hover {
+  color: #0756c9;
+  transform: translateY(-3px);
+}
+
+
+/* =====================================
+   PAYMENT SECTION
+===================================== */
+
+.payment-section {
+  padding: 80px 6%;
+  background:
+    radial-gradient(circle at 90% 10%,#dcecff 0,transparent 30%),
+    linear-gradient(135deg,#edf5ff,#f8fbff);
+}
+
+.payment-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.payment-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.payment-heading span {
+  color: #0756c9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.payment-heading h2 {
+  margin: 13px 0;
+  color: #0b1b35;
+  font-size: clamp(29px,4vw,42px);
+  font-weight: 800;
+}
+
+.payment-heading p {
+  max-width: 650px;
+  margin: auto;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* PAYMENT GRID */
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px;
+}
+
+.payment-card {
+  padding: 32px;
+  transition: .3s;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px #153c7012;
+}
+
+.payment-icon {
+  display: grid;
+  place-items: center;
+  width: 57px;
+  height: 57px;
+  color: white;
+  background: linear-gradient(135deg,#0756c9,#18a9ec);
+  border-radius: 15px;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.payment-card h3 {
+  color: #10213a;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.payment-card p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.payment-highlight {
+  display: inline-block;
+  padding: 8px 13px;
+  margin: 7px 0 14px;
+  color: #0756c9;
+  background: #e9f2ff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ADVANCE PROCESS */
+
+.advance-process {
+  margin-top: 30px;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e0eaf7;
+  border-radius: 20px;
+}
+
+.advance-process h3 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #10213a;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.advance-steps {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 17px;
+}
+
+.advance-step {
+  text-align: center;
+  padding: 20px 12px;
+  border-radius: 13px;
+  background: #f5f9ff;
+}
+
+.advance-step-number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 12px;
+  color: #fff;
+  background: #0756c9;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.advance-step strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #10213a;
+  font-size: 13px;
+}
+
+.advance-step p {
+  margin: 0;
+  color: #718198;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+/* PAYMENT METHODS */
+
+.payment-methods {
+  margin-top: 28px;
+  padding: 32px;
+  background: white;
+  border: 1px solid #e0eaf7;
+  border-radius: 20px;
+}
+
+.payment-methods h3 {
+  margin-bottom: 23px;
+  color: #10213a;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.payment-method-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
+
+.payment-method {
+  padding: 22px;
+  text-align: center;
+  background: #f5f9ff;
+  border: 1px solid #e4edf8;
+  border-radius: 14px;
+}
+
+.payment-method i {
+  display: block;
+  margin-bottom: 12px;
+  color: #0756c9;
+  font-size: 27px;
+}
+
+.payment-method strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #10213a;
+  font-size: 14px;
+}
+
+.payment-method small {
+  color: #718198;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+/* =====================================
+   ADVANCE PAYMENT CALCULATOR
+===================================== */
+
+.calculator-section {
+  padding: 85px 6%;
+  background: #f7faff;
+}
+
+.calculator-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 38px;
+}
+
+.calculator-card h2 {
+  color: #10213a;
+  text-align: center;
+  font-size: 29px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.calculator-card > p {
+  color: #718198;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.calculator-input label {
+  display: block;
+  margin-bottom: 9px;
+  color: #253b58;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.calculator-input input {
+  width: 100%;
+  min-height: 53px;
+  padding: 13px 15px;
+  color: #10213a;
+  background: #f8fbff;
+  border: 1px solid #dce7f5;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.calculator-input input:focus {
+  border-color: #0756c9;
+}
+
+.calculator-results {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.calculator-result {
+  padding: 20px;
+  background: #edf5ff;
+  border-radius: 13px;
+}
+
+.calculator-result span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.calculator-result strong {
+  color: #0756c9;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.calculator-balance {
+  margin-top: 15px;
+  padding: 17px;
+  color: #31516e;
+  background: #f4f8fd;
+  border-radius: 11px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.calculator-note {
+  margin-top: 17px;
+  color: #718198;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+
+/* =====================================
+   TERMS AND CONDITIONS
+===================================== */
+
+.terms-section {
+  padding: 0 6% 85px;
+  background: #f7faff;
+}
+
+.terms-card {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px;
+}
+
+.terms-card h2 {
+  margin-bottom: 20px;
+  color: #10213a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.terms-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.terms-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 15px 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.terms-list i {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: #0756c9;
+}
+
+.terms-note {
+  margin-top: 22px;
+  padding: 17px;
+  color: #0756c9;
+  background: #eaf3ff;
+  border-radius: 11px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .advance-steps {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+}
+
+@media(max-width:650px) {
+
+  .contact-hero {
+    padding: 65px 5%;
+  }
+
+  .contact-hero h1 {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+
+  .contact-main,
+  .payment-section,
+  .calculator-section {
+    padding: 55px 5%;
+  }
+
+  .contact-form-card,
+  .contact-info-card,
+  .payment-card,
+  .calculator-card,
+  .terms-card {
+    padding: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advance-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calculator-results {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calculator-result strong {
+    font-size: 21px;
+  }
+
+  .advance-process,
+  .payment-methods {
+    padding: 23px;
+  }
+
+  .terms-section {
+    padding: 0 5% 60px;
+  }
+
+}
+
+@media(max-width:380px) {
+
+  .advance-steps,
+  .calculator-results {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     PIHU CREATORS NAVBAR
+===================================== -->
+
+<header class="pc-header">
+
+  <div class="pc-header-inner">
+
+    <a href="index.html" class="pc-logo" aria-label="Pihu Creators Home">
+      <img src="images/white2nd.png" alt="Pihu Creators Logo">
+    </a>
+
+    <button class="pc-menu-toggle" type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="pc-navigation">
+
+      <span></span><span></span><span></span>
+
+    </button>
+
+    <nav class="pc-navigation" id="pc-navigation" aria-label="Main navigation">
+
+      <a class="pc-nav-link" href="index.html">Home</a>
+
+      <a class="pc-nav-link" href="about.html">About</a>
+
+
+      <div class="pc-dropdown">
+
+        <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+          Services <span class="pc-chevron">⌄</span>
+        </button>
+
+        <div class="pc-dropdown-menu">
+
+          <a href="services.html">
+            <span class="pc-menu-icon">✦</span>
+            <span><strong>All Services</strong><small>Explore our creative solutions</small></span>
+          </a>
+
+          <a href="services.html#social-media">
+            <span class="pc-menu-icon">◎</span>
+            <span><strong>Social Media Management</strong><small>Content planning and page growth</small></span>
+          </a>
+
+          <a href="graphic designs.html">
+            <span class="pc-menu-icon">✎</span>
+            <span><strong>Graphic Design</strong><small>Logos, posts, banners and branding</small></span>
+          </a>
+
+          <a href="video-content.html">
+            <span class="pc-menu-icon">▶</span>
+            <span><strong>Video Editing & Reels</strong><small>Reels, ads and promotional videos</small></span>
+          </a>
+
+          <a href="services.html#web-development">
+            <span class="pc-menu-icon">⌘</span>
+            <span><strong>Website Development</strong><small>Responsive business websites</small></span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="pc-dropdown">
+
+        <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+          Projects <span class="pc-chevron">⌄</span>
+        </button>
+
+        <div class="pc-dropdown-menu">
+
+          <a href="graphic%20designs.html">
+            <span class="pc-menu-icon">▧</span>
+            <span><strong>Graphic Portfolio</strong><small>Designs and brand creatives</small></span>
+          </a>
+
+          <a href="video-content.html">
+            <span class="pc-menu-icon">▷</span>
+            <span><strong>Video & Reels Portfolio</strong><small>Explore edited videos</small></span>
+          </a>
+
+          <a href="website-portfolio.html">
+            <span class="pc-menu-icon">⌘</span>
+            <span><strong>Website Projects</strong><small>Web and digital solutions</small></span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a class="pc-nav-link" href="contact.html">Contact</a>
+
+      <a class="pc-header-cta"
+         href="https://wa.me/919310688455"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        Let's Work Together <span>↗</span>
+
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================
+     CONTACT HERO
+===================================== -->
+
+<main>
+
+<section class="contact-hero">
+
+  <div class="contact-hero-inner">
+
+    <span class="contact-tag">
+      LET'S CONNECT & CREATE
+    </span>
+
+    <h1>
+      Let's Start Your
+      <span>Next Project.</span>
+    </h1>
+
+    <p>
+      Have an idea, need a website, creative designs or
+      digital growth support? Tell us about your project.
+      Let's turn your vision into reality.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CONTACT FORM
+===================================== -->
+
+<section class="contact-main">
+
+  <div class="contact-container">
+
+    <div class="contact-heading">
+
+      <span>GET IN TOUCH</span>
+
+      <h2>Tell Us About Your Project</h2>
+
+      <p>
+        Share your requirements and we will get back to you.
+      </p>
+
+    </div>
+
+
+    <div class="contact-layout">
+
+
+      <!-- CONTACT FORM -->
+
+      <div class="contact-form-card">
+
+        <h3>Project Inquiry Form</h3>
+
+        <p class="form-intro">
+          Fill in the details below to discuss your project.
+        </p>
+
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="clientName">Full Name *</label>
+
+              <input type="text"
+                     id="clientName"
+                     placeholder="Enter your name"
+                     required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="clientPhone">Phone Number *</label>
+
+              <input type="tel"
+                     id="clientPhone"
+                     placeholder="Enter your phone number"
+                     pattern="[0-9+\-\s]{10,16}"
+                     required>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="clientEmail">Email Address</label>
+
+              <input type="email"
+                     id="clientEmail"
+                     placeholder="Enter your email">
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="clientService">Select Service *</label>
+
+              <select id="clientService" required>
+
+                <option value="">Choose a service</option>
+
+                <option>Website Development</option>
+                <option>Website Redesign</option>
+                <option>Landing Page</option>
+                <option>E-commerce Website</option>
+                <option>Graphic Designing</option>
+                <option>Logo & Branding</option>
+                <option>Social Media Management</option>
+                <option>Video Editing & Reels</option>
+                <option>SEO & Digital Marketing</option>
+                <option>Content Writing & Planning</option>
+                <option>Multiple Services</option>
+                <option>Other</option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="clientBudget">Estimated Budget</label>
+
+              <select id="clientBudget">
+
+                <option value="">Select your budget</option>
+                <option>Below ₹2,000</option>
+                <option>₹2,000 – ₹5,000</option>
+                <option>₹5,000 – ₹10,000</option>
+                <option>₹10,000 – ₹20,000</option>
+                <option>₹20,000 – ₹50,000</option>
+                <option>Above ₹50,000</option>
+                <option>Need a quotation</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="clientTimeline">Expected Timeline</label>
+
+              <select id="clientTimeline">
+
+                <option value="">Select timeline</option>
+                <option>Urgent</option>
+                <option>Within 3–5 Days</option>
+                <option>Within 1–2 Weeks</option>
+                <option>Within 1 Month</option>
+                <option>Flexible</option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="clientMessage">Project Details *</label>
+
+            <textarea id="clientMessage"
+              placeholder="Describe your project requirements, ideas and expectations..."
+              required></textarea>
+
+          </div>
+
+
+          <div class="form-note">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>
+              After submitting, your inquiry will open in WhatsApp.
+              You can review and send the message directly.
+            </span>
+
+          </div>
+
+
+          <button type="submit" class="contact-submit">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Submit Inquiry on WhatsApp
+
+          </button>
+
+        </form>
+
+      </div>
+
+
+
+      <!-- CONTACT DETAILS -->
+
+      <aside class="contact-info-card">
+
+        <h3>Contact Information</h3>
+
+        <p>
+          Have questions about our services, pricing or payment?
+          Connect with us directly.
+        </p>
+
+
+        <div class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div>
+
+            <strong>Email Address</strong>
+
+            <a href="mailto:pihucreators083@gmail.com">
+              pihucreators083@gmail.com
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div>
+
+            <strong>Phone / WhatsApp</strong>
+
+            <a href="https://wa.me/919310688455"
+               target="_blank"
+               rel="noopener noreferrer">
+              +91 93106 88455
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+
+          <div>
+
+            <strong>Instagram</strong>
+
+            <a href="https://www.instagram.com/pihucreators/"
+               target="_blank"
+               rel="noopener noreferrer">
+              @pihucreators
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-info-item">
+
+          <div class="contact-info-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+
+          <div>
+
+            <strong>Website</strong>
+
+            <a href="https://pihucreators.in">
+              www.pihucreators.in
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-info-divider"></div>
+
+
+        <a href="https://wa.me/919310688455"
+           class="contact-whatsapp"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          Chat With Us
+
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+      </aside>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PAYMENT AND ADVANCE POLICY
+===================================== -->
+
+<section class="payment-section">
+
+  <div class="payment-container">
+
+    <div class="payment-heading">
+
+      <span>SECURE PROJECT PAYMENTS</span>
+
+      <h2>Simple & Transparent Payments</h2>
+
+      <p>
+        We follow a clear payment process so both clients
+        and our team understand the project scope,
+        pricing and payment terms before work begins.
+      </p>
+
+    </div>
+
+
+    <div class="payment-grid">
+
+
+      <!-- 50% ADVANCE -->
+
+      <div class="payment-card">
+
+        <div class="payment-icon">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+
+        <h3>50% Project Advance</h3>
+
+        <span class="payment-highlight">
+          50% Advance Required
+        </span>
+
+        <p>
+          A 50% advance payment is compulsory after the
+          quotation, project scope and deliverables are
+          approved by the client.
+        </p>
+
+        <p>
+          The remaining 50% is payable as per the
+          agreed project completion and delivery terms.
+        </p>
+
+      </div>
+
+
+      <!-- SAMPLE PAYMENT -->
+
+      <div class="payment-card">
+
+        <div class="payment-icon">
+          <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+
+        <h3>Sample / Preview Request</h3>
+
+        <span class="payment-highlight">
+          ₹200 Sample Advance
+        </span>
+
+        <p>
+          Want to see a sample before confirming your
+          project? A ₹200 advance is required before
+          sample preparation.
+        </p>
+
+        <p>
+          Please contact us to confirm the sample scope,
+          deliverables and applicable terms before payment.
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- PAYMENT PROCESS -->
+
+    <div class="advance-process">
+
+      <h3>How Our Payment Process Works</h3>
+
+      <div class="advance-steps">
+
+        <div class="advance-step">
+
+          <div class="advance-step-number">01</div>
+
+          <strong>Discuss Project</strong>
+
+          <p>
+            Share your requirements and project ideas.
+          </p>
+
+        </div>
+
+
+        <div class="advance-step">
+
+          <div class="advance-step-number">02</div>
+
+          <strong>Approve Quotation</strong>
+
+          <p>
+            Confirm scope, pricing and deliverables.
+          </p>
+
+        </div>
+
+
+        <div class="advance-step">
+
+          <div class="advance-step-number">03</div>
+
+          <strong>Pay 50% Advance</strong>
+
+          <p>
+            Complete the advance payment to start work.
+          </p>
+
+        </div>
+
+
+        <div class="advance-step">
+
+          <div class="advance-step-number">04</div>
+
+          <strong>Work & Delivery</strong>
+
+          <p>
+            Work begins and final balance is paid as agreed.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PAYMENT OPTIONS -->
+
+    <div class="payment-methods">
+
+      <h3>Available Payment Methods</h3>
+
+      <div class="payment-method-grid">
+
+
+        <div class="payment-method">
+
+          <i class="fa-solid fa-mobile-screen-button"></i>
+
+          <strong>UPI Payment</strong>
+
+          <small>
+            Pay using an official UPI ID or QR code
+            shared by Pihu Creators.
+          </small>
+
+        </div>
+
+
+        <div class="payment-method">
+
+          <i class="fa-solid fa-credit-card"></i>
+
+          <strong>Online Payment</strong>
+
+          <small>
+            Request an official online payment
+            or Razorpay checkout link.
+          </small>
+
+        </div>
+
+
+        <div class="payment-method">
+
+          <i class="fa-solid fa-building-columns"></i>
+
+          <strong>Bank Transfer</strong>
+
+          <small>
+            Bank transfer details can be requested
+            directly from our team.
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+      <div style="margin-top:25px;text-align:center;">
+
+        <a href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20I%20would%20like%20to%20receive%20your%20official%20payment%20details."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-submit"
+           style="max-width:350px;margin:auto;text-decoration:none;">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+          Request Payment Details
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     ADVANCE PAYMENT CALCULATOR
+===================================== -->
+
+<section class="calculator-section">
+
+  <div class="contact-container">
+
+    <div class="calculator-card">
+
+      <h2>50% Advance Calculator</h2>
+
+      <p>
+        Enter your estimated project amount to calculate
+        the advance and remaining balance.
+      </p>
+
+
+      <div class="calculator-input">
+
+        <label for="projectAmount">
+          Total Project Amount (₹)
+        </label>
+
+        <input type="number"
+               id="projectAmount"
+               min="0"
+               step="1"
+               placeholder="Enter project amount">
+
+      </div>
+
+
+      <div class="calculator-results">
+
+        <div class="calculator-result">
+
+          <span>50% Advance Payment</span>
+
+          <strong id="advanceAmount">₹0</strong>
+
+        </div>
+
+
+        <div class="calculator-result">
+
+          <span>Remaining 50%</span>
+
+          <strong id="remainingAmount">₹0</strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="calculator-balance">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        The final project quotation will be confirmed
+        after discussing your requirements and deliverables.
+        This calculator is only an estimate.
+
+      </div>
+
+
+      <p class="calculator-note">
+
+        * Sample requests have a separate ₹200 advance
+        requirement. The project advance and sample advance
+        are different payment requirements.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PAYMENT TERMS
+===================================== -->
+
+<section class="terms-section">
+
+  <div class="terms-card">
+
+    <h2>Payment Terms & Conditions</h2>
+
+    <ul class="terms-list">
+
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span>
+          A 50% advance payment is compulsory after
+          approval of the quotation, project scope
+          and deliverables.
+        </span>
+      </li>
+
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span>
+          Work will begin only after the agreed
+          advance payment has been received and confirmed.
+        </span>
+      </li>
+
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span>
+          Clients requesting samples or previews must
+          pay a ₹200 advance before sample preparation.
+        </span>
+      </li>
+
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span>
+          The remaining project balance must be paid
+          according to the agreed delivery and payment schedule.
+        </span>
+      </li>
+
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span>
+          Any additional work or changes outside the
+          approved scope may require separate charges.
+        </span>
+      </li>
+
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span>
+          Always use payment details or payment links
+          officially shared by Pihu Creators.
+          Keep your transaction receipt for reference.
+        </span>
+      </li>
+
+    </ul>
+
+
+    <div class="terms-note">
+
+      <strong>Important:</strong>
+
+      Please confirm your quotation, deliverables,
+      payment schedule and applicable cancellation/refund
+      terms with Pihu Creators before making a payment.
+
+      Never share your UPI PIN, OTP, card PIN or banking
+      password with anyone.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     PIHU CREATORS FOOTER - SAME AS INDEX
+===================================== -->
+
+<footer class="pc-footer">
+
+  <div class="pc-footer-main">
+
+
+    <div class="pc-footer-brand">
+
+      <a href="index.html" class="pc-footer-logo">
+
+        <img src="images/white2nd.png" alt="Pihu Creators">
+
+      </a>
+
+      <p>
+        Creative ideas. Digital solutions. Helping brands
+        build their online presence through design,
+        development and digital growth.
+      </p>
+
+      <p class="pc-tagline">
+        One step to grow every day.
+      </p>
+
+      <div class="pc-social-links">
+
+        <a href="https://www.instagram.com/pihucreators/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">IG</a>
+
+        <a href="https://www.facebook.com/pihucreators"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Facebook">f</a>
+
+        <a href="https://wa.me/919310688455"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="WhatsApp">WA</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="pc-footer-column">
+
+      <h3>Quick Links</h3>
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="graphic%20designs.html">Graphic Portfolio</a>
+      <a href="video-content.html">Video & Reels</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+
+    <div class="pc-footer-column">
+
+      <h3>Our Services</h3>
+
+      <a href="website-portfolio.html">Website Development</a>
+      <a href="graphic%20designs.html">Graphic Designing</a>
+      <a href="services.html#social-media">Social Media Management</a>
+      <a href="video-content.html">Video Editing & Reels</a>
+      <a href="services.html#digital-marketing">Digital Marketing & SEO</a>
+      <a href="graphic designs.html">Branding & Content</a>
+
+    </div>
+
+
+    <div class="pc-footer-column pc-footer-contact">
+
+      <h3>Get In Touch</h3>
+
+      <a href="mailto:pihucreators083@gmail.com">
+        <span>✉</span> pihucreators083@gmail.com
+      </a>
+
+      <a href="https://wa.me/919310688455"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span>☏</span> +91 93106 88455
+      </a>
+
+      <a href="https://www.instagram.com/pihucreators/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span>◎</span> @pihucreators
+      </a>
+
+      <a href="https://pihucreators.in">
+        <span>↗</span> pihucreators.in
+      </a>
+
+      <a class="pc-footer-cta" href="contact.html">
+        Start a Project <span>→</span>
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="pc-footer-bottom">
+
+    <p>
+      © <span id="pc-current-year"></span>
+      Pihu Creators. All rights reserved.
+    </p>
+
+    <p>Designed with creativity and purpose.</p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* NAVBAR */
+
+  const menuToggle = document.querySelector(".pc-menu-toggle");
+  const navigation = document.querySelector(".pc-navigation");
+  const dropdowns = document.querySelectorAll(".pc-dropdown");
+
+
+  function closeDropdowns(except = null) {
+
+    dropdowns.forEach((dropdown) => {
+
+      if (dropdown === except) return;
+
+      dropdown.classList.remove("open");
+
+      const button = dropdown.querySelector(".pc-dropdown-toggle");
+
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+      }
+
+    });
+
+  }
+
+
+  function closeMobileMenu() {
+
+    if (!menuToggle || !navigation) return;
+
+    menuToggle.classList.remove("active");
+    navigation.classList.remove("open");
+
+    menuToggle.setAttribute("aria-expanded", "false");
+
+    closeDropdowns();
+
+  }
+
+
+  if (menuToggle && navigation) {
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen = navigation.classList.toggle("open");
+
+      menuToggle.classList.toggle("active", isOpen);
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+      if (!isOpen) closeDropdowns();
+
+    });
+
+  }
+
+
+  dropdowns.forEach((dropdown) => {
+
+    const button = dropdown.querySelector(".pc-dropdown-toggle");
+
+    if (!button) return;
+
+    button.addEventListener("click", (event) => {
+
+      event.stopPropagation();
+
+      const willOpen = !dropdown.classList.contains("open");
+
+      closeDropdowns(dropdown);
+
+      dropdown.classList.toggle("open", willOpen);
+
+      button.setAttribute("aria-expanded", String(willOpen));
+
+    });
+
+  });
+
+
+  document.addEventListener("click", (event) => {
+
+    if (!event.target.closest(".pc-navigation")) {
+      closeDropdowns();
+    }
+
+    if (
+      navigation &&
+      menuToggle &&
+      !event.target.closest(".pc-header")
+    ) {
+      closeMobileMenu();
+    }
+
+  });
+
+
+  document.querySelectorAll(".pc-navigation a").forEach((link) => {
+
+    link.addEventListener("click", closeMobileMenu);
+
+  });
+
+
+  document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+
+  });
+
+
+  /* FOOTER YEAR */
+
+  const year = document.getElementById("pc-current-year");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+
+  /* ADVANCE PAYMENT CALCULATOR */
+
+  const projectAmount = document.getElementById("projectAmount");
+  const advanceAmount = document.getElementById("advanceAmount");
+  const remainingAmount = document.getElementById("remainingAmount");
+
+
+  function formatCurrency(amount) {
+
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 2
+    }).format(amount);
+
+  }
+
+
+  if (projectAmount) {
+
+    projectAmount.addEventListener("input", () => {
+
+      const total = Math.max(0, Number(projectAmount.value) || 0);
+
+      const advance = total * 0.5;
+
+      const remaining = total - advance;
+
+      advanceAmount.textContent = formatCurrency(advance);
+
+      remainingAmount.textContent = formatCurrency(remaining);
+
+    });
+
+  }
+
+
+  /* WHATSAPP CONTACT FORM */
+
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+
+    contactForm.addEventListener("submit", (event) => {
+
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) return;
+
+      const name = document.getElementById("clientName").value.trim();
+
+      const phone = document.getElementById("clientPhone").value.trim();
+
+      const email = document.getElementById("clientEmail").value.trim();
+
+      const service = document.getElementById("clientService").value;
+
+      const budget = document.getElementById("clientBudget").value;
+
+      const timeline = document.getElementById("clientTimeline").value;
+
+      const message = document.getElementById("clientMessage").value.trim();
+
+
+      const whatsappMessage =
+
+`Hello Pihu Creators!
+
+I would like to discuss a new project.
+
+Name: ${name}
+
+Phone: ${phone}
+
+Email: ${email || "Not provided"}
+
+Service Required: ${service}
+
+Estimated Budget: ${budget || "Not specified"}
+
+Expected Timeline: ${timeline || "Not specified"}
+
+Project Details:
+${message}
+
+Please share the quotation, project details and payment process.
+
+Thank you!`;
+
+
+      const whatsappURL =
+        "https://wa.me/919310688455?text=" +
+        encodeURIComponent(whatsappMessage);
+
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+    });
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>

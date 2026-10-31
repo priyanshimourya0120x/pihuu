@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0756c9">
+<meta name="description" content="Explore graphic design services and portfolio by Pihu Creators — logos, branding, social media creatives, brochures, flyers and more.">
+<title>Graphic Design & Portfolio | Pihu Creators</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{--blue:#0756c9;--blue2:#087fe0;--cyan:#35bdf2;--ink:#10213a;--muted:#64748b;--bg:#f7faff;--pale:#edf5ff;--line:#dce8f8;--white:#fff;--shadow:0 12px 35px rgba(21,60,112,.09);--grad:linear-gradient(135deg,#0756c9,#087fe0 65%,#35bdf2)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{text-decoration:none;color:inherit}button,input{font:inherit}.container{width:min(1200px,90%);margin:auto}
+h1,h2,h3,h4{font-family:"Space Grotesk","DM Sans",sans-serif;line-height:1.16}
+.gradient-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section{padding:88px 0}.section-tag,.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:1.7px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#16a6e8;box-shadow:0 0 0 4px #dff3ff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 21px;border-radius:9px;font-size:13px;font-weight:800;transition:.25s}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 22px #0756c926}.btn-outline{border:1px solid #b8d2f5;color:var(--blue);background:#fff}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0756c925}
+
+/* EXACT HOMEPAGE NAVBAR */
+.pc-header,.pc-header *,.pc-footer,.pc-footer *{box-sizing:border-box}
+.pc-header{position:sticky;top:0;z-index:9999;width:100%;background:rgba(255,255,255,.97);border-bottom:1px solid #dce8f8;box-shadow:0 5px 25px rgba(14,48,95,.07);backdrop-filter:blur(18px);font-family:"DM Sans",sans-serif}
+.pc-header-inner{width:min(1320px,92%);min-height:82px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.pc-logo{display:inline-flex;align-items:center;flex-shrink:0}.pc-logo img{display:block;width:145px;max-height:64px;object-fit:contain}
+.pc-navigation{display:flex;align-items:center;justify-content:flex-end;gap:5px}
+.pc-navigation a,.pc-dropdown-toggle{font-family:inherit;text-decoration:none}
+.pc-nav-link,.pc-dropdown-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 13px;color:#10213a;font-size:14px;font-weight:700;white-space:nowrap;border:0;border-radius:9px;background:transparent;cursor:pointer;transition:color .2s,background .2s}
+.pc-nav-link:hover,.pc-dropdown-toggle:hover,.pc-dropdown.open>.pc-dropdown-toggle{color:#0756c9;background:#edf5ff}
+.pc-dropdown{position:relative}.pc-chevron{font-size:18px;transition:transform .2s}.pc-dropdown.open .pc-chevron{transform:rotate(180deg)}
+.pc-dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;z-index:10000;width:315px;padding:9px;visibility:hidden;opacity:0;transform:translateY(7px);pointer-events:none;background:#fff;border:1px solid #e2eaf5;border-radius:15px;box-shadow:0 18px 50px rgba(13,45,89,.16);transition:.2s}
+.pc-dropdown:hover>.pc-dropdown-menu,.pc-dropdown:focus-within>.pc-dropdown-menu,.pc-dropdown.open>.pc-dropdown-menu{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto}
+.pc-dropdown-menu>a{display:flex;align-items:center;gap:12px;padding:11px 10px;color:#10213a;border-radius:10px}
+.pc-dropdown-menu>a:hover{background:#edf5ff}.pc-dropdown-menu>a>span:last-child{display:flex;flex-direction:column;gap:4px}
+.pc-dropdown-menu strong{font-size:13px;font-weight:800}.pc-dropdown-menu small{color:#64748b;font-size:11px;line-height:1.5}
+.pc-menu-icon{display:grid;place-items:center;flex-shrink:0;width:39px;height:39px;color:#0756c9;background:#eaf3ff;border-radius:10px;font-size:19px}
+.pc-header-cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-left:7px;padding:13px 16px;color:#fff!important;background:linear-gradient(135deg,#0756c9,#087fe0);border-radius:10px;font-size:13px;font-weight:800;white-space:nowrap;box-shadow:0 8px 20px rgba(7,86,201,.2);transition:transform .2s}
+.pc-header-cta:hover{transform:translateY(-2px)}
+.pc-menu-toggle{display:none;width:44px;height:43px;padding:10px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid #e2eaf5;border-radius:10px;background:#fff;cursor:pointer}
+.pc-menu-toggle span{width:21px;height:2px;background:#07377f;border-radius:4px;transition:.2s}
+.pc-menu-toggle.active span:first-child{transform:translateY(7px) rotate(45deg)}.pc-menu-toggle.active span:nth-child(2){opacity:0}.pc-menu-toggle.active span:last-child{transform:translateY(-7px) rotate(-45deg)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:92px 0 32px;background:radial-gradient(circle at 85% 20%,#d5eaff 0,transparent 35%),radial-gradient(circle at 5% 90%,#e1f6ff 0,transparent 30%),linear-gradient(135deg,#fff,#edf5ff)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px}
+.hero h1{font-size:clamp(42px,5.8vw,68px);letter-spacing:-2.5px;margin:22px 0;color:#0b1b35}
+.hero-text{font-size:16px;line-height:1.9;max-width:590px;color:#53657e}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin:28px 0}
+.hero-proof{display:flex;align-items:center;gap:13px;margin-top:32px}.proof-icon{width:45px;height:45px;border-radius:13px;background:#e1eeff;color:var(--blue);display:grid;place-items:center}
+.hero-proof strong,.hero-proof small{display:block}.hero-proof strong{font-size:13px}.hero-proof small{font-size:11px;color:var(--muted);margin-top:3px}
+.hero-art{min-height:400px;position:relative;display:grid;place-items:center}
+.art-glow{position:absolute;width:300px;height:300px;background:#8ccaff80;filter:blur(85px);border-radius:50%}
+.design-board{position:relative;width:min(370px,90%);height:330px;padding:25px;background:linear-gradient(145deg,#fff,#e5f1ff);border:1px solid #c9e1ff;border-radius:22px;box-shadow:0 30px 80px #153c7020;transform:rotate(-4deg);overflow:hidden}
+.board-top{display:flex;justify-content:space-between;color:var(--blue);font-size:10px;letter-spacing:1px;font-weight:800}.board-top i{font-size:20px}
+.board-shape{position:absolute;width:220px;height:220px;border:35px solid #1686e8;transform:rotate(35deg);right:-70px;top:55px;border-radius:35px;opacity:.18}
+.board-copy{position:absolute;left:28px;bottom:35px;z-index:2}.board-copy small,.board-copy span{display:block;color:#607895;font-size:10px;letter-spacing:1px}
+.board-copy b{display:block;color:#10213a;font-size:43px;line-height:1.02;margin:13px 0}.board-copy em{font-style:normal;color:var(--blue)}
+.float-chip{position:absolute;background:#fff;border:1px solid #cce2ff;padding:12px 16px;border-radius:10px;font-size:11px;font-weight:800;box-shadow:0 10px 30px #153c7020;color:#173b69}
+.float-chip i{color:var(--blue);margin-right:7px}.chip-one{top:55px;left:0}.chip-two{bottom:50px;right:0}
+.hero-bottom{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;padding:45px 0 10px;color:#66809f;font-size:10px;font-weight:800;letter-spacing:2px}.hero-bottom i{width:5px;height:5px;border-radius:50%;background:#1686e8}
+
+
+/* =========================================
+   HEADINGS + PORTFOLIO
+   PIHU CREATORS - RESPONSIVE IMAGE FIX
+========================================= */
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 38px;
+}
+
+.section-heading h2,
+.centered h2,
+.process-layout h2,
+.cta-panel h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    letter-spacing: -1.5px;
+    margin-top: 15px;
+    color: #0b1b35;
+}
+
+.section-heading > p {
+    max-width: 400px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #64748b;
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered > p {
+    max-width: 550px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* PORTFOLIO SECTION */
+
+.portfolio-section {
+    background: #f0f6ff;
+    border-top: 1px solid #e1ecfa;
+    border-bottom: 1px solid #e1ecfa;
+}
+
+.portfolio-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.filter-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #d8e5f5;
+    background: #fff;
+    color: #45617f;
+    padding: 9px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--grad);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 5px 15px #0756c922;
+}
+
+/* SEARCH BOX */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: #fff;
+    border: 1px solid #d8e5f5;
+    padding: 10px 13px;
+    border-radius: 9px;
+    color: var(--blue);
+    min-width: 210px;
+    box-shadow: 0 5px 18px #153c7008;
+}
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #10213a;
+    font-size: 12px;
+}
+
+.search-box input::placeholder {
+    color: #8da0b8;
+}
+
+/* PORTFOLIO COUNT */
+
+.portfolio-count {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin: -10px 0 22px;
+}
+
+/* PORTFOLIO GRID */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+/* PORTFOLIO CARD */
+
+.work-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e0eaf6;
+    border-radius: 15px;
+    background: #fff;
+    transition: 0.25s;
+    box-shadow: 0 7px 25px #153c7008;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    border-color: #9dc9ff;
+    box-shadow: 0 15px 35px #153c7017;
+}
+
+/* IMAGE AREA - FULL IMAGE VISIBLE */
+
+.work-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+    padding: 10px;
+    overflow: hidden;
+    background: #edf4fc;
+    border: 0;
+    cursor: zoom-in;
+    box-sizing: border-box;
+}
+
+/* IMPORTANT: CONTAIN PREVENTS IMAGE CROPPING */
+
+.work-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle hover effect without cropping */
+
+.work-card:hover .work-visual img {
+    transform: scale(1.02);
+}
+
+/* PORTFOLIO INFO */
+
+.work-info {
+    padding: 14px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.work-info h3 {
+    font-size: 15px;
+    color: #142b49;
+}
+
+.work-info p {
+    font-size: 11px;
+    margin-top: 5px;
+    color: #74869d;
+}
+
+/* VIEW BUTTON */
+
+.view-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+    border: 1px solid #cfe2fa;
+    background: #edf5ff;
+    color: var(--blue);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    text-align: center;
+    color: #64748b;
+    padding: 45px 10px;
+    display: none;
+}
+
+/* PORTFOLIO NOTE */
+
+.portfolio-note {
+    text-align: center;
+    color: #7b8da4;
+    font-size: 11px;
+    margin-top: 30px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .work-visual {
+        height: 260px;
+    }
+
+    .section-heading {
+        gap: 20px;
+    }
+
+    .portfolio-tools {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2,
+    .centered h2,
+    .process-layout h2,
+    .cta-panel h2 {
+        font-size: clamp(27px, 7vw, 36px);
+        letter-spacing: -0.8px;
+    }
+
+    .section-heading > p {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .centered > p {
+        font-size: 13px;
+    }
+
+    .portfolio-tools {
+        gap: 15px;
+        margin-bottom: 22px;
+    }
+
+    .filter-list {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 8px 11px;
+        font-size: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .work-card {
+        border-radius: 11px;
+    }
+
+    .work-visual {
+        height: 180px;
+        padding: 7px;
+    }
+
+    .work-visual img {
+        object-fit: contain;
+    }
+
+    .work-info {
+        padding: 10px;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .work-info h3 {
+        font-size: 12px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .work-info p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .view-btn {
+        width: 29px;
+        height: 29px;
+        border-radius: 7px;
+        font-size: 12px;
+    }
+
+    .portfolio-count {
+        font-size: 11px;
+        margin-bottom: 18px;
+    }
+
+    .portfolio-note {
+        font-size: 10px;
+        line-height: 1.6;
+        margin-top: 22px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .portfolio-grid {
+        gap: 9px;
+    }
+
+    .work-visual {
+        height: 145px;
+        padding: 5px;
+    }
+
+    .work-info {
+        padding: 8px;
+    }
+
+    .work-info h3 {
+        font-size: 11px;
+    }
+
+    .work-info p {
+        font-size: 9px;
+    }
+
+    .view-btn {
+        width: 26px;
+        height: 26px;
+    }
+
+    .filter-btn {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+}
+
+/* SERVICES + PROCESS + CTA */
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-top:38px}
+.service-card{padding:25px 21px;background:#fff;border:1px solid #e0eaf6;border-radius:15px;transition:.25s;box-shadow:0 8px 25px #153c7008}
+.service-card:hover{transform:translateY(-5px);border-color:#9dc9ff;box-shadow:var(--shadow)}
+.service-icon{width:46px;height:46px;border-radius:12px;background:#eaf3ff;color:var(--blue);display:grid;place-items:center;font-size:18px;margin-bottom:20px}
+.service-card h3{font-size:17px;margin-bottom:10px;color:#10213a}.service-card p{font-size:12px;line-height:1.8;min-height:65px;color:#64748b}
+.service-no{display:block;color:var(--blue);font-size:9px;letter-spacing:1.5px;font-weight:800;margin-top:20px}
+.process-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.process-intro{font-size:14px;line-height:1.9;margin:20px 0 25px;max-width:370px;color:#64748b}
+.steps{border-top:1px solid #dce8f8}.step{display:grid;grid-template-columns:45px 1fr 35px;gap:18px;align-items:center;padding:24px 5px;border-bottom:1px solid #dce8f8}
+.step>span{color:var(--blue);font-family:"Space Grotesk";font-size:19px;font-weight:700}.step h3{font-size:17px;margin-bottom:6px;color:#10213a}.step p{font-size:12px;color:#64748b}.step>i{color:var(--blue);font-size:20px;text-align:center}
+.cta-section{padding:45px 0 90px}.cta-panel{padding:48px;background:radial-gradient(circle at 90% 10%,#70caff55,transparent 40%),linear-gradient(120deg,#e6f2ff,#f8fbff);border:1px solid #c7e0ff;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:var(--shadow)}
+.cta-panel h2{margin-bottom:0}.cta-panel .btn{background:var(--blue);color:#fff;white-space:nowrap}
+
+/* HOMEPAGE FOOTER */
+.pc-footer{color:#dce8fb;background:radial-gradient(circle at 12% 0%,#123d79 0,transparent 36%),linear-gradient(135deg,#07152d,#061023 65%,#0a1d3c);font-family:"DM Sans",sans-serif}
+.pc-footer-main{width:min(1320px,90%);margin:auto;padding:68px 0 52px;display:grid;grid-template-columns:1.4fr .8fr 1fr 1.2fr;gap:40px}
+.pc-footer-logo{display:inline-flex;margin-bottom:15px}.pc-footer-logo img{display:block;width:160px;max-height:75px;object-fit:contain}
+.pc-footer-brand>p{max-width:340px;color:#aebed7;font-size:13px;line-height:1.9}.pc-footer-brand .pc-tagline{color:#70d4ff;font-weight:800}
+.pc-social-links{display:flex;gap:10px;margin-top:22px}.pc-social-links a{display:grid;place-items:center;width:39px;height:39px;color:#fff;text-decoration:none;font-size:13px;font-weight:800;background:#ffffff12;border:1px solid #ffffff22;border-radius:10px;transition:.2s}
+.pc-social-links a:hover{background:#0756c9;transform:translateY(-3px)}
+.pc-footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:13px}.pc-footer-column h3{margin:7px 0 10px;color:#fff;font-size:16px;font-weight:800}
+.pc-footer-column>a{color:#b6c5dc;font-size:12px;line-height:1.8;text-decoration:none;overflow-wrap:anywhere}.pc-footer-column>a:hover{color:#71d7ff}
+.pc-footer-contact>a:not(.pc-footer-cta){display:flex;gap:9px;align-items:flex-start}.pc-footer-contact>a>span{color:#64cfff;font-weight:800}
+.pc-footer-cta{display:inline-flex;gap:12px;margin-top:8px;padding:11px 15px;color:#fff!important;background:#0756c9;border-radius:9px}
+.pc-footer-bottom{width:min(1320px,90%);margin:auto;padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid #ffffff20}
+.pc-footer-bottom p{margin:0;color:#9aacc8;font-size:11px;line-height:1.7}
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:900;width:54px;height:54px;border-radius:50%;background:#20c76a;color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 7px 25px #0002}
+.lightbox{position:fixed;inset:0;z-index:20000;background:#07152deF;display:none;align-items:center;justify-content:center;padding:25px}
+.lightbox.open{display:flex}.lightbox-content{max-width:95vw;max-height:90vh;text-align:center}
+.lightbox img{display:block;max-width:94vw;max-height:82vh;object-fit:contain;margin:auto;background:#fff;border-radius:5px}
+.lightbox-caption{color:#fff;font-size:13px;margin-top:12px}.lightbox-close{position:absolute;right:25px;top:15px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer}
+@media(max-width:1050px){.pc-header-inner{width:94%;min-height:74px}.pc-logo img{width:130px}.pc-menu-toggle{display:flex;flex-shrink:0}.pc-navigation{position:absolute;top:100%;left:0;right:0;display:none;max-height:calc(100vh - 74px);overflow-y:auto;padding:17px 5% 24px;align-items:stretch;flex-direction:column;gap:5px;background:#fff;border-top:1px solid #e2eaf5;box-shadow:0 18px 28px #0d2d591f}.pc-navigation.open{display:flex}.pc-nav-link,.pc-dropdown-toggle{width:100%;min-height:45px;justify-content:space-between;padding:12px 14px;font-size:14px}.pc-dropdown{width:100%}.pc-dropdown-menu{position:static;display:none;width:100%;margin:0 0 8px;padding:7px;visibility:visible;opacity:1;transform:none;pointer-events:auto;box-shadow:none;background:#f9fbff}.pc-dropdown.open>.pc-dropdown-menu{display:block}.pc-dropdown:hover>.pc-dropdown-menu{display:none}.pc-dropdown.open:hover>.pc-dropdown-menu{display:block}.pc-header-cta{min-height:45px;margin:9px 0 0}.pc-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}.service-grid{grid-template-columns:repeat(2,1fr)}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.hero{padding-top:65px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero h1{font-size:48px}.hero-art{min-height:350px}.section{padding:65px 0}.section-heading{display:block}.section-heading>p{margin-top:15px}.portfolio-tools{align-items:stretch;flex-direction:column}.search-box{width:100%}.process-layout{grid-template-columns:1fr;gap:35px}.cta-panel{align-items:flex-start;flex-direction:column;padding:30px}}
+@media(max-width:560px){.pc-header-inner{min-height:68px}.pc-logo img{width:115px;max-height:53px}.pc-navigation{max-height:calc(100vh - 68px)}.hero h1{font-size:40px}.hero-bottom{gap:10px;font-size:8px}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.work-info{padding:10px;align-items:flex-start}.work-info h3{font-size:12px}.work-info p{font-size:9px}.view-btn{width:29px;height:29px}.filter-list{gap:6px}.filter-btn{padding:8px 10px;font-size:10px}.service-grid{grid-template-columns:1fr}.service-card p{min-height:0}.pc-footer-main{width:90%;padding:48px 0 34px;grid-template-columns:1fr;gap:30px}.pc-footer-brand>p{max-width:100%}.pc-footer-bottom{width:90%;align-items:flex-start;flex-direction:column;gap:7px}.design-board{height:290px}.board-copy b{font-size:36px}.float-chip{font-size:9px;padding:9px}}
+</style>
+</head>
+<body>
+
+<!-- SAME NAVBAR AS INDEX.HTML -->
+<header class="pc-header">
+  <div class="pc-header-inner">
+    <a href="index.html" class="pc-logo" aria-label="Pihu Creators Home"><img src="images/white2nd.png" alt="Pihu Creators Logo"></a>
+    <button class="pc-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="pc-navigation"><span></span><span></span><span></span></button>
+    <nav class="pc-navigation" id="pc-navigation" aria-label="Main navigation">
+      <a class="pc-nav-link" href="index.html">Home</a>
+      <a class="pc-nav-link" href="about.html">About</a>
+      <div class="pc-dropdown">
+        <button class="pc-dropdown-toggle" type="button" aria-expanded="false">Services <span class="pc-chevron">⌄</span></button>
+        <div class="pc-dropdown-menu">
+          <a href="services.html"><span class="pc-menu-icon">✦</span><span><strong>All Services</strong><small>Explore our creative solutions</small></span></a>
+          <a href="services.html#social-media"><span class="pc-menu-icon">◎</span><span><strong>Social Media Management</strong><small>Content planning and page growth</small></span></a>
+          <a href="graphic designs.html"><span class="pc-menu-icon">✎</span><span><strong>Graphic Design</strong><small>Logos, posts, banners and branding</small></span></a>
+          <a href="video-content.html"><span class="pc-menu-icon">▶</span><span><strong>Video Editing & Reels</strong><small>Reels, ads and promotional videos</small></span></a>
+          <a href="services.html#web-development"><span class="pc-menu-icon">⌘</span><span><strong>Website Development</strong><small>Responsive business websites</small></span></a>
+        </div>
+      </div>
+      <div class="pc-dropdown">
+        <button class="pc-dropdown-toggle" type="button" aria-expanded="false">Projects <span class="pc-chevron">⌄</span></button>
+        <div class="pc-dropdown-menu">
+          <a href="graphic designs.html"><span class="pc-menu-icon">▧</span><span><strong>Graphic Portfolio</strong><small>Designs and brand creatives</small></span></a>
+          <a href="video-content.html"><span class="pc-menu-icon">▷</span><span><strong>Video & Reels Portfolio</strong><small>Explore edited videos</small></span></a>
+          <a href="website-portfolio.html"><span class="pc-menu-icon">⌘</span><span><strong>Website Projects</strong><small>Web and digital solutions</small></span></a>
+        </div>
+      </div>
+      <a class="pc-nav-link" href="contact.html">Contact</a>
+      <a class="pc-header-cta" href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer">Let's Work Together <span>↗</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="status-dot"></span> CREATIVE DESIGN STUDIO</div>
+      <h1>Make your brand<br><span class="gradient-text">impossible to ignore.</span></h1>
+      <p class="hero-text">From scroll-stopping social media creatives to polished brochures and memorable brand identities, we turn your ideas into visuals that connect with your audience.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="po">Explore our work <i class="fa-solid fa-arrow-down"></i></a>
+        <a class="btn btn-outline" href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20I%20need%20graphic%20design%20services."><i class="fa-brands fa-whatsapp"></i> Start a project</a>
+      </div>
+      <div class="hero-proof"><span class="proof-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span><div><strong>Creative thinking. Consistent design.</strong><small>Visuals shaped around your business goals.</small></div></div>
+    </div>
+    <div class="hero-art" aria-label="Graphic design showcase">
+      <div class="art-glow"></div><div class="design-board">
+        <div class="board-top"><span>PIHU CREATORS / DESIGN LAB</span><i class="fa-solid fa-asterisk"></i></div><div class="board-shape"></div>
+        <div class="board-copy"><small>CREATIVE DIRECTION / 01</small><b>MAKE IT<br><em>MEMORABLE.</em></b><span>Branding · Digital · Print</span></div>
+      </div>
+      <div class="float-chip chip-one"><i class="fa-solid fa-pen-nib"></i> Brand identity</div><div class="float-chip chip-two"><i class="fa-solid fa-layer-group"></i> Digital creatives</div>
+    </div>
+  </div>
+  <div class="container hero-bottom"><span>BRAND IDENTITY</span><i></i><span>SOCIAL MEDIA</span><i></i><span>PRINT DESIGN</span><i></i><span>DIGITAL CREATIVES</span></div>
+</section>
+
+<section class="section portfolio-section" id="portfolio">
+  <div class="container">
+    <div class="section-heading"><div><span class="section-tag"><span class="status-dot"></span> SELECTED WORK</span><h2>Designs with a purpose.<br><span class="gradient-text">Made to stand out.</span></h2></div><p>Explore our design concepts across branding, social media and print. Choose a category or search to find the style you need.</p></div>
+    <div class="portfolio-tools">
+      <div class="filter-list" id="filterList" aria-label="Filter portfolio">
+        <button class="filter-btn active" data-category="all">All Designs</button>
+        <button class="filter-btn" data-category="logo">Logo Design</button>
+        <button class="filter-btn" data-category="branding">Branding</button>
+        <button class="filter-btn" data-category="carousel">Carousels</button>
+        <button class="filter-btn" data-category="ads">Ads & Posters</button>
+        <button class="filter-btn" data-category="social">Social Media</button>
+        <button class="filter-btn" data-category="print">Print Design</button>
+        <button class="filter-btn" data-category="youtube-thumbnail">YouTube Thumbnail</button>
+        <button class="filter-btn" data-category="linkedin-banner">LinkedIn Banner</button>
+        <button class="filter-btn" data-category="visiting-card">Visiting Cards</button>
+        <button class="filter-btn" data-category="brochure">Brochures</button>
+        <button class="filter-btn" data-category="flyer">Flyers</button>
+      </div>
+      <label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="portfolioSearch" placeholder="Search designs..." aria-label="Search designs"></label>
+    </div>
+    <p class="portfolio-count" id="portfolioCount" aria-live="polite">Showing 60 designs</p>
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+    <div class="empty-state" id="emptyState">No designs found. Try another search or category.</div>
+    <p class="portfolio-note"><i class="fa-solid fa-circle-info"></i> Portfolio includes selected design samples and mockups. Images can be updated as new work is added.</p>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-heading centered"><span class="section-tag"><span class="status-dot"></span> WHAT WE DO</span><h2>One creative partner.<br><span class="gradient-text">Many ways to stand out.</span></h2><p>Consistent visuals across every place your audience meets your brand.</p></div>
+    <div class="service-grid">
+      <article class="service-card"><span class="service-icon"><i class="fa-solid fa-pen-nib"></i></span><h3>Logo & Brand Identity</h3><p>Logos, colour palettes and a visual direction that feels like your business.</p><span class="service-no">01 / BRANDING</span></article>
+      <article class="service-card"><span class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></span><h3>Social Media Creatives</h3><p>Posts, carousels, stories and covers that keep your brand consistent.</p><span class="service-no">02 / SOCIAL</span></article>
+      <article class="service-card"><span class="service-icon"><i class="fa-solid fa-print"></i></span><h3>Print & Marketing</h3><p>Flyers, brochures, visiting cards, menus and other print materials.</p><span class="service-no">03 / PRINT</span></article>
+      <article class="service-card"><span class="service-icon"><i class="fa-solid fa-panorama"></i></span><h3>Digital Banners</h3><p>YouTube, LinkedIn, website and campaign banner designs.</p><span class="service-no">04 / DIGITAL</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container process-layout">
+    <div><span class="section-tag"><span class="status-dot"></span> SIMPLE & COLLABORATIVE</span><h2>From first idea<br>to <span class="gradient-text">final design.</span></h2><p class="process-intro">A clear, friendly process keeps every project moving in the right direction.</p><a class="btn btn-primary" href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20let%E2%80%99s%20start%20a%20design%20project.">Tell us your idea <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="steps">
+      <div class="step"><span>01</span><div><h3>Share your brief</h3><p>Tell us about your business, audience, style and design needs.</p></div><i class="fa-solid fa-message"></i></div>
+      <div class="step"><span>02</span><div><h3>Design & refine</h3><p>We shape the concept and refine it with your feedback.</p></div><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+      <div class="step"><span>03</span><div><h3>Receive your files</h3><p>Get the approved design files ready for your intended use.</p></div><i class="fa-solid fa-paper-plane"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section"><div class="container"><div class="cta-panel"><div><span class="section-tag"><span class="status-dot"></span> HAVE A PROJECT IN MIND?</span><h2>Let's make something<br><span class="gradient-text">people remember.</span></h2></div><a class="btn" href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20I%20want%20to%20start%20a%20graphic%20design%20project."><i class="fa-brands fa-whatsapp"></i> Discuss your project</a></div></div></section>
+</main>
+
+<!-- SAME FOOTER AS INDEX.HTML -->
+<footer class="pc-footer">
+  <div class="pc-footer-main">
+    <div class="pc-footer-brand">
+      <a href="index.html" class="pc-footer-logo"><img src="images/white2nd.png" alt="Pihu Creators"></a>
+      <p>Creative ideas. Digital solutions. Helping brands build their online presence through design, development and digital growth.</p>
+      <p class="pc-tagline">One step to grow every day.</p>
+      <div class="pc-social-links">
+        <a href="https://www.instagram.com/pihucreators/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/pihucreators" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        <a href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="pc-footer-column"><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="graphic%20designs.html">Graphic Portfolio</a><a href="video-content.html">Video & Reels</a><a href="contact.html">Contact</a></div>
+    <div class="pc-footer-column"><h3>Our Services</h3><a href="website-portfolio.html">Website Development</a><a href="graphic%20designs.html">Graphic Designing</a><a href="services.html#social-media">Social Media Management</a><a href="video-content.html">Video Editing & Reels</a><a href="services.html#digital-marketing">Digital Marketing & SEO</a><a href="services.html#branding">Branding & Content</a></div>
+    <div class="pc-footer-column pc-footer-contact"><h3>Get In Touch</h3><a href="mailto:pihucreators083@gmail.com"><span>✉</span> pihucreators083@gmail.com</a><a href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer"><span>☏</span> +91 93106 88455</a><a href="https://www.instagram.com/pihucreators/" target="_blank" rel="noopener noreferrer"><span>◎</span> @pihucreators</a><a href="https://pihucreators.in"><span>↗</span> pihucreators.in</a><a class="pc-footer-cta" href="contact.html">Start a Project <span>→</span></a></div>
+  </div>
+  <div class="pc-footer-bottom"><p>© <span id="pc-current-year"></span> Pihu Creators. All rights reserved.</p><p>Designed with creativity and purpose.</p></div>
+</footer>
+
+<a class="floating-whatsapp" aria-label="Chat with Pihu Creators on WhatsApp" href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+
+<div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Design preview">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">×</button>
+  <div class="lightbox-content"><img src="" alt="" id="lightboxImage"><div class="lightbox-caption" id="lightboxCaption"></div></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const menuToggle=document.querySelector(".pc-menu-toggle");
+  const navigation=document.querySelector(".pc-navigation");
+  const dropdowns=document.querySelectorAll(".pc-dropdown");
+  function closeDropdowns(except=null){dropdowns.forEach(dropdown=>{if(dropdown===except)return;dropdown.classList.remove("open");const button=dropdown.querySelector(".pc-dropdown-toggle");if(button)button.setAttribute("aria-expanded","false")})}
+  function closeMobileMenu(){if(!menuToggle||!navigation)return;menuToggle.classList.remove("active");navigation.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");closeDropdowns()}
+  if(menuToggle&&navigation){menuToggle.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("open");menuToggle.classList.toggle("active",isOpen);menuToggle.setAttribute("aria-expanded",String(isOpen));if(!isOpen)closeDropdowns()})}
+  dropdowns.forEach(dropdown=>{const button=dropdown.querySelector(".pc-dropdown-toggle");if(!button)return;button.addEventListener("click",event=>{event.stopPropagation();const willOpen=!dropdown.classList.contains("open");closeDropdowns(dropdown);dropdown.classList.toggle("open",willOpen);button.setAttribute("aria-expanded",String(willOpen))})});
+  document.addEventListener("click",event=>{if(!event.target.closest(".pc-navigation"))closeDropdowns();if(navigation&&menuToggle&&!event.target.closest(".pc-header"))closeMobileMenu()});
+  document.querySelectorAll(".pc-navigation a").forEach(link=>link.addEventListener("click",closeMobileMenu));
+  document.addEventListener("keydown",event=>{if(event.key==="Escape")closeMobileMenu()});
+  const year=document.getElementById("pc-current-year");if(year)year.textContent=new Date().getFullYear();
+});
+
+/* PORTFOLIO DATA — all 60 entries and original image paths retained */
+const graphicSamples=[
+...["images second folder/brew and bean logo.png","images second folder/AUTYDIDI LOGO.jpg","images second folder/tripal udyog logo.png","images second folder/pantherlogistics logo.png","images second folder/agg bro logo.png","images second folder/NOVACORE 3D company logo.png","images second folder/kvs updated logo in portrait.jpeg","images second folder/panther digital logo.png","images second folder/velora logo.png","images second folder/prime build logo.png"].map((image,i)=>({title:`Logo Design ${String(i+1).padStart(2,"0")}`,category:"logo",label:"Logo Design",image})),
+...["images branding/agg bro branding .png","images branding/kvs branding  .png","images branding/pihu creators brandign.png","images branding/panther digital branding.png","images branding/panther logistics branding .png","images branding/AK POWER Brand Identity Showcase.png"].map((image,i)=>({title:`Branding Design ${String(i+1).padStart(2,"0")}`,category:"branding",label:"Branding",image})),
+...["images carousal/carousal panther logisctics.png","images carousal/kvs caoursal.png","images carousal/Panther_Digital_Solutions_Carousel_Preview.png","images carousal/panther logsitics caorousals.png"].map((image,i)=>({title:`Carousel Design ${String(i+1).padStart(2,"0")}`,category:"carousel",label:"Carousel",image})),
+...["images printing/wire adver.png","images printing/happy selling lapto adver.png","images printing/adver panther.png","images printing/heater advertisement.png"].map((image,i)=>({title:`Advertisement / Poster ${String(i+1).padStart(2,"0")}`,category:"ads",label:"Ads & Posters",image})),
+...["images smm/Powering Businesses with Logistics Solutions.png","images smm/Panther Logistics_ Precision Freight Nationwide.png","images smm/logo post 8.png","images smm/erp stop switching 12.png","images smm/erp 11, 5 problem solving.png","images smm/logo post 4.png","images smm/one dash panther.png","images smm/panther digital 2.png","images smm/erp stop switching 12.png","images smm/Panther Logistics_ Precision Freight Poster.png"].map((image,i)=>({title:`Social Media Design ${String(i+1).padStart(2,"0")}`,category:"social",label:"Social Media",image})),
+...["images printing/menu card brew and bean.png","images printing/menu card velora .png","images printing/menu coffee time.png","images printing/print trauplin.png","images printing/print agg bro.jpeg","images printing/upnexz print.png"].map((image,i)=>({title:`Print Design ${String(i+1).padStart(2,"0")}`,category:"print",label:"Print Design",image})),
+...["images printing/youtube thumbnail semicon.png","images printing/india youtube thumbnail.png","images printing/youtube thumbnail.png","images printing/thumbnail ai tech.png","images printing/india youtube thumbnail.png","images printing/nse thumbnails.png"].map((image,i)=>({title:`YouTube Thumbnail ${String(i+1).padStart(2,"0")}`,category:"youtube-thumbnail",label:"YouTube Thumbnail",image})),
+...["images printing/linkedin banner.png","images printing/codenest linkedin banner.jpeg","images printing/linkedin banner of panther logistic.png","images printing/panther digital linkedin.png"].map((image,i)=>({title:`LinkedIn Banner ${String(i+1).padStart(2,"0")}`,category:"linkedin-banner",label:"LinkedIn Banner",image})),
+...["images printing/panther logistics back visiting card.png","images printing/panther logistics visiting card.png","images printing/visiting card pihu creators.png","images printing/bharat electricals visiting card.png"].map((image,i)=>({title:`Visiting Card ${String(i+1).padStart(2,"0")}`,category:"visiting-card",label:"Visiting Card",image})),
+...["images printing/brouchure pihu.png","images printing/german brouhure.png","images printing/parlour brouhure.png","images printing/panther logistics brouhure.png"].map((image,i)=>({title:`Brochure Design ${String(i+1).padStart(2,"0")}`,category:"brochure",label:"Brochure",image})),
+...["images printing/flate  flyer.png","images printing/pihu flyer.png"].map((image,i)=>({title:`Flyer Design ${String(i+1).padStart(2,"0")}`,category:"flyer",label:"Flyer",image}))
+];
+
+const grid=document.getElementById("portfolioGrid"),count=document.getElementById("portfolioCount"),empty=document.getElementById("emptyState"),search=document.getElementById("portfolioSearch"),filters=document.querySelectorAll(".filter-btn");
+let activeCategory="all";
+function renderPortfolio(){
+ const term=search.value.toLowerCase().trim();
+ const items=graphicSamples.filter(item=>(activeCategory==="all"||item.category===activeCategory)&&(`${item.title} ${item.label} ${item.category} ${item.image}`).toLowerCase().includes(term));
+ grid.replaceChildren();count.textContent=`Showing ${items.length} design${items.length===1?"":"s"}`;empty.style.display=items.length?"none":"block";
+ items.forEach(item=>{
+  const card=document.createElement("article");card.className="work-card";
+  const preview=document.createElement("button");preview.className="work-visual";preview.type="button";preview.setAttribute("aria-label",`Preview ${item.title}`);
+  const img=document.createElement("img");img.src=item.image;img.alt=item.title;img.loading="lazy";
+  img.onerror=()=>{img.style.display="none";preview.style.cursor="default";preview.style.background="linear-gradient(135deg,#eaf3ff,#dceaff)";preview.title=`Image file not found: ${item.image}`};
+  preview.appendChild(img);preview.addEventListener("click",()=>{if(img.complete&&img.naturalWidth>0)openLightbox(item.image,item.title)});
+  const info=document.createElement("div");info.className="work-info";const textArea=document.createElement("div");
+  const title=document.createElement("h3");title.textContent=item.title;const label=document.createElement("p");label.textContent=item.label;textArea.append(title,label);
+  const view=document.createElement("button");view.className="view-btn";view.type="button";view.setAttribute("aria-label",`View ${item.title}`);view.innerHTML='<i class="fa-solid fa-expand"></i>';view.addEventListener("click",()=>{if(img.complete&&img.naturalWidth>0)openLightbox(item.image,item.title)});
+  info.append(textArea,view);card.append(preview,info);grid.appendChild(card);
+ });
+}
+filters.forEach(button=>button.addEventListener("click",()=>{filters.forEach(btn=>btn.classList.remove("active"));button.classList.add("active");activeCategory=button.dataset.category;renderPortfolio()}));
+search.addEventListener("input",renderPortfolio);
+const lightbox=document.getElementById("lightbox"),lightboxImage=document.getElementById("lightboxImage"),caption=document.getElementById("lightboxCaption");
+function openLightbox(src,title){lightboxImage.src=src;lightboxImage.alt=title;caption.textContent=title;lightbox.classList.add("open");document.body.style.overflow="hidden"}
+function closeLightbox(){lightbox.classList.remove("open");lightboxImage.src="";document.body.style.overflow=""}
+document.getElementById("lightboxClose").addEventListener("click",closeLightbox);
+lightbox.addEventListener("click",event=>{if(event.target===lightbox)closeLightbox()});
+document.addEventListener("keydown",event=>{if(event.key==="Escape")closeLightbox()});
+renderPortfolio();
+</script>
+</body>
+</html>

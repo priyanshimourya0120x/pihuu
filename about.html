@@ -1,0 +1,1944 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0756c9">
+
+  <title>About Us | Pihu Creators – Creative Digital Studio</title>
+  <meta name="description" content="Discover Pihu Creators, a creative digital studio offering website development, graphic design, branding, video editing and social media management.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS%20FOLDER/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ==========================================
+       PIHU CREATORS - SHARED NAVBAR & FOOTER
+    ========================================== */
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: #10213a;
+      background: #f7faff;
+    }
+
+    a { text-decoration: none; }
+
+    .pc-header, .pc-header *, .pc-footer, .pc-footer * {
+      box-sizing: border-box;
+    }
+
+    .pc-header {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      width: 100%;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #dce8f8;
+      box-shadow: 0 5px 25px rgba(14,48,95,.07);
+      backdrop-filter: blur(18px);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .pc-header-inner {
+      width: min(1320px,92%);
+      min-height: 82px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .pc-logo {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pc-logo img {
+      display: block;
+      width: 145px;
+      max-height: 64px;
+      object-fit: contain;
+    }
+
+    .pc-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+
+    .pc-navigation a,
+    .pc-dropdown-toggle {
+      font-family: inherit;
+      text-decoration: none;
+    }
+
+    .pc-nav-link, .pc-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 12px 13px;
+      color: #10213a;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      cursor: pointer;
+      transition: color .2s, background .2s;
+    }
+
+    .pc-nav-link:hover,
+    .pc-dropdown-toggle:hover,
+    .pc-dropdown.open > .pc-dropdown-toggle {
+      color: #0756c9;
+      background: #edf5ff;
+    }
+
+    .pc-dropdown { position: relative; }
+
+    .pc-chevron {
+      font-size: 18px;
+      transition: transform .2s;
+    }
+
+    .pc-dropdown.open .pc-chevron {
+      transform: rotate(180deg);
+    }
+
+    .pc-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      z-index: 10000;
+      width: 315px;
+      padding: 9px;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(7px);
+      pointer-events: none;
+      background: #fff;
+      border: 1px solid #e2eaf5;
+      border-radius: 15px;
+      box-shadow: 0 18px 50px rgba(13,45,89,.16);
+      transition: opacity .2s, transform .2s, visibility .2s;
+    }
+
+    .pc-dropdown:hover > .pc-dropdown-menu,
+    .pc-dropdown:focus-within > .pc-dropdown-menu,
+    .pc-dropdown.open > .pc-dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .pc-dropdown-menu > a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 10px;
+      color: #10213a;
+      border-radius: 10px;
+    }
+
+    .pc-dropdown-menu > a:hover { background: #edf5ff; }
+
+    .pc-dropdown-menu > a > span:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pc-dropdown-menu strong {
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .pc-dropdown-menu small {
+      color: #64748b;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .pc-menu-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 39px;
+      height: 39px;
+      color: #0756c9;
+      background: #eaf3ff;
+      border-radius: 10px;
+      font-size: 19px;
+    }
+
+    .pc-header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-left: 7px;
+      padding: 13px 16px;
+      color: #fff !important;
+      background: linear-gradient(135deg,#0756c9,#087fe0);
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+      box-shadow: 0 8px 20px rgba(7,86,201,.2);
+      transition: transform .2s;
+    }
+
+    .pc-header-cta:hover { transform: translateY(-2px); }
+
+    .pc-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 43px;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      border: 1px solid #e2eaf5;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .pc-menu-toggle span {
+      width: 21px;
+      height: 2px;
+      background: #07377f;
+      border-radius: 4px;
+      transition: .2s;
+    }
+
+    .pc-menu-toggle.active span:first-child {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .pc-menu-toggle.active span:nth-child(2) { opacity: 0; }
+
+    .pc-menu-toggle.active span:last-child {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Footer */
+
+    .pc-footer {
+      color: #dce8fb;
+      background:
+        radial-gradient(circle at 12% 0%,#123d79 0,transparent 36%),
+        linear-gradient(135deg,#07152d,#061023 65%,#0a1d3c);
+      font-family: "DM Sans",sans-serif;
+    }
+
+    .pc-footer-main {
+      width: min(1320px,90%);
+      margin: auto;
+      padding: 68px 0 52px;
+      display: grid;
+      grid-template-columns: 1.4fr .8fr 1fr 1.2fr;
+      gap: 40px;
+    }
+
+    .pc-footer-logo {
+      display: inline-flex;
+      margin-bottom: 15px;
+    }
+
+    .pc-footer-logo img {
+      display: block;
+      width: 160px;
+      max-height: 75px;
+      object-fit: contain;
+    }
+
+    .pc-footer-brand > p {
+      max-width: 340px;
+      color: #aebed7;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .pc-footer-brand .pc-tagline {
+      color: #70d4ff;
+      font-weight: 800;
+    }
+
+    .pc-social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pc-social-links a {
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      background: #ffffff12;
+      border: 1px solid #ffffff22;
+      border-radius: 10px;
+      transition: .2s;
+    }
+
+    .pc-social-links a:hover {
+      background: #0756c9;
+      transform: translateY(-3px);
+    }
+
+    .pc-footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    .pc-footer-column h3 {
+      margin: 7px 0 10px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .pc-footer-column > a {
+      color: #b6c5dc;
+      font-size: 12px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+      transition: color .2s;
+    }
+
+    .pc-footer-column > a:hover { color: #71d7ff; }
+
+    .pc-footer-contact > a:not(.pc-footer-cta) {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+    }
+
+    .pc-footer-contact > a > span {
+      color: #64cfff;
+      font-weight: 800;
+    }
+
+    .pc-footer-cta {
+      display: inline-flex;
+      gap: 12px;
+      margin-top: 8px;
+      padding: 11px 15px;
+      color: #fff !important;
+      background: #0756c9;
+      border-radius: 9px;
+    }
+
+    .pc-footer-bottom {
+      width: min(1320px,90%);
+      margin: auto;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border-top: 1px solid #ffffff20;
+    }
+
+    .pc-footer-bottom p {
+      margin: 0;
+      color: #9aacc8;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    /* ==========================================
+       ABOUT PAGE - SKY BLUE GRID THEME
+    ========================================== */
+
+    .about-page {
+      overflow: hidden;
+      background-color: #f4f9ff;
+      background-image:
+        linear-gradient(rgba(7,86,201,.055) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(7,86,201,.055) 1px, transparent 1px);
+      background-size: 38px 38px;
+    }
+
+    .about-container {
+      width: min(1200px,90%);
+      margin: auto;
+    }
+
+    .about-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      color: #0756c9;
+      background: rgba(255,255,255,.85);
+      border: 1px solid #c8defb;
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+    }
+
+    .about-eyebrow i { font-size: 13px; }
+
+    .about-hero {
+      position: relative;
+      padding: 105px 0 95px;
+      background:
+        radial-gradient(ellipse at 80% 15%,#d1e7ff 0,transparent 38%),
+        linear-gradient(135deg,rgba(255,255,255,.96),rgba(229,241,255,.87));
+      border-bottom: 1px solid #dbe9fb;
+    }
+
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .about-hero h1 {
+      margin: 24px 0 20px;
+      color: #0b1b35;
+      font-size: clamp(39px,5.2vw,66px);
+      font-weight: 800;
+      letter-spacing: -2.5px;
+      line-height: 1.1;
+    }
+
+    .about-hero h1 span {
+      color: #0756c9;
+      position: relative;
+    }
+
+    .about-hero-copy {
+      max-width: 620px;
+      color: #53657e;
+      font-size: 16px;
+      line-height: 1.95;
+    }
+
+    .about-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 28px;
+    }
+
+    .about-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 21px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .about-btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg,#0756c9,#087fe0);
+      box-shadow: 0 9px 22px #0756c925;
+    }
+
+    .about-btn-primary:hover {
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 13px 28px #0756c938;
+    }
+
+    .about-btn-outline {
+      color: #0756c9;
+      background: #fff;
+      border-color: #c5dafa;
+    }
+
+    .about-btn-outline:hover {
+      color: #0756c9;
+      background: #eaf3ff;
+      transform: translateY(-3px);
+    }
+
+    /* Hero creative visual */
+
+    .about-visual {
+      position: relative;
+      min-height: 410px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      background: linear-gradient(145deg,#ffffffd9,#dceaffb8);
+      box-shadow: 0 25px 70px #153c7014;
+    }
+
+    .about-visual-inner {
+      width: 100%;
+      padding: 30px 23px;
+      text-align: center;
+      background: rgba(255,255,255,.93);
+      border: 1px solid #e5effd;
+      border-radius: 23px;
+      box-shadow: 0 12px 35px #153c700c;
+    }
+
+    .about-visual-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 38px;
+      border-radius: 26px;
+      background: linear-gradient(135deg,#0756c9,#36c7f4);
+      box-shadow: 0 12px 28px #0756c92c;
+    }
+
+    .about-visual-inner h2 {
+      margin: 0 0 10px;
+      color: #0b1b35;
+      font-size: 27px;
+      font-weight: 800;
+    }
+
+    .about-visual-inner p {
+      margin: 0;
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .about-float {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 16px;
+      color: #17345b;
+      background: #fff;
+      border: 1px solid #d9e8fc;
+      border-radius: 13px;
+      box-shadow: 0 12px 30px #153c7014;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .about-float i {
+      color: #0756c9;
+      font-size: 17px;
+    }
+
+    .about-float-one { top: 18px; left: -22px; }
+    .about-float-two { right: -20px; bottom: 20px; }
+
+    /* Shared section styling */
+
+    .about-section {
+      padding: 88px 0;
+    }
+
+    .about-section-white {
+      background: rgba(255,255,255,.88);
+      border-top: 1px solid #e1ecfa;
+      border-bottom: 1px solid #e1ecfa;
+    }
+
+    .about-section-heading {
+      max-width: 750px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .about-section-heading > span {
+      color: #0756c9;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+    }
+
+    .about-section-heading h2 {
+      margin: 14px 0;
+      color: #0b1b35;
+      font-size: clamp(29px,4vw,43px);
+      font-weight: 800;
+      letter-spacing: -1.3px;
+      line-height: 1.2;
+    }
+
+    .about-section-heading p {
+      margin: 0;
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* Our story */
+
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .about-story-visual {
+      position: relative;
+      min-height: 365px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d5e7fd;
+      border-radius: 24px;
+      background: linear-gradient(145deg,#dcecff,#f8fbff);
+      overflow: hidden;
+    }
+
+    .about-story-visual::before,
+    .about-story-visual::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #a8cdf8;
+      border-radius: 50%;
+    }
+
+    .about-story-visual::before {
+      width: 270px;
+      height: 270px;
+    }
+
+    .about-story-visual::after {
+      width: 205px;
+      height: 205px;
+    }
+
+    .about-story-center {
+      position: relative;
+      z-index: 1;
+      width: 165px;
+      height: 165px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      text-align: center;
+      border: 7px solid #ffffffb8;
+      border-radius: 35px;
+      background: linear-gradient(135deg,#0756c9,#18b8ee);
+      box-shadow: 0 20px 45px #0756c930;
+      transform: rotate(-5deg);
+    }
+
+    .about-story-center i {
+      font-size: 43px;
+    }
+
+    .about-story-center span {
+      display: block;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .about-story-content h2 {
+      margin: 0 0 20px;
+      color: #0b1b35;
+      font-size: clamp(28px,3.5vw,39px);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .about-story-content h2 span { color: #0756c9; }
+
+    .about-story-content p {
+      margin-bottom: 17px;
+      color: #5b6c83;
+      font-size: 15px;
+      line-height: 1.95;
+    }
+
+    .about-check-list {
+      display: grid;
+      gap: 13px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .about-check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #243c5d;
+      font-size: 14px;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    .about-check-list i {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: #0878d7;
+    }
+
+    /* Mission and vision */
+
+    .about-purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 23px;
+    }
+
+    .about-purpose-card {
+      position: relative;
+      padding: 35px;
+      background: rgba(255,255,255,.93);
+      border: 1px solid #dce9fa;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px #153c7008;
+      transition: .3s;
+    }
+
+    .about-purpose-card:hover {
+      transform: translateY(-5px);
+      border-color: #9fc9fa;
+      box-shadow: 0 20px 40px #153c7012;
+    }
+
+    .about-card-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 23px;
+      color: #0756c9;
+      background: #e8f2ff;
+      border: 1px solid #d5e7ff;
+      border-radius: 16px;
+      font-size: 24px;
+    }
+
+    .about-purpose-card h3 {
+      margin: 0 0 13px;
+      color: #10213a;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .about-purpose-card p {
+      margin: 0;
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    /* Values */
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .about-value-card {
+      padding: 28px 23px;
+      background: #fff;
+      border: 1px solid #dfeafb;
+      border-radius: 17px;
+      box-shadow: 0 9px 28px #153c7007;
+      transition: .3s;
+    }
+
+    .about-value-card:hover {
+      transform: translateY(-5px);
+      border-color: #9fc9fa;
+    }
+
+    .about-value-card .about-card-icon {
+      width: 51px;
+      height: 51px;
+      font-size: 21px;
+      margin-bottom: 19px;
+    }
+
+    .about-value-card h3 {
+      margin: 0 0 10px;
+      color: #10213a;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .about-value-card p {
+      margin: 0;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* Our process */
+
+    .about-process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .about-process-card {
+      padding: 27px 21px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid #dce9fa;
+      border-radius: 17px;
+      transition: .3s;
+    }
+
+    .about-process-card:hover {
+      transform: translateY(-5px);
+      border-color: #9fc9fa;
+      box-shadow: 0 15px 30px #153c7010;
+    }
+
+    .about-step-number {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      color: #fff;
+      background: linear-gradient(135deg,#0756c9,#16a6ed);
+      border-radius: 13px;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .about-process-card h3 {
+      margin: 0 0 11px;
+      color: #10213a;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .about-process-card p {
+      margin: 0;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.85;
+    }
+
+    /* CTA */
+
+    .about-cta-section {
+      padding: 0 0 90px;
+      background: transparent;
+    }
+
+    .about-cta {
+      position: relative;
+      padding: 62px 30px;
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #ffffff35;
+      border-radius: 25px;
+      background:
+        radial-gradient(circle at 85% 0%,#27b5f5 0,transparent 33%),
+        linear-gradient(120deg,#073c91,#0879df);
+      box-shadow: 0 22px 50px #0756c91c;
+    }
+
+    .about-cta h2 {
+      max-width: 760px;
+      margin: 0 auto 16px;
+      font-size: clamp(28px,4vw,43px);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .about-cta p {
+      max-width: 660px;
+      margin: 0 auto 27px;
+      color: #e2efff;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .about-cta .about-btn {
+      color: #0756c9;
+      background: #fff;
+    }
+
+    .about-cta .about-btn:hover {
+      background: #edf6ff;
+      transform: translateY(-3px);
+    }
+
+    /* Accessibility and animations */
+
+    .about-reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .about-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+
+      .about-reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Responsive */
+
+    @media (max-width: 1050px) {
+      .pc-header-inner {
+        width: 94%;
+        min-height: 74px;
+      }
+
+      .pc-logo img { width: 130px; }
+
+      .pc-menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+      }
+
+      .pc-navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        max-height: calc(100vh - 74px);
+        overflow-y: auto;
+        padding: 17px 5% 24px;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 5px;
+        background: #fff;
+        border-top: 1px solid #e2eaf5;
+        box-shadow: 0 18px 28px #0d2d591f;
+      }
+
+      .pc-navigation.open { display: flex; }
+
+      .pc-nav-link, .pc-dropdown-toggle {
+        width: 100%;
+        min-height: 45px;
+        justify-content: space-between;
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+
+      .pc-dropdown { width: 100%; }
+
+      .pc-dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        margin: 0 0 8px;
+        padding: 7px;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        box-shadow: none;
+        background: #f9fbff;
+      }
+
+      .pc-dropdown.open > .pc-dropdown-menu { display: block; }
+      .pc-dropdown:hover > .pc-dropdown-menu { display: none; }
+
+      .pc-dropdown.open:hover > .pc-dropdown-menu {
+        display: block;
+      }
+
+      .pc-header-cta {
+        min-height: 45px;
+        margin: 9px 0 0;
+      }
+
+      .pc-footer-main {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 35px;
+      }
+
+      .about-hero-grid { gap: 35px; }
+      .about-visual { min-height: 350px; }
+      .about-story-grid { gap: 35px; }
+
+      .about-process-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .about-hero {
+        padding: 72px 0;
+      }
+
+      .about-hero-grid,
+      .about-story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-hero-grid { gap: 48px; }
+
+      .about-hero h1 {
+        font-size: clamp(37px,8vw,53px);
+        letter-spacing: -1.5px;
+      }
+
+      .about-hero-copy { font-size: 15px; }
+
+      .about-visual {
+        width: 100%;
+        max-width: 510px;
+        min-height: 320px;
+        margin: auto;
+      }
+
+      .about-story-visual {
+        min-height: 315px;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .about-section { padding: 68px 0; }
+
+      .about-section-heading { margin-bottom: 35px; }
+
+      .about-purpose-grid { grid-template-columns: 1fr; }
+
+      .about-values-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+
+      .about-cta-section { padding-bottom: 65px; }
+    }
+
+    @media (max-width: 560px) {
+      .pc-header-inner { min-height: 68px; }
+
+      .pc-logo img {
+        width: 115px;
+        max-height: 53px;
+      }
+
+      .pc-navigation { max-height: calc(100vh - 68px); }
+
+      .pc-footer-main {
+        width: 90%;
+        padding: 48px 0 34px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .pc-footer-brand > p { max-width: 100%; }
+
+      .pc-footer-bottom {
+        width: 90%;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .about-container { width: 90%; }
+
+      .about-hero { padding: 58px 0; }
+
+      .about-hero h1 {
+        font-size: 39px;
+        line-height: 1.16;
+      }
+
+      .about-eyebrow {
+        font-size: 10px;
+        letter-spacing: .8px;
+      }
+
+      .about-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .about-btn { width: 100%; }
+
+      .about-visual {
+        min-height: 285px;
+        padding: 15px;
+        border-radius: 22px;
+      }
+
+      .about-visual-inner { padding: 25px 15px; }
+
+      .about-visual-inner h2 { font-size: 23px; }
+
+      .about-visual-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        border-radius: 20px;
+      }
+
+      .about-float {
+        padding: 10px 11px;
+        font-size: 10px;
+      }
+
+      .about-float-one { left: -5px; top: 7px; }
+      .about-float-two { right: -5px; bottom: 7px; }
+
+      .about-section { padding: 58px 0; }
+
+      .about-section-heading h2 {
+        font-size: 30px;
+        letter-spacing: -.7px;
+      }
+
+      .about-section-heading p { font-size: 14px; }
+
+      .about-story-visual {
+        min-height: 280px;
+        padding: 15px;
+      }
+
+      .about-story-visual::before {
+        width: 230px;
+        height: 230px;
+      }
+
+      .about-story-visual::after {
+        width: 175px;
+        height: 175px;
+      }
+
+      .about-story-center {
+        width: 140px;
+        height: 140px;
+      }
+
+      .about-story-content h2 { font-size: 29px; }
+      .about-story-content p { font-size: 14px; }
+
+      .about-purpose-card { padding: 27px 23px; }
+
+      .about-values-grid,
+      .about-process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-value-card,
+      .about-process-card { padding: 25px 22px; }
+
+      .about-cta-section { padding-bottom: 55px; }
+
+      .about-cta {
+        padding: 43px 20px;
+        border-radius: 20px;
+      }
+
+      .about-cta h2 { font-size: 29px; }
+      .about-cta p { font-size: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================
+       SHARED NAVBAR
+  ========================================== -->
+
+  <header class="pc-header">
+    <div class="pc-header-inner">
+
+      <a href="index.html" class="pc-logo" aria-label="Pihu Creators Home">
+        <img src="images/white2nd.png" alt="Pihu Creators Logo">
+      </a>
+
+      <button class="pc-menu-toggle" type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="pc-navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="pc-navigation" id="pc-navigation" aria-label="Main navigation">
+
+        <a class="pc-nav-link" href="index.html">Home</a>
+        <a class="pc-nav-link" href="about.html" aria-current="page">About</a>
+
+        <div class="pc-dropdown">
+          <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+            Services <span class="pc-chevron">⌄</span>
+          </button>
+
+          <div class="pc-dropdown-menu">
+            <a href="services.html">
+              <span class="pc-menu-icon">✦</span>
+              <span><strong>All Services</strong><small>Explore our creative solutions</small></span>
+            </a>
+            <a href="services.html#social-media">
+              <span class="pc-menu-icon">◎</span>
+              <span><strong>Social Media Management</strong><small>Content planning and page growth</small></span>
+            </a>
+            <a href="graphic%20designs.html">
+              <span class="pc-menu-icon">✎</span>
+              <span><strong>Graphic Design</strong><small>Logos, posts, banners and branding</small></span>
+            </a>
+            <a href="video-content.html">
+              <span class="pc-menu-icon">▶</span>
+              <span><strong>Video Editing & Reels</strong><small>Reels, ads and promotional videos</small></span>
+            </a>
+            <a href="services.html#web-development">
+              <span class="pc-menu-icon">⌘</span>
+              <span><strong>Website Development</strong><small>Responsive business websites</small></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pc-dropdown">
+          <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+            Projects <span class="pc-chevron">⌄</span>
+          </button>
+
+          <div class="pc-dropdown-menu">
+            <a href="graphic%20designs.html">
+              <span class="pc-menu-icon">▧</span>
+              <span><strong>Graphic Portfolio</strong><small>Designs and brand creatives</small></span>
+            </a>
+            <a href="video-content.html">
+              <span class="pc-menu-icon">▷</span>
+              <span><strong>Video & Reels Portfolio</strong><small>Explore edited videos</small></span>
+            </a>
+            <a href="website-portfolio.html">
+              <span class="pc-menu-icon">⌘</span>
+              <span><strong>Website Projects</strong><small>Web and digital solutions</small></span>
+            </a>
+          </div>
+        </div>
+
+        <a class="pc-nav-link" href="contact.html">Contact</a>
+
+        <a class="pc-header-cta"
+           href="https://wa.me/919310688455"
+           target="_blank"
+           rel="noopener noreferrer">
+          Let's Work Together <span>↗</span>
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-page">
+
+    <!-- HERO -->
+
+    <section class="about-hero">
+      <div class="about-container">
+        <div class="about-hero-grid">
+
+          <div class="about-reveal">
+            <span class="about-eyebrow">
+              <i class="fa-solid fa-sparkles"></i>
+              GET TO KNOW PIHU CREATORS
+            </span>
+
+            <h1>
+              Creative Ideas.<br>
+              Smart Solutions.<br>
+              <span>Real Growth.</span>
+            </h1>
+
+            <p class="about-hero-copy">
+              We help businesses turn their ideas into a powerful digital
+              presence through creative design, responsive websites,
+              engaging videos and social media solutions. Our goal is to
+              make your brand look professional, communicate clearly and
+              connect with the right audience.
+            </p>
+
+            <div class="about-actions">
+              <a href="contact.html" class="about-btn about-btn-primary">
+                Let's Work Together
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="services.html" class="about-btn about-btn-outline">
+                Explore Our Services
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-visual about-reveal">
+            <div class="about-float about-float-one">
+              <i class="fa-solid fa-pen-nib"></i>
+              Creative Design
+            </div>
+
+            <div class="about-visual-inner">
+              <div class="about-visual-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+
+              <h2>Ideas Into Impact</h2>
+
+              <p>
+                Design. Develop. Create. Grow.
+                <br>
+                One step to grow every day.
+              </p>
+            </div>
+
+            <div class="about-float about-float-two">
+              <i class="fa-solid fa-chart-line"></i>
+              Digital Growth
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-story-grid">
+
+          <div class="about-story-visual about-reveal">
+            <div class="about-story-center">
+              <div>
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Pihu Creators</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-story-content about-reveal">
+            <span class="about-eyebrow">OUR STORY</span>
+
+            <h2>
+              A Creative Partner for Your
+              <span>Digital Journey.</span>
+            </h2>
+
+            <p>
+              Pihu Creators is a creative digital studio focused on helping
+              businesses establish and improve their online presence.
+              We bring design, development and content together to help
+              brands communicate their value in a clear and engaging way.
+            </p>
+
+            <p>
+              Whether you are starting a new business, building your
+              website, improving your social media presence or promoting
+              your products and services, we aim to provide practical
+              creative solutions that fit your goals.
+            </p>
+
+            <p>
+              We believe that a strong digital identity begins with
+              understanding your business, your audience and the message
+              you want to share with the world.
+            </p>
+
+            <ul class="about-check-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Creative solutions tailored to your brand.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Design and development with a user-first approach.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                A focus on consistency, quality and clear communication.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+
+    <section class="about-section about-section-white">
+      <div class="about-container">
+
+        <div class="about-section-heading about-reveal">
+          <span>OUR PURPOSE</span>
+          <h2>What Drives Pihu Creators?</h2>
+          <p>
+            Every project starts with a purpose. We combine creativity
+            and practical digital solutions to help businesses move forward.
+          </p>
+        </div>
+
+        <div class="about-purpose-grid">
+
+          <article class="about-purpose-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To make creative and digital services more accessible to
+              businesses by providing thoughtful designs, functional
+              websites and engaging content that helps them present
+              their brands professionally and connect with their audience.
+            </p>
+          </article>
+
+          <article class="about-purpose-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h3>Our Vision</h3>
+
+            <p>
+              To become a trusted creative digital partner for businesses
+              of different sizes, supporting their journey from an initial
+              idea to a consistent and recognisable digital identity.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR VALUES -->
+
+    <section class="about-section">
+      <div class="about-container">
+
+        <div class="about-section-heading about-reveal">
+          <span>WHAT WE BELIEVE IN</span>
+          <h2>Our Values, Our Approach</h2>
+          <p>
+            The principles that guide how we approach creative work
+            and collaborate with our clients.
+          </p>
+        </div>
+
+        <div class="about-values-grid">
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3>Creativity</h3>
+            <p>
+              We look for thoughtful ideas and fresh visual approaches
+              that help your brand communicate effectively.
+            </p>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3>Quality</h3>
+            <p>
+              We focus on clear layouts, consistent branding,
+              attention to detail and a polished final presentation.
+            </p>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3>Collaboration</h3>
+            <p>
+              We value your ideas, requirements and feedback
+              throughout the creative process.
+            </p>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>User-First Design</h3>
+            <p>
+              We aim to make websites and digital content
+              accessible, clear and easy to navigate.
+            </p>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3>Communication</h3>
+            <p>
+              We believe in understanding project requirements
+              and keeping expectations clear from the start.
+            </p>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            <h3>Continuous Growth</h3>
+            <p>
+              We keep learning, exploring new ideas and improving
+              our approach as digital needs evolve.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+
+    <section class="about-section about-section-white">
+      <div class="about-container">
+
+        <div class="about-section-heading about-reveal">
+          <span>OUR EXPERTISE</span>
+          <h2>Creative Services Under One Roof</h2>
+          <p>
+            From your brand's visual identity to its website and
+            digital content, explore the services we offer.
+          </p>
+        </div>
+
+        <div class="about-values-grid">
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Website Development</h3>
+            <p>
+              Responsive business websites with clean layouts,
+              useful features and a smooth browsing experience.
+            </p>
+            <a href="website-portfolio.html"
+               class="about-service-link">
+              Explore service <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3>Graphic Design</h3>
+            <p>
+              Logos, branding, social media creatives, banners,
+              posters and marketing materials.
+            </p>
+            <a href="graphic designs.html" class="about-service-link">
+              View portfolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3>Video Editing</h3>
+            <p>
+              Reels, promotional videos, short-form content
+              and creative video edits for businesses.
+            </p>
+            <a href="video-content.html" class="about-service-link">
+              View portfolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-hashtag"></i>
+            </div>
+            <h3>Social Media Management</h3>
+            <p>
+              Content planning, creative posts, captions
+              and ongoing social media support.
+            </p>
+            <a href="graphic designs.html" class="about-service-link">
+              Explore service <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <h3>Digital Marketing & SEO</h3>
+            <p>
+              Search optimisation and digital support
+              to improve your online visibility.
+            </p>
+            <a href="services.html#digital-marketing" class="about-service-link">
+              Explore service <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="about-value-card about-reveal">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <h3>Content & Branding</h3>
+            <p>
+              Brand messaging and creative content that
+              communicates your business identity consistently.
+            </p>
+            <a href="graphic designs.html" class="about-service-link">
+              Explore service <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+
+    <section class="about-section">
+      <div class="about-container">
+
+        <div class="about-section-heading about-reveal">
+          <span>HOW WE WORK</span>
+          <h2>From Idea to Final Delivery</h2>
+          <p>
+            A straightforward process helps us understand your
+            requirements and work towards the right solution.
+          </p>
+        </div>
+
+        <div class="about-process-grid">
+
+          <article class="about-process-card about-reveal">
+            <div class="about-step-number">01</div>
+            <h3>Understand</h3>
+            <p>
+              We discuss your business, target audience,
+              requirements and project goals.
+            </p>
+          </article>
+
+          <article class="about-process-card about-reveal">
+            <div class="about-step-number">02</div>
+            <h3>Plan & Create</h3>
+            <p>
+              We develop a creative direction and work on
+              the design, content or website.
+            </p>
+          </article>
+
+          <article class="about-process-card about-reveal">
+            <div class="about-step-number">03</div>
+            <h3>Review</h3>
+            <p>
+              We share the work for feedback and make
+              agreed revisions according to the project scope.
+            </p>
+          </article>
+
+          <article class="about-process-card about-reveal">
+            <div class="about-step-number">04</div>
+            <h3>Deliver</h3>
+            <p>
+              We deliver the approved project files or
+              completed digital solution as agreed.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="about-cta-section">
+      <div class="about-container">
+
+        <div class="about-cta about-reveal">
+          <h2>Let's Build Something Great Together</h2>
+
+          <p>
+            Have an idea for a website, need creative designs
+            or want to improve your brand's digital presence?
+            Tell us about your project and let's explore how
+            we can work together.
+          </p>
+
+          <a href="https://wa.me/919310688455"
+             class="about-btn"
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            Let's Talk on WhatsApp
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SHARED FOOTER
+  ========================================== -->
+
+  <footer class="pc-footer">
+    <div class="pc-footer-main">
+
+      <div class="pc-footer-brand">
+        <a href="index.html" class="pc-footer-logo">
+          <img src="images/white2nd.png" alt="Pihu Creators">
+        </a>
+
+        <p>
+          Creative ideas. Digital solutions. Helping brands build
+          their online presence through design, development and digital growth.
+        </p>
+
+        <p class="pc-tagline">One step to grow every day.</p>
+
+        <div class="pc-social-links">
+          <a href="https://www.instagram.com/pihucreators/"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram">IG</a>
+
+          <a href="https://www.facebook.com/pihucreators"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Facebook">f</a>
+
+          <a href="https://wa.me/919310688455"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <div class="pc-footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="graphic designs.html">Graphic Portfolio</a>
+        <a href="video-content.html">Video & Reels</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="pc-footer-column">
+        <h3>Our Services</h3>
+        <a href="services.html#web-development">Website Development</a>
+        <a href="graphic designs.html">Graphic Designing</a>
+        <a href="services.html#social-media">Social Media Management</a>
+        <a href="video-content.html">Video Editing & Reels</a>
+        <a href="services.html#digital-marketing">Digital Marketing & SEO</a>
+        <a href="services.html#branding">Branding & Content</a>
+      </div>
+
+      <div class="pc-footer-column pc-footer-contact">
+        <h3>Get In Touch</h3>
+
+        <a href="mailto:pihucreators083@gmail.com">
+          <span>✉</span> pihucreators083@gmail.com
+        </a>
+
+        <a href="https://wa.me/919310688455"
+           target="_blank" rel="noopener noreferrer">
+          <span>☏</span> +91 93106 88455
+        </a>
+
+        <a href="https://www.instagram.com/pihucreators/"
+           target="_blank" rel="noopener noreferrer">
+          <span>◎</span> @pihucreators
+        </a>
+
+        <a href="https://pihucreators.in">
+          <span>↗</span> pihucreators.in
+        </a>
+
+        <a class="pc-footer-cta" href="contact.html">
+          Start a Project <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="pc-footer-bottom">
+      <p>© <span id="pc-current-year"></span> Pihu Creators. All rights reserved.</p>
+      <p>Designed with creativity and purpose.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const menuToggle = document.querySelector(".pc-menu-toggle");
+      const navigation = document.querySelector(".pc-navigation");
+      const dropdowns = document.querySelectorAll(".pc-dropdown");
+
+      function closeDropdowns(except = null) {
+        dropdowns.forEach((dropdown) => {
+          if (dropdown === except) return;
+
+          dropdown.classList.remove("open");
+
+          const button = dropdown.querySelector(".pc-dropdown-toggle");
+
+          if (button) {
+            button.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      function closeMobileMenu() {
+        if (!menuToggle || !navigation) return;
+
+        menuToggle.classList.remove("active");
+        navigation.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        closeDropdowns();
+      }
+
+      if (menuToggle && navigation) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = navigation.classList.toggle("open");
+
+          menuToggle.classList.toggle("active", isOpen);
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+          if (!isOpen) closeDropdowns();
+        });
+      }
+
+      dropdowns.forEach((dropdown) => {
+        const button = dropdown.querySelector(".pc-dropdown-toggle");
+
+        if (!button) return;
+
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+
+          const willOpen = !dropdown.classList.contains("open");
+
+          closeDropdowns(dropdown);
+
+          dropdown.classList.toggle("open", willOpen);
+          button.setAttribute("aria-expanded", String(willOpen));
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".pc-navigation")) {
+          closeDropdowns();
+        }
+
+        if (
+          navigation &&
+          menuToggle &&
+          !event.target.closest(".pc-header")
+        ) {
+          closeMobileMenu();
+        }
+      });
+
+      document.querySelectorAll(".pc-navigation a").forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+
+      /* Footer year */
+
+      const year = document.getElementById("pc-current-year");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+      /* Scroll reveal animation */
+
+      const revealElements = document.querySelectorAll(".about-reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12
+        });
+
+        revealElements.forEach((element) => {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>

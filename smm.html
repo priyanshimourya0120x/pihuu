@@ -1,0 +1,2238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f8ff">
+
+  <meta name="description" content="Social Media Management by Pihu Creators. Get creative Instagram posts, LinkedIn content, Facebook creatives, reels and content planning.">
+
+  <title>Social Media Management | Pihu Creators</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="CSS FOLDER/smm.css">
+
+  <style>
+    :root {
+      --navy: #07152f;
+      --blue: #1769e0;
+      --blue-light: #eaf3ff;
+      --text: #17243b;
+      --muted: #68758b;
+      --white: #ffffff;
+      --border: #e4ebf5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: #f7faff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container,
+    .pc-header-inner,
+    .pc-footer-main,
+    .pc-footer-bottom {
+      width: min(1180px, 92%);
+      margin-inline: auto;
+    }
+
+    /* NAVBAR */
+
+    .pc-header {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid #e9eef7;
+      box-shadow: 0 4px 20px rgba(20,50,90,.04);
+    }
+
+    .pc-header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .pc-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pc-logo img {
+      width: 170px;
+      height: auto;
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .pc-navigation {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .pc-nav-link {
+      color: #26364e;
+      font-size: 14px;
+      font-weight: 600;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      padding: 12px 0;
+      white-space: nowrap;
+      transition: .25s;
+    }
+
+    .pc-nav-link:hover,
+    .pc-nav-link.active {
+      color: var(--blue);
+    }
+
+    .pc-dropdown {
+      position: relative;
+    }
+
+    .pc-dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .pc-dropdown-toggle i {
+      font-size: 11px;
+    }
+
+    .pc-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 230px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 9px;
+      box-shadow: 0 15px 35px rgba(20,40,80,.12);
+      display: none;
+    }
+
+    .pc-dropdown:hover .pc-dropdown-menu,
+    .pc-dropdown.open .pc-dropdown-menu {
+      display: block;
+    }
+
+    .pc-dropdown-menu a {
+      display: block;
+      color: #34445c;
+      padding: 11px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 7px;
+      transition: .2s;
+    }
+
+    .pc-dropdown-menu a:hover,
+    .pc-dropdown-menu a.active {
+      background: var(--blue-light);
+      color: var(--blue);
+    }
+
+    .pc-header-cta {
+      background: var(--blue);
+      color: white;
+      padding: 13px 19px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: .25s;
+    }
+
+    .pc-header-cta:hover {
+      background: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .pc-menu-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .pc-menu-toggle span {
+      height: 2px;
+      width: 100%;
+      background: var(--navy);
+      display: block;
+      margin: 5px 0;
+      transition: .25s;
+    }
+
+    /* GENERAL SECTIONS */
+
+    .section-space {
+      padding: 95px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .section-heading h2,
+    .deliverables-copy h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 17px;
+      color: var(--navy);
+    }
+
+    .section-heading p,
+    .deliverables-copy p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .gradient-text {
+      color: var(--blue);
+    }
+
+    /* HERO */
+
+    .smm-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 95px 0 35px;
+      background: linear-gradient(135deg,#f7faff,#eaf3ff);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
+      border-radius: 50px;
+      background: #fff;
+      border: 1px solid #dce9fb;
+      color: #31547f;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .eyebrow-dot,
+    .status-dot {
+      height: 8px;
+      width: 8px;
+      background: #21b77a;
+      border-radius: 50%;
+    }
+
+    .hero-copy h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(39px,5.5vw,65px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      color: var(--navy);
+      margin: 25px 0;
+    }
+
+    .hero-copy p {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-actions,
+    .closing-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 21px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--navy);
+      transform: translateY(-3px);
+    }
+
+    .button-ghost {
+      background: white;
+      border: 1px solid #dce5f1;
+      color: var(--navy);
+    }
+
+    .button-ghost:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      margin-top: 30px;
+    }
+
+    .hero-points span {
+      font-size: 12px;
+      color: #52637b;
+      font-weight: 600;
+    }
+
+    .hero-points i {
+      color: #1ca875;
+      margin-right: 5px;
+    }
+
+    /* HERO CREATIVE PREVIEW */
+
+    .hero-visual {
+      position: relative;
+      padding: 20px;
+    }
+
+    .visual-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: 800;
+      color: #52637b;
+      margin-bottom: 15px;
+    }
+
+    .preview-board {
+      position: relative;
+      min-height: 450px;
+      border-radius: 22px;
+      background: white;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      box-shadow: 0 25px 65px rgba(35,80,140,.13);
+    }
+
+    .preview-card {
+      min-height: 185px;
+      padding: 20px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-linkedin {
+      background: #102f55;
+      color: white;
+    }
+
+    .preview-instagram {
+      background: #eaf1ff;
+      color: #102b51;
+    }
+
+    .preview-facebook {
+      background: #1769e0;
+      color: white;
+    }
+
+    .preview-mini-brand {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .preview-mini-brand small {
+      display: block;
+      font-size: 8px;
+      opacity: .7;
+    }
+
+    .mini-logo {
+      width: 25px;
+      height: 25px;
+      background: white;
+      color: var(--blue);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+    }
+
+    .preview-mini-brand i {
+      margin-left: auto;
+      font-size: 20px;
+    }
+
+    .preview-kicker,
+    .ig-topline,
+    .preview-facebook > span {
+      display: block;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-top: 20px;
+    }
+
+    .preview-card h2,
+    .preview-card h3 {
+      font-family: "Space Grotesk",sans-serif;
+      font-size: 25px;
+      line-height: 1.1;
+      margin: 12px 0;
+    }
+
+    .preview-card em {
+      color: #7db4ff;
+    }
+
+    .preview-card small {
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    .preview-line {
+      width: 45px;
+      height: 3px;
+      background: #7db4ff;
+      margin: 12px 0;
+    }
+
+    .ig-shapes {
+      display: flex;
+      gap: 8px;
+      margin: 15px 0;
+    }
+
+    .ig-shapes span {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #1769e0;
+    }
+
+    .ig-shapes span:nth-child(2) {
+      background: #91baff;
+    }
+
+    .ig-shapes span:nth-child(3) {
+      background: #c7dbff;
+    }
+
+    .preview-facebook i {
+      font-size: 22px;
+    }
+
+    .floating-tag {
+      position: absolute;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 12px 15px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(30,60,100,.1);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .floating-tag i {
+      color: var(--blue);
+      margin-right: 6px;
+    }
+
+    .floating-tag-one {
+      top: 100px;
+      right: -5px;
+    }
+
+    .floating-tag-two {
+      bottom: 20px;
+      left: -15px;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 55px;
+      color: #60718a;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .hero-line {
+      flex: 1;
+      height: 1px;
+      background: #d4e0f1;
+    }
+
+    /* PLATFORMS */
+
+    .platform-strip {
+      padding: 55px 0;
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .platform-intro h2 {
+      font-family: "Space Grotesk",sans-serif;
+      font-size: 23px;
+      margin: 8px 0 0;
+      color: var(--navy);
+    }
+
+    .platform-intro .section-kicker {
+      font-size: 10px;
+      margin: 0;
+    }
+
+    .platform-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .platform-item > i {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 21px;
+    }
+
+    .platform-item h3 {
+      margin: 0 0 5px;
+      font-size: 14px;
+    }
+
+    .platform-item p {
+      margin: 0;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* CREATIVE GALLERY */
+
+    .work-section {
+      background: #f7faff;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 35px;
+    }
+
+    .filter-btn {
+      border: 1px solid #dce6f3;
+      background: white;
+      color: #506078;
+      padding: 10px 17px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .creative-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .creative-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(30,60,100,.09);
+    }
+
+    .creative-card.hidden {
+      display: none;
+    }
+
+    .creative-open {
+      width: 100%;
+      display: block;
+      border: 0;
+      padding: 15px;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .artwork {
+      min-height: 270px;
+      padding: 25px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .art-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 9px;
+      font-weight: 800;
+      color: white;
+    }
+
+    .art-brand i {
+      margin-left: auto;
+      font-size: 20px;
+    }
+
+    .art-logo {
+      display: grid;
+      place-items: center;
+      width: 27px;
+      height: 27px;
+      background: white;
+      color: var(--blue);
+      border-radius: 6px;
+    }
+
+    .art-label {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-top: 18px;
+    }
+
+    .artwork h3 {
+      font-family: "Space Grotesk",sans-serif;
+      font-size: 37px;
+      line-height: 1.05;
+      margin: 15px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .artwork p {
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .art-footer {
+      position: absolute;
+      bottom: 18px;
+      left: 25px;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+    }
+
+    .art-linkedin {
+      background: #12365f;
+      color: white;
+    }
+
+    .art-linkedin h3 span {
+      color: #8bc0ff;
+    }
+
+    .art-corner-shape {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border: 25px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      right: -65px;
+      bottom: -50px;
+    }
+
+    .art-instagram {
+      background: #e7efff;
+      color: #142d51;
+    }
+
+    .art-instagram h3 em,
+    .art-carousel h3 em,
+    .art-reels h3 em,
+    .art-service h3 em {
+      color: var(--blue);
+    }
+
+    .art-orbit {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      display: flex;
+      gap: 6px;
+      transform: rotate(-25deg);
+    }
+
+    .art-orbit span {
+      width: 30px;
+      height: 80px;
+      background: #1769e0;
+      border-radius: 50%;
+    }
+
+    .art-orbit span:nth-child(2) {
+      background: #80b5ff;
+    }
+
+    .art-orbit span:nth-child(3) {
+      background: #bed8ff;
+    }
+
+    .art-facebook {
+      background: #1769e0;
+      color: white;
+    }
+
+    .fb-badge {
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .art-button {
+      display: inline-block;
+      width: fit-content;
+      padding: 9px 13px;
+      background: white;
+      color: var(--blue);
+      font-size: 9px;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+
+    .art-carousel {
+      background: #142f53;
+      color: white;
+    }
+
+    .carousel-pages {
+      display: flex;
+      gap: 7px;
+      margin-top: 15px;
+    }
+
+    .carousel-pages span {
+      width: 28px;
+      height: 35px;
+      border: 1px solid #80b5ff;
+      display: grid;
+      place-items: center;
+      border-radius: 4px;
+      font-size: 9px;
+    }
+
+    .art-reels {
+      background: #e4efff;
+      color: #132f53;
+    }
+
+    .reel-pill {
+      display: inline-block;
+      width: fit-content;
+      padding: 7px 11px;
+      border-radius: 30px;
+      color: white;
+      background: var(--blue);
+      font-size: 9px;
+      font-weight: 800;
+    }
+
+    .reel-sun {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: #b5d2ff;
+      border-radius: 50%;
+      right: -30px;
+      top: 55px;
+    }
+
+    .art-service {
+      background: #f0f5ff;
+      color: #15345e;
+    }
+
+    .service-symbol {
+      font-size: 25px;
+      color: var(--blue);
+    }
+
+    .creative-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px 20px;
+    }
+
+    .creative-type {
+      color: var(--blue);
+      font-size: 9px;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .creative-info h3 {
+      margin: 5px 0 0;
+      font-size: 15px;
+    }
+
+    .creative-arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--blue-light);
+      color: var(--blue);
+      border: 0;
+      cursor: pointer;
+    }
+
+    .sample-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 30px;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      background: white;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      background: #f7faff;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 25px;
+      position: relative;
+      transition: .25s;
+    }
+
+    .process-card:hover {
+      border-color: #a9caff;
+      transform: translateY(-5px);
+    }
+
+    .process-number {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #9cb4d5;
+    }
+
+    .process-icon {
+      width: 48px;
+      height: 48px;
+      background: #e4efff;
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-size: 20px;
+    }
+
+    .process-card h3 {
+      margin: 22px 0 9px;
+      font-family: "Space Grotesk",sans-serif;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* DELIVERABLES */
+
+    .deliverables-section {
+      background: #f0f5ff;
+    }
+
+    .deliverables-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .deliverables-copy {
+      position: sticky;
+      top: 120px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: 20px;
+    }
+
+    .deliverables-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .deliverable {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: white;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: .25s;
+    }
+
+    .deliverable:hover {
+      border-color: #a9caff;
+      transform: translateX(5px);
+    }
+
+    .deliverable > span {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    .deliverable h3 {
+      font-size: 14px;
+      margin: 0 0 6px;
+    }
+
+    .deliverable p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .deliverable-arrow {
+      margin-left: auto;
+      color: #9aabc2;
+      font-size: 13px;
+    }
+
+    /* CTA */
+
+    .closing-section {
+      background: white;
+    }
+
+    .closing-panel {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 75px 30px;
+      border-radius: 22px;
+      background: linear-gradient(135deg,#092b59,#1769e0);
+      color: white;
+    }
+
+    .closing-panel .section-kicker {
+      color: #b9d7ff;
+    }
+
+    .closing-panel h2 {
+      max-width: 700px;
+      margin: 0 auto 18px;
+      font-family: "Space Grotesk",sans-serif;
+      font-size: clamp(32px,4vw,49px);
+      line-height: 1.15;
+    }
+
+    .closing-panel .gradient-text {
+      color: #a9d0ff;
+    }
+
+    .closing-panel p {
+      max-width: 600px;
+      margin: auto;
+      color: #d9e8ff;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .closing-actions {
+      justify-content: center;
+    }
+
+    .closing-panel .button-ghost {
+      background: transparent;
+      border-color: rgba(255,255,255,.5);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    .pc-footer {
+      background: #07152f;
+      color: white;
+      padding-top: 65px;
+    }
+
+    .pc-footer-main {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 45px;
+      padding-bottom: 45px;
+    }
+
+    .pc-footer-logo img {
+      width: 175px;
+      max-height: 65px;
+      object-fit: contain;
+    }
+
+    .pc-footer-brand p {
+      color: #b5c3d8;
+      line-height: 1.8;
+      font-size: 13px;
+      max-width: 300px;
+      margin: 20px 0;
+    }
+
+    .pc-social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pc-social-links a {
+      width: 37px;
+      height: 37px;
+      border: 1px solid #31415e;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .pc-social-links a:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .pc-footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .pc-footer-column h3 {
+      color: white;
+      font-size: 15px;
+      margin: 0 0 8px;
+    }
+
+    .pc-footer-column a {
+      color: #b5c3d8;
+      font-size: 12px;
+      transition: .2s;
+      overflow-wrap: anywhere;
+    }
+
+    .pc-footer-column a:hover {
+      color: #7db4ff;
+      padding-left: 4px;
+    }
+
+    .pc-footer-bottom {
+      border-top: 1px solid #263752;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .pc-footer-bottom p {
+      margin: 0;
+      color: #9aabc2;
+      font-size: 11px;
+    }
+
+    /* FLOATING BUTTONS */
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 900;
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #20c66b;
+      color: white;
+      font-size: 26px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.18);
+    }
+
+    .floating-top {
+      position: fixed;
+      bottom: 90px;
+      right: 29px;
+      z-index: 900;
+      height: 42px;
+      width: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    .floating-top.show {
+      display: grid;
+      place-items: center;
+    }
+
+    /* MODAL */
+
+    .creative-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .creative-modal.open {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(4,15,35,.75);
+    }
+
+    .modal-panel {
+      position: relative;
+      z-index: 2;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      width: min(500px,100%);
+      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+    }
+
+    .modal-panel h2 {
+      font-family: "Space Grotesk",sans-serif;
+      color: var(--navy);
+    }
+
+    .modal-panel p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .modal-hint {
+      font-size: 11px;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      height: 35px;
+      width: 35px;
+      border: 0;
+      border-radius: 50%;
+      background: #edf3fc;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1050px) {
+      .pc-navigation {
+        gap: 14px;
+      }
+
+      .pc-nav-link {
+        font-size: 12px;
+      }
+
+      .pc-header-cta {
+        padding: 11px 13px;
+        font-size: 11px;
+      }
+
+      .hero-layout {
+        gap: 25px;
+      }
+
+      .pc-footer-main {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:850px) {
+      .pc-menu-toggle {
+        display: block;
+      }
+
+      .pc-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px 5%;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 15px 25px rgba(0,0,0,.08);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+      }
+
+      .pc-navigation.active {
+        display: flex;
+      }
+
+      .pc-nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 12px 0;
+        font-size: 14px;
+      }
+
+      .pc-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: 0;
+        background: #f5f8ff;
+        margin: 5px 0 10px;
+      }
+
+      .pc-header-cta {
+        text-align: center;
+        padding: 14px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy p {
+        margin-inline: auto;
+      }
+
+      .hero-actions,
+      .hero-points {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .platform-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .creative-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .deliverables-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .deliverables-copy {
+        position: static;
+      }
+    }
+
+    @media(max-width:560px) {
+      .pc-header-inner {
+        min-height: 70px;
+      }
+
+      .pc-logo img {
+        width: 145px;
+      }
+
+      .section-space {
+        padding: 65px 0;
+      }
+
+      .smm-hero {
+        padding-top: 65px;
+      }
+
+      .hero-copy h1 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-points {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .preview-board {
+        padding: 12px;
+        min-height: 350px;
+        gap: 9px;
+      }
+
+      .preview-card {
+        padding: 13px;
+        min-height: 155px;
+      }
+
+      .preview-card h2,
+      .preview-card h3 {
+        font-size: 19px;
+      }
+
+      .floating-tag {
+        font-size: 9px;
+        padding: 9px;
+      }
+
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .artwork {
+        min-height: 290px;
+      }
+
+      .pc-footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .pc-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .closing-panel {
+        padding: 55px 20px;
+      }
+
+      .closing-actions {
+        flex-direction: column;
+      }
+
+      .modal-panel {
+        padding: 30px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- NAVBAR -->
+<header class="pc-header" id="top">
+  <div class="pc-header-inner">
+
+    <a href="index.html" class="pc-logo" aria-label="Pihu Creators Home">
+      <img src="images/white2nd.png" alt="Pihu Creators Logo">
+    </a>
+
+    <button class="pc-menu-toggle" type="button"
+      aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="pc-navigation" aria-label="Main navigation">
+
+      <a href="index.html" class="pc-nav-link">Home</a>
+      <a href="about.html" class="pc-nav-link">About</a>
+
+      <div class="pc-dropdown">
+        <button class="pc-nav-link pc-dropdown-toggle" type="button" aria-expanded="false">
+          Services <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="pc-dropdown-menu">
+          <a href="services.html">All Services</a>
+          <a href="graphic designs.html">Graphic &amp; Brand Design</a>
+          <a href="web design.html">Website Development</a>
+          <a href="smm.html" class="active" aria-current="page">Social Media Management</a>
+          <a href="video-content.html">Video Content &amp; Editing</a>
+        </div>
+      </div>
+
+      <div class="pc-dropdown">
+        <button class="pc-nav-link pc-dropdown-toggle" type="button" aria-expanded="false">
+          Projects <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <div class="pc-dropdown-menu">
+          <a href="graphic designs.html">Graphic Portfolio</a>
+          <a href="video-content.html">Video Portfolio</a>
+          <a href="website-portfolio.html">Website Projects</a>
+        </div>
+      </div>
+
+     
+      <a href="contact.html" class="pc-nav-link">Contact</a>
+
+      <a class="pc-header-cta" href="https://wa.me/919310688455"
+        target="_blank" rel="noopener noreferrer">
+        Let's Work Together <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section class="smm-hero">
+    <div class="container hero-layout">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          SOCIAL MEDIA MANAGEMENT · PIHU CREATORS
+        </span>
+
+        <h1>
+          Make your brand
+          <span class="gradient-text">impossible to scroll past.</span>
+        </h1>
+
+        <p>
+          Strategic content, scroll-stopping creatives and consistent
+          social media support to help your business show up with
+          confidence online.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#creative-work" class="button button-primary">
+            Explore Our Creatives <i class="fa-solid fa-arrow-down"></i>
+          </a>
+
+          <a href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20I%20need%20social%20media%20management%20services."
+            class="button button-ghost" target="_blank" rel="noopener noreferrer">
+            Discuss Your Page <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="hero-points">
+          <span><i class="fa-solid fa-check"></i> Content with purpose</span>
+          <span><i class="fa-solid fa-check"></i> Platform-ready designs</span>
+          <span><i class="fa-solid fa-check"></i> Consistent brand identity</span>
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="visual-label">
+          <span class="status-dot"></span> CREATIVE PREVIEW
+        </div>
+
+        <div class="preview-board">
+
+          <div class="preview-card preview-linkedin">
+            <div class="preview-mini-brand">
+              <span class="mini-logo">P</span>
+              <span>YOUR BRAND <small>LinkedIn creative</small></span>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <span class="preview-kicker">THOUGHT LEADERSHIP</span>
+            <h2>Ideas that<br>move business<br><em>forward.</em></h2>
+            <div class="preview-line"></div>
+            <small>DESIGN · STRATEGY · GROWTH</small>
+          </div>
+
+          <div class="preview-card preview-instagram">
+            <span class="ig-topline">A LITTLE BRAND MAGIC</span>
+            <h3>Show up.<br><em>Stand out.</em></h3>
+            <div class="ig-shapes"><span></span><span></span><span></span></div>
+            <small>YOUR NEXT POST STARTS HERE</small>
+          </div>
+
+          <div class="preview-card preview-facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>FACEBOOK CAMPAIGN</span>
+            <h3>Make every<br>connection count.</h3>
+            <small>CONNECT WITH YOUR AUDIENCE</small>
+          </div>
+
+          <div class="floating-tag floating-tag-one">
+            <i class="fa-solid fa-palette"></i> Creative Design
+          </div>
+
+          <div class="floating-tag floating-tag-two">
+            <i class="fa-solid fa-calendar-days"></i> Content Planning
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container hero-bottom">
+      <span>PLAN WITH PURPOSE</span>
+      <span class="hero-line"></span>
+      <span>CREATE WITH CONSISTENCY <i class="fa-solid fa-arrow-down-right"></i></span>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section class="platform-strip">
+    <div class="container platform-grid">
+
+      <div class="platform-intro">
+        <span class="section-kicker">ONE BRAND. MANY TOUCHPOINTS.</span>
+        <h2>Content built for <span class="gradient-text">your platforms.</span></h2>
+      </div>
+
+      <article class="platform-item">
+        <i class="fa-brands fa-instagram"></i>
+        <div>
+          <h3>Instagram</h3>
+          <p>Posts, carousels &amp; reel covers</p>
+        </div>
+      </article>
+
+      <article class="platform-item">
+        <i class="fa-brands fa-linkedin"></i>
+        <div>
+          <h3>LinkedIn</h3>
+          <p>Professional brand content</p>
+        </div>
+      </article>
+
+      <article class="platform-item">
+        <i class="fa-brands fa-facebook"></i>
+        <div>
+          <h3>Facebook</h3>
+          <p>Promotions &amp; community posts</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CREATIVE GALLERY -->
+  <section class="work-section section-space" id="creative-work">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-kicker">THE CREATIVE SHOWCASE</span>
+        <h2>Social posts with <span class="gradient-text">something to say.</span></h2>
+        <p>
+          Browse sample creative concepts for different platforms.
+          Replace sample artwork with your finished client designs before publishing.
+        </p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter creative portfolio">
+        <button class="filter-btn active" data-filter="all" type="button">All Creatives</button>
+        <button class="filter-btn" data-filter="linkedin" type="button">LinkedIn</button>
+        <button class="filter-btn" data-filter="instagram" type="button">Instagram</button>
+        <button class="filter-btn" data-filter="facebook" type="button">Facebook</button>
+        <button class="filter-btn" data-filter="carousel" type="button">Carousels</button>
+        <button class="filter-btn" data-filter="reels" type="button">Reel Covers</button>
+      </div>
+
+      <div class="creative-grid">
+
+        <article class="creative-card" data-category="linkedin">
+          <button class="creative-open" type="button"
+            data-title="LinkedIn — Business Growth"
+            data-description="Professional thought-leadership creative concept for a business audience.">
+
+            <div class="artwork art-linkedin">
+              <div class="art-brand">
+                <span class="art-logo">P</span> YOUR BRAND
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+              <span class="art-label">BUSINESS INSIGHT / 01</span>
+              <h3>Grow with<br><span>clarity.</span></h3>
+              <p>Better strategy.<br>Stronger connections.</p>
+              <div class="art-corner-shape"></div>
+              <div class="art-footer">THOUGHT LEADERSHIP</div>
+            </div>
+          </button>
+
+          <div class="creative-info">
+            <div>
+              <span class="creative-type">LINKEDIN POST</span>
+              <h3>Business Growth</h3>
+            </div>
+            <a href="graphic designs.html" class="creative-arrow" aria-label="View graphic portfolio">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="creative-card" data-category="instagram">
+          <button class="creative-open" type="button"
+            data-title="Instagram — Brand Identity"
+            data-description="Bold promotional post concept designed to stop the scroll and reinforce brand recall.">
+
+            <div class="artwork art-instagram">
+              <span class="art-label">YOUR BRAND, YOUR STORY</span>
+              <h3>Make your<br>brand <em>matter.</em></h3>
+              <p>Design that feels like you.</p>
+              <div class="art-orbit"><span></span><span></span><span></span></div>
+              <div class="art-footer">CREATIVE • CONSISTENT • YOU</div>
+            </div>
+          </button>
+
+          <div class="creative-info">
+            <div>
+              <span class="creative-type">INSTAGRAM POST</span>
+              <h3>Brand Identity</h3>
+            </div>
+            <a href="graphic designs.html" class="creative-arrow" aria-label="View graphic portfolio">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="creative-card" data-category="facebook">
+          <button class="creative-open" type="button"
+            data-title="Facebook — Offer Promotion"
+            data-description="A promotional concept for announcing an offer or inviting customers to enquire.">
+
+            <div class="artwork art-facebook">
+              <div class="fb-badge"><i class="fa-brands fa-facebook-f"></i> COMMUNITY FIRST</div>
+              <span class="art-label">A SPECIAL ANNOUNCEMENT</span>
+              <h3>Something<br><span>good is here.</span></h3>
+              <p>Discover what we have planned for you.</p>
+              <div class="art-button">EXPLORE MORE <i class="fa-solid fa-arrow-right"></i></div>
+              <div class="art-footer">YOUR BRAND • YOUR COMMUNITY</div>
+            </div>
+          </button>
+
+          <div class="creative-info">
+            <div>
+              <span class="creative-type">FACEBOOK POST</span>
+              <h3>Offer Promotion</h3>
+            </div>
+            <a href="graphic designs.html" class="creative-arrow" aria-label="View graphic portfolio">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="creative-card" data-category="carousel">
+          <button class="creative-open" type="button"
+            data-title="Carousel — 3 Content Tips"
+            data-description="Carousel cover concept introducing a short educational post series.">
+
+            <div class="artwork art-carousel">
+              <span class="art-label">SAVE THIS POST</span>
+              <h3>3 content<br>tips you can<br><em>use today.</em></h3>
+              <div class="carousel-pages">
+                <span>01</span><span>02</span><span>03</span><span>04</span>
+              </div>
+              <div class="art-footer">SWIPE FOR THE TIPS <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </button>
+
+          <div class="creative-info">
+            <div>
+              <span class="creative-type">CAROUSEL COVER</span>
+              <h3>Content Tips</h3>
+            </div>
+            <a href="graphic designs.html" class="creative-arrow" aria-label="View graphic portfolio">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="creative-card" data-category="reels">
+          <button class="creative-open" type="button"
+            data-title="Reel Cover — Behind the Brand"
+            data-description="Vertical reel cover concept for a behind-the-scenes or founder story video.">
+
+            <div class="artwork art-reels">
+              <span class="reel-pill"><i class="fa-solid fa-play"></i> NEW REEL</span>
+              <div class="reel-sun"></div>
+              <span class="art-label">A LOOK BEHIND</span>
+              <h3>Behind<br>the <em>brand.</em></h3>
+              <p>The people. The process. The purpose.</p>
+              <div class="art-footer">@YOURBRAND</div>
+            </div>
+          </button>
+
+          <div class="creative-info">
+            <div>
+              <span class="creative-type">REEL COVER</span>
+              <h3>Behind the Brand</h3>
+            </div>
+            <a href="graphic designs.html" class="creative-arrow" aria-label="View graphic portfolio">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="creative-card" data-category="instagram">
+          <button class="creative-open" type="button"
+            data-title="Instagram — Service Spotlight"
+            data-description="Service-focused creative concept to explain one clear offer with a strong headline.">
+
+            <div class="artwork art-service">
+              <span class="art-label">SERVICE SPOTLIGHT / 02</span>
+              <div class="service-symbol"><i class="fa-solid fa-sparkles"></i></div>
+              <h3>Your next<br>big idea<br><em>starts here.</em></h3>
+              <p>Make your online presence work harder.</p>
+              <div class="art-footer">LET'S BUILD SOMETHING</div>
+            </div>
+          </button>
+
+          <div class="creative-info">
+            <div>
+              <span class="creative-type">INSTAGRAM POST</span>
+              <h3>Service Spotlight</h3>
+            </div>
+            <a href="graphic designs.html" class="creative-arrow" aria-label="View graphic portfolio">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="sample-note">
+        <i class="fa-solid fa-circle-info"></i>
+        These are editable CSS sample concepts, not client work.
+        Replace them with your finished designs before publishing.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section section-space">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-kicker">FROM IDEA TO POST</span>
+        <h2>A simple process. <span class="gradient-text">Consistent content.</span></h2>
+        <p>Keep your social media workflow organised from planning to publishing.</p>
+      </div>
+
+      <div class="process-grid">
+
+        <article class="process-card">
+          <span class="process-number">01</span>
+          <span class="process-icon"><i class="fa-solid fa-comments"></i></span>
+          <h3>Understand</h3>
+          <p>Discuss your business, audience, goals and brand style.</p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">02</span>
+          <span class="process-icon"><i class="fa-solid fa-calendar-check"></i></span>
+          <h3>Plan</h3>
+          <p>Build content themes, post ideas and a practical calendar.</p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">03</span>
+          <span class="process-icon"><i class="fa-solid fa-pen-ruler"></i></span>
+          <h3>Create</h3>
+          <p>Prepare creatives, captions and platform-ready content.</p>
+        </article>
+
+        <article class="process-card">
+          <span class="process-number">04</span>
+          <span class="process-icon"><i class="fa-solid fa-chart-line"></i></span>
+          <h3>Review</h3>
+          <p>Review performance and refine future content direction.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="deliverables-section section-space">
+    <div class="container deliverables-layout">
+
+      <div class="deliverables-copy">
+        <span class="section-kicker">WHAT WE CAN CREATE</span>
+        <h2>More than just <span class="gradient-text">posting.</span></h2>
+        <p>
+          Build a recognisable online presence with a connected mix
+          of creative, planning and support.
+        </p>
+
+        <a class="text-link"
+          href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20please%20share%20your%20social%20media%20management%20packages."
+          target="_blank" rel="noopener noreferrer">
+          Ask about SMM packages <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="deliverables-list">
+
+        <article class="deliverable">
+          <span><i class="fa-solid fa-image"></i></span>
+          <div>
+            <h3>Static Post Designs</h3>
+            <p>Promotional, educational, festival and brand-awareness posts.</p>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square deliverable-arrow"></i>
+        </article>
+
+        <article class="deliverable">
+          <span><i class="fa-solid fa-layer-group"></i></span>
+          <div>
+            <h3>Carousel Content</h3>
+            <p>Multi-slide tips, explainers, checklists and mini-guides.</p>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square deliverable-arrow"></i>
+        </article>
+
+        <article class="deliverable">
+          <span><i class="fa-solid fa-clapperboard"></i></span>
+          <div>
+            <h3>Reel Covers &amp; Video Concepts</h3>
+            <p>Cover designs, hook ideas and content prompts for short videos.</p>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square deliverable-arrow"></i>
+        </article>
+
+        <article class="deliverable">
+          <span><i class="fa-solid fa-calendar-days"></i></span>
+          <div>
+            <h3>Monthly Content Calendar</h3>
+            <p>Organised topics, formats and suggested publishing dates.</p>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square deliverable-arrow"></i>
+        </article>
+
+        <article class="deliverable">
+          <span><i class="fa-solid fa-pen"></i></span>
+          <div>
+            <h3>Captions &amp; Content Direction</h3>
+            <p>Clear copy and calls to action that match your brand voice.</p>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square deliverable-arrow"></i>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="closing-section section-space">
+    <div class="container">
+
+      <div class="closing-panel">
+        <span class="section-kicker">LET'S BUILD YOUR ONLINE PRESENCE</span>
+
+        <h2>
+          Ready to make your content
+          <span class="gradient-text">work harder?</span>
+        </h2>
+
+        <p>
+          Tell us about your business and the platforms you want to grow.
+          Let's plan creative content that fits your brand.
+        </p>
+
+        <div class="closing-actions">
+          <a class="button button-primary"
+            href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20I%20want%20to%20discuss%20social%20media%20management."
+            target="_blank" rel="noopener noreferrer">
+            Let's Discuss Your Page <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a class="button button-ghost" href="portfolio-page.html">
+            View Portfolio <i class="fa-solid fa-grid-2"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="pc-footer">
+
+  <div class="pc-footer-main">
+
+    <div class="pc-footer-brand">
+      <a href="index.html" class="pc-footer-logo">
+        <img src="images/white2nd.png" alt="Pihu Creators Logo">
+      </a>
+
+      <p>
+        Your creative partner for website development, graphic design,
+        branding and social media management. Helping businesses
+        build a strong digital presence.
+      </p>
+
+      <div class="pc-social-links">
+        <a href="https://www.instagram.com/pihucreators/"
+          target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+
+        <a href="https://www.facebook.com/"
+          target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+
+        <a href="https://wa.me/919310688455"
+          target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+
+    <div class="pc-footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="portfolio-page.html">Portfolio</a>
+
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="pc-footer-column">
+      <h3>Our Services</h3>
+      <a href="graphic designs.html">Graphic Design</a>
+      <a href="website-portfolio.html">Website Development</a>
+      <a href="smm.html">Social Media Management</a>
+      <a href="video-content.html">Video Editing</a>
+    </div>
+
+    <div class="pc-footer-column pc-footer-contact">
+      <h3>Get In Touch</h3>
+      <a href="tel:+919310688455">+91 93106 88455</a>
+      <a href="mailto:pihucreators083@gmail.com">pihucreators083@gmail.com</a>
+      <a href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      <a href="https://pihucreators.in" target="_blank" rel="noopener noreferrer">pihucreators.in</a>
+    </div>
+
+  </div>
+
+  <div class="pc-footer-bottom">
+    <p>© <span id="pc-current-year"></span> Pihu Creators. All rights reserved.</p>
+    <p>Designed &amp; Developed with ♥ by Priyanshi Mourya</p>
+  </div>
+
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="floating-whatsapp"
+  aria-label="Chat with Pihu Creators on WhatsApp"
+  href="https://wa.me/919310688455?text=Hello%20Pihu%20Creators%2C%20I%20need%20help%20with%20social%20media%20management"
+  target="_blank" rel="noopener noreferrer">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- BACK TO TOP -->
+<button class="floating-top" id="backToTop" type="button" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- CREATIVE PREVIEW MODAL -->
+<div class="creative-modal" id="creativeModal"
+  aria-hidden="true" aria-labelledby="modalTitle"
+  aria-modal="true" role="dialog">
+
+  <div class="modal-backdrop" data-close-modal></div>
+
+  <div class="modal-panel" role="document">
+
+    <button class="modal-close" type="button" aria-label="Close preview" data-close-modal>
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <span class="section-kicker">CREATIVE PREVIEW</span>
+    <h2 id="modalTitle">Creative title</h2>
+    <p id="modalDescription">Creative description</p>
+
+    <p class="modal-hint">
+      Sample concept preview. Replace with your finished post design before publishing.
+    </p>
+
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="JS FOLDER/smm.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Mobile navigation
+  const menuToggle = document.querySelector(".pc-menu-toggle");
+  const navigation = document.querySelector(".pc-navigation");
+
+  if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("active");
+      menuToggle.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
+  // Dropdown navigation
+  document.querySelectorAll(".pc-dropdown-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      const dropdown = toggle.closest(".pc-dropdown");
+      const isOpen = dropdown.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+
+  // Close menu after navigation
+  document.querySelectorAll(".pc-navigation a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (link.closest(".pc-dropdown-menu")) return;
+
+      navigation?.classList.remove("active");
+      menuToggle?.classList.remove("active");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Footer year
+  const year = document.getElementById("pc-current-year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Gallery filters
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const creativeCards = document.querySelectorAll(".creative-card");
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      creativeCards.forEach(function (card) {
+        const category = card.dataset.category;
+        card.classList.toggle(
+          "hidden",
+          filter !== "all" && category !== filter
+        );
+      });
+    });
+  });
+
+  // Creative preview modal
+  const modal = document.getElementById("creativeModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+
+  document.querySelectorAll(".creative-open").forEach(function (button) {
+    button.addEventListener("click", function () {
+      modalTitle.textContent = button.dataset.title || "Creative Preview";
+      modalDescription.textContent = button.dataset.description || "";
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll("[data-close-modal]").forEach(function (element) {
+    element.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && modal.classList.contains("open")) {
+      closeModal();
+    }
+  });
+
+  // Back to top
+  const backToTop = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 450) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+});
+</script>
+
+</body>
+</html>

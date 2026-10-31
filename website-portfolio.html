@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0756c9">
+  <meta name="description" content="Priyanshi Mourya — Web Developer and Graphic Designer portfolio, featuring websites, web apps and creative design work.">
+  <title>Priyanshi Mourya | Web Developer & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue:#0756c9; --blue2:#087fe0; --cyan:#35bdf2; --ink:#10213a;
+      --muted:#64748b; --bg:#f7faff; --pale:#edf5ff; --line:#dce8f8;
+      --white:#fff; --grad:linear-gradient(135deg,#0756c9,#087fe0 65%,#35bdf2);
+      --shadow:0 15px 40px rgba(21,60,112,.09);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    img{max-width:100%}
+    .container{width:min(1180px,90%);margin:auto}
+    h1,h2,h3,h4{font-family:"Space Grotesk","DM Sans",sans-serif;line-height:1.16}
+    .gradient-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .section{padding:86px 0}
+    .section-tag,.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:1.7px}
+    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:36px}
+    .section-heading h2{font-size:clamp(32px,4.5vw,48px);letter-spacing:-1.5px;margin-top:13px;color:#0b1b35}
+    .section-heading>p{max-width:430px;color:var(--muted);font-size:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 21px;border-radius:9px;font-size:13px;font-weight:800;transition:.25s}
+    .btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 22px #0756c926}
+    .btn-outline{border:1px solid #b8d2f5;color:var(--blue);background:#fff}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0756c925}
+
+    /* Pihu Creators navbar */
+    .pc-header,.pc-header *,.pc-footer,.pc-footer *{box-sizing:border-box}
+    .pc-header{position:sticky;top:0;z-index:9999;width:100%;background:rgba(255,255,255,.97);border-bottom:1px solid #dce8f8;box-shadow:0 5px 25px rgba(14,48,95,.07);backdrop-filter:blur(18px)}
+    .pc-header-inner{width:min(1320px,92%);min-height:82px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .pc-logo{display:inline-flex;align-items:center;flex-shrink:0}
+    .pc-logo img{display:block;width:145px;max-height:64px;object-fit:contain}
+    .pc-navigation{display:flex;align-items:center;justify-content:flex-end;gap:5px}
+    .pc-navigation a,.pc-dropdown-toggle{text-decoration:none}
+    .pc-nav-link,.pc-dropdown-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 13px;color:#10213a;font-size:14px;font-weight:700;white-space:nowrap;border:0;border-radius:9px;background:transparent;cursor:pointer;transition:.2s}
+    .pc-nav-link:hover,.pc-dropdown-toggle:hover,.pc-dropdown.open>.pc-dropdown-toggle{color:#0756c9;background:#edf5ff}
+    .pc-dropdown{position:relative}
+    .pc-chevron{font-size:18px;transition:transform .2s}
+    .pc-dropdown.open .pc-chevron{transform:rotate(180deg)}
+    .pc-dropdown-menu{position:absolute;top:calc(100% + 10px);left:0;z-index:10000;width:315px;padding:9px;visibility:hidden;opacity:0;transform:translateY(7px);pointer-events:none;background:#fff;border:1px solid #e2eaf5;border-radius:15px;box-shadow:0 18px 50px rgba(13,45,89,.16);transition:.2s}
+    .pc-dropdown:hover>.pc-dropdown-menu,.pc-dropdown:focus-within>.pc-dropdown-menu,.pc-dropdown.open>.pc-dropdown-menu{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto}
+    .pc-dropdown-menu>a{display:flex;align-items:center;gap:12px;padding:11px 10px;color:#10213a;border-radius:10px}
+    .pc-dropdown-menu>a:hover{background:#edf5ff}
+    .pc-dropdown-menu>a>span:last-child{display:flex;flex-direction:column;gap:4px}
+    .pc-dropdown-menu strong{font-size:13px;font-weight:800}
+    .pc-dropdown-menu small{color:#64748b;font-size:11px;line-height:1.5}
+    .pc-menu-icon{display:grid;place-items:center;flex-shrink:0;width:39px;height:39px;color:#0756c9;background:#eaf3ff;border-radius:10px;font-size:19px}
+    .pc-header-cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-left:7px;padding:13px 16px;color:#fff!important;background:linear-gradient(135deg,#0756c9,#087fe0);border-radius:10px;font-size:13px;font-weight:800;white-space:nowrap;box-shadow:0 8px 20px #0756c933;transition:transform .2s}
+    .pc-header-cta:hover{transform:translateY(-2px)}
+    .pc-menu-toggle{display:none;width:44px;height:43px;padding:10px;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid #e2eaf5;border-radius:10px;background:#fff;cursor:pointer}
+    .pc-menu-toggle span{width:21px;height:2px;background:#07377f;border-radius:4px;transition:.2s}
+    .pc-menu-toggle.active span:first-child{transform:translateY(7px) rotate(45deg)}
+    .pc-menu-toggle.active span:nth-child(2){opacity:0}
+    .pc-menu-toggle.active span:last-child{transform:translateY(-7px) rotate(-45deg)}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;padding:88px 0 65px;background:radial-gradient(circle at 85% 20%,#d5eaff 0,transparent 35%),radial-gradient(circle at 5% 90%,#e1f6ff 0,transparent 30%),linear-gradient(135deg,#fff,#edf5ff)}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:55px}
+    .hero-badge{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border:1px solid #cfe4ff;border-radius:30px;background:#ffffffc9;color:#23517e;font-size:10px;font-weight:800;letter-spacing:1px}
+    .hero-badge i{width:8px;height:8px;background:#19b981;border-radius:50%;box-shadow:0 0 0 4px #d9f9ed}
+    .hero h1{font-size:clamp(44px,6vw,72px);letter-spacing:-3px;margin:20px 0;color:#0b1b35}
+    .hero-text{font-size:16px;line-height:1.9;max-width:590px;color:#53657e}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin:28px 0}
+    .hero-proof{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px}
+    .hero-proof strong{display:block;font:700 25px "Space Grotesk";color:#0b1b35}
+    .hero-proof small{color:#718198;font-size:11px}
+    .hero-art{min-height:440px;position:relative;display:grid;place-items:center}
+    .art-glow{position:absolute;width:330px;height:330px;background:#8ccaff80;filter:blur(85px);border-radius:50%}
+    .profile-card{position:relative;width:min(360px,86%);padding:13px;background:#fff;border:1px solid #c9e1ff;border-radius:22px;box-shadow:0 30px 80px #153c7020;transform:rotate(2deg);overflow:hidden}
+    .profile-top,.profile-bottom{display:flex;align-items:center;justify-content:space-between;padding:9px 8px;color:#45617f;font-size:10px;font-weight:800;letter-spacing:1px}
+    .profile-top b{font-size:20px;color:var(--blue)}
+    .profile-card img{display:block;width:100%;height:330px;object-fit:cover;object-position:center 25%;border-radius:13px;background:#eaf3ff}
+    .profile-bottom strong,.profile-bottom small{display:block}
+    .profile-bottom strong{font-size:14px;color:var(--ink);letter-spacing:0}
+    .profile-bottom small{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0}
+    .float-chip{position:absolute;background:#fff;border:1px solid #cce2ff;padding:12px 16px;border-radius:10px;font-size:11px;font-weight:800;box-shadow:0 10px 30px #153c7020;color:#173b69}
+    .chip-one{top:55px;left:0}.chip-two{bottom:55px;right:0}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-copy .lead{font-size:21px;line-height:1.7;color:#203b5d;font-weight:600;margin-bottom:18px}
+    .about-copy p:not(.lead){color:var(--muted);line-height:1.9;font-size:14px}
+    .text-link{display:inline-flex;margin-top:25px;color:var(--blue);font-size:13px;font-weight:800}
+    .about-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 23px;box-shadow:var(--shadow)}
+    .about-box article{display:grid;grid-template-columns:40px 1fr 25px;gap:15px;align-items:center;padding:21px 0;border-bottom:1px solid #edf2f8}
+    .about-box article:last-child{border:0}
+    .about-box article>span{color:#1686e8;font-weight:800;font-size:12px}
+    .about-box h3{font-size:17px;margin-bottom:4px}
+    .about-box p{font-size:12px;color:var(--muted)}
+    .about-box b{color:var(--blue)}
+
+    /* Skills */
+    .skills-section{background:#f0f6ff;border-block:1px solid #e1ecfa}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .skill-card{padding:24px;background:#fff;border:1px solid #e0eaf6;border-radius:15px;box-shadow:0 7px 25px #153c7008;transition:.25s}
+    .skill-card:hover,.project-card:hover,.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#a8d0ff}
+    .skill-card>span{color:#9aabc0;font-size:11px;font-weight:800}
+    .skill-icon{display:grid;place-items:center;width:48px;height:48px;margin:17px 0 13px;border-radius:13px;background:#eaf3ff;color:var(--blue);font-weight:800;font-size:17px}
+    .skill-card h3{font-size:18px;margin-bottom:6px}
+    .skill-card p{color:var(--muted);font-size:12px}
+    .skill-line{height:5px;background:#eaf1f9;border-radius:9px;margin-top:18px;overflow:hidden}
+    .skill-line i{display:block;height:100%;width:var(--level);background:var(--grad);border-radius:9px}
+
+    /* Website projects */
+    .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .project-card{overflow:hidden;background:#fff;border:1px solid #e0eaf6;border-radius:16px;box-shadow:0 7px 25px #153c7008;transition:.25s}
+    .project-image{position:relative;aspect-ratio:4/3;overflow:hidden;background:#eaf2fc}
+    .project-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+    .project-card:hover .project-image img{transform:scale(1.04)}
+    .project-open{position:absolute;right:14px;top:14px;width:37px;height:37px;display:grid;place-items:center;background:#fff;color:var(--blue);border-radius:50%;font-weight:800}
+    .project-image small{position:absolute;bottom:13px;left:14px;padding:6px 9px;border-radius:6px;background:#10213ad9;color:white;font-size:9px;font-weight:800;letter-spacing:1px}
+    .project-info{padding:18px}
+    .project-info h3{font-size:18px;margin-bottom:7px}
+    .project-info p{font-size:12px;color:var(--muted);min-height:42px}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+    .tags span{padding:5px 8px;background:#edf5ff;color:#37618e;border-radius:5px;font-size:9px;font-weight:800}
+
+    /* Live website */
+    .live-section{background:linear-gradient(135deg,#eaf4ff,#f8fbff);border-block:1px solid #dceafa}
+    .live-card{display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;border:1px solid #d4e5f8;border-radius:20px;background:#fff;box-shadow:var(--shadow)}
+    .live-preview{position:relative;min-height:320px;background:#eaf2fc}
+    .live-preview img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+    .live-badge{position:absolute;left:18px;top:18px;background:#fff;padding:7px 11px;border-radius:30px;color:#0c9a69;font-size:10px;font-weight:900}
+    .live-copy{padding:38px;align-self:center}
+    .live-copy .eyebrow{font-size:10px}
+    .live-copy h3{font-size:32px;margin:12px 0}
+    .live-copy p{color:var(--muted);font-size:14px;line-height:1.8}
+    .live-copy .tags{margin:22px 0}
+
+    /* Services and contact */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{padding:26px;background:#fff;border:1px solid #e0eaf6;border-radius:16px;transition:.25s}
+    .service-card>span{font-size:11px;color:#9aabc0;font-weight:800}
+    .service-icon{width:48px;height:48px;display:grid;place-items:center;margin:16px 0;background:#eaf3ff;color:var(--blue);border-radius:13px;font-size:22px}
+    .service-card h3{font-size:19px;margin-bottom:9px}
+    .service-card p{font-size:13px;color:var(--muted);line-height:1.8;min-height:70px}
+    .service-card a{display:inline-flex;margin-top:17px;color:var(--blue);font-size:12px;font-weight:800}
+    .contact-wrap{padding:55px;border-radius:22px;background:radial-gradient(circle at 90% 10%,#d4ebff,transparent 36%),linear-gradient(135deg,#fff,#eaf4ff);border:1px solid #d7e8fa;box-shadow:var(--shadow)}
+    .contact-wrap h2{font-size:clamp(34px,5vw,54px);margin:14px 0}
+    .contact-wrap p{color:var(--muted);max-width:600px}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+
+    /* Pihu Creators footer */
+    .pc-footer{background:#071a35;color:#dbe8f8;font-family:"DM Sans",sans-serif}
+    .pc-footer-main{width:min(1200px,90%);margin:auto;padding:62px 0 45px;display:grid;grid-template-columns:1.35fr 1fr 1fr 1.2fr;gap:35px}
+    .pc-footer-logo img{width:150px;max-height:65px;object-fit:contain}
+    .pc-footer-brand>p{max-width:290px;margin-top:17px;color:#a9bdd5;font-size:12px;line-height:1.9}
+    .pc-footer-brand .pc-tagline{color:#80c8ff;font-weight:800;margin-top:10px}
+    .pc-social-links{display:flex;gap:9px;margin-top:18px}
+    .pc-social-links a{width:34px;height:34px;display:grid;place-items:center;border:1px solid #294565;border-radius:9px;color:#fff;font-size:10px;font-weight:800}
+    .pc-footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+    .pc-footer-column h3{font-size:14px;color:#fff;margin-bottom:7px}
+    .pc-footer-column>a{font-size:11px;color:#a9bdd5;transition:.2s}
+    .pc-footer-column>a:hover{color:#80c8ff}
+    .pc-footer-contact>a span{color:#80c8ff;margin-right:6px}
+    .pc-footer-contact .pc-footer-cta{margin-top:8px;padding:10px 13px;border-radius:8px;background:#0b64c8;color:white;font-weight:800}
+    .pc-footer-bottom{width:min(1200px,90%);margin:auto;border-top:1px solid #203b5b;padding:17px 0;display:flex;justify-content:space-between;gap:15px;color:#91a9c5;font-size:10px}
+    .back-top{position:fixed;right:20px;bottom:20px;z-index:99;width:43px;height:43px;border:0;border-radius:12px;background:var(--grad);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 8px 20px #0756c933;display:none}
+    .back-top.show{display:block}
+
+    @media(max-width:1050px){
+      .pc-header-inner{width:94%;min-height:74px}
+      .pc-logo img{width:130px}
+      .pc-menu-toggle{display:flex;flex-shrink:0}
+      .pc-navigation{position:absolute;top:100%;left:0;right:0;display:none;max-height:calc(100vh - 74px);overflow-y:auto;padding:17px 5% 24px;align-items:stretch;flex-direction:column;gap:5px;background:#fff;border-top:1px solid #e2eaf5;box-shadow:0 18px 28px #0d2d591f}
+      .pc-navigation.open{display:flex}
+      .pc-nav-link,.pc-dropdown-toggle{width:100%;min-height:45px;justify-content:space-between;padding:12px 14px;font-size:14px}
+      .pc-dropdown-menu{position:static;display:none;width:100%;margin:0 0 8px;padding:7px;visibility:visible;opacity:1;transform:none;pointer-events:auto;box-shadow:none;background:#f9fbff}
+      .pc-dropdown.open>.pc-dropdown-menu{display:block}
+      .pc-dropdown:hover>.pc-dropdown-menu{display:none}
+      .pc-dropdown.open:hover>.pc-dropdown-menu{display:block}
+      .pc-header-cta{min-height:45px;margin:9px 0 0}
+      .pc-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}
+      .hero-grid{gap:25px}
+    }
+    @media(max-width:760px){
+      .section{padding:65px 0}
+      .hero{padding-top:60px}
+      .hero-grid,.about-grid,.live-card{grid-template-columns:1fr}
+      .hero-art{min-height:390px}
+      .skills-grid,.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .services-grid{grid-template-columns:1fr}
+      .section-heading{display:block}
+      .section-heading>p{margin-top:13px}
+      .live-preview{min-height:260px}
+      .contact-wrap{padding:32px}
+      .pc-footer-main{gap:28px}
+    }
+    @media(max-width:560px){
+      .pc-header-inner{min-height:68px}
+      .pc-logo img{width:115px;max-height:53px}
+      .pc-navigation{max-height:calc(100vh - 68px)}
+      .hero h1{font-size:43px;letter-spacing:-2px}
+      .hero-text{font-size:14px}
+      .hero-proof{gap:20px}
+      .hero-art{min-height:350px}
+      .profile-card img{height:280px}
+      .chip-one{left:-3px;top:35px}
+      .chip-two{right:-3px;bottom:35px}
+      .skills-grid,.project-grid{grid-template-columns:1fr}
+      .project-info p{min-height:0}
+      .pc-footer-main{width:90%;padding:48px 0 34px;grid-template-columns:1fr;gap:28px}
+      .pc-footer-brand>p{max-width:100%}
+      .pc-footer-bottom{width:90%;align-items:flex-start;flex-direction:column;gap:7px}
+      .contact-wrap{padding:25px}
+      .section-heading h2{font-size:35px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="pc-header">
+    <div class="pc-header-inner">
+      <a href="index.html" class="pc-logo" aria-label="Pihu Creators Home">
+        <img src="images/white2nd.png" alt="Pihu Creators Logo">
+      </a>
+      <button class="pc-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="pc-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="pc-navigation" id="pc-navigation" aria-label="Main navigation">
+        <a class="pc-nav-link" href="index.html">Home</a>
+        <a class="pc-nav-link" href="about.html">About</a>
+        <div class="pc-dropdown">
+          <button class="pc-dropdown-toggle" type="button" aria-expanded="false">Services <span class="pc-chevron">⌄</span></button>
+          <div class="pc-dropdown-menu">
+            <a href="services.html"><span class="pc-menu-icon">✦</span><span><strong>All Services</strong><small>Explore our creative solutions</small></span></a>
+            <a href="services.html#social-media"><span class="pc-menu-icon">◎</span><span><strong>Social Media Management</strong><small>Content planning and page growth</small></span></a>
+            <a href="graphic%20designs.html"><span class="pc-menu-icon">✎</span><span><strong>Graphic Design</strong><small>Logos, posts, banners and branding</small></span></a>
+            <a href="services.html#web-development"><span class="pc-menu-icon">⌘</span><span><strong>Website Development</strong><small>Responsive business websites</small></span></a>
+          </div>
+        </div>
+       <div class="pc-dropdown">
+  <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+    Portfolio <span class="pc-chevron">⌄</span>
+  </button>
+
+  <div class="pc-dropdown-menu">
+
+    <a href="website-portfolio.html">
+      <span class="pc-menu-icon">⌘</span>
+      <span>
+        <strong>Website Projects</strong>
+        <small>Websites and web applications</small>
+      </span>
+    </a>
+
+    <a href="graphic designs.html">
+      <span class="pc-menu-icon">▧</span>
+      <span>
+        <strong>Graphic Portfolio</strong>
+        <small>Designs and brand creatives</small>
+      </span>
+    </a>
+
+    <a href="video-content.html">
+      <span class="pc-menu-icon">▶</span>
+      <span>
+        <strong>Video Editing</strong>
+        <small>Video edits, reels and creative videos</small>
+      </span>
+    </a>
+
+    <a href="smm.html">
+      <span class="pc-menu-icon">◎</span>
+      <span>
+        <strong>Social Media Management</strong>
+        <small>Social media content and page management</small>
+      </span>
+    </a>
+
+  </div>
+</div>
+        <a class="pc-nav-link" href="contact.html">Contact</a>
+        <a class="pc-header-cta" href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer">Let's Work Together <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-badge"><i></i> AVAILABLE FOR FREELANCE &amp; COLLABORATIONS</span>
+          <p class="eyebrow" style="margin-top:22px">WEB DEVELOPER + DESIGNER</p>
+          <h1>I build <span class="gradient-text">digital</span><br>experiences.</h1>
+          <p class="hero-text">I'm Priyanshi Mourya — a Web Developer &amp; Graphic Designer creating modern websites, visual identities and digital experiences that help ideas stand out.</p>
+          <div class="hero-actions">
+            <a href="website-portfolio.html" class="btn btn-primary">View My Work ↗</a>
+            <a href="contact.html" class="btn btn-outline">Let's Connect</a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>10+</strong><small>Projects</small></div>
+            <div><strong>6+</strong><small>Core Skills</small></div>
+            <div><strong>100%</strong><small>Creative</small></div>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="art-glow"></div>
+          <div class="profile-card">
+            <div class="profile-top"><span>PRIYANSHI / 01</span><b>✦</b></div>
+            <img src="images web portfolio/Profile image.jpeg" alt="Priyanshi Mourya">
+            <div class="profile-bottom">
+              <div><strong>Creative Developer</strong><small>Delhi, India</small></div>
+              <b>↗</b>
+            </div>
+          </div>
+          <div class="float-chip chip-one">✦ Creative</div>
+          <div class="float-chip chip-two">&lt;/&gt; Developer</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-tag">01 / ABOUT</p><h2>Turning ideas into<br><span class="gradient-text">digital reality.</span></h2></div>
+          <p>Creativity meets technology to build useful, engaging and memorable digital experiences.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="lead">I’m Priyanshi Mourya, combining creativity with technology to create beautiful, functional and memorable websites and visual experiences.</p>
+            <p>From frontend development to graphic design and branding, I focus on building digital experiences that feel modern, clear and purposeful.</p>
+            <a class="text-link" href="#contact">Let's work together ↗</a>
+          </div>
+          <div class="about-box">
+            <article><span>01</span><div><h3>Creative</h3><p>Designing distinctive visual experiences.</p></div><b>↗</b></article>
+            <article><span>02</span><div><h3>Developer</h3><p>Building responsive modern websites.</p></div><b>↗</b></article>
+            <article><span>03</span><div><h3>Problem Solver</h3><p>Turning ideas into useful products.</p></div><b>↗</b></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-tag">02 / TOOLKIT</p><h2>Skills &amp; <span class="gradient-text">technologies.</span></h2></div>
+          <p>A growing toolkit for creating responsive websites, applications and visual identities.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card"><span>01</span><div class="skill-icon">&lt;/&gt;</div><h3>HTML</h3><p>Semantic &amp; responsive structures</p><div class="skill-line"><i style="--level:92%"></i></div></article>
+          <article class="skill-card"><span>02</span><div class="skill-icon">#</div><h3>CSS</h3><p>Modern UI, layouts &amp; animations</p><div class="skill-line"><i style="--level:90%"></i></div></article>
+          <article class="skill-card"><span>03</span><div class="skill-icon">JS</div><h3>JavaScript</h3><p>Interactive web experiences</p><div class="skill-line"><i style="--level:82%"></i></div></article>
+          <article class="skill-card"><span>04</span><div class="skill-icon">R</div><h3>React JS</h3><p>Component-based applications</p><div class="skill-line"><i style="--level:72%"></i></div></article>
+          <article class="skill-card"><span>05</span><div class="skill-icon">✦</div><h3>Graphic Design</h3><p>Branding &amp; social media design</p><div class="skill-line"><i style="--level:88%"></i></div></article>
+          <article class="skill-card"><span>06</span><div class="skill-icon">UX</div><h3>UI / UX</h3><p>Clean and intuitive experiences</p><div class="skill-line"><i style="--level:84%"></i></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="web-projects">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-tag">03 / WEBSITE &amp; APP WORK</p><h2>Projects that <span class="gradient-text">speak.</span></h2></div>
+          <p>Selected websites and web applications built with a focus on usability, responsive layouts and clean interfaces.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card"><a href="https://priyanshimourya0120x.github.io/Perfume/" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="images web portfolio/e-commerce.jpeg" alt="Perfume e-commerce website"><span class="project-open">↗</span><small>01 / WEBSITE</small></div><div class="project-info"><h3>E-Commerce Perfume</h3><p>Premium shopping experience with category-based products.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></div></a></article>
+          <article class="project-card"><a href="https://priyanshimourya0120x.github.io/99.9resturant/" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="images web portfolio/resturant website.jpeg" alt="Restaurant website"><span class="project-open">↗</span><small>02 / WEBSITE</small></div><div class="project-info"><h3>Restaurant Website</h3><p>A visual food experience designed for discovery and conversion.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></div></a></article>
+          <article class="project-card"><a href="https://priyanshimourya0120x.github.io/Expense-Tracker-Green/" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="images web portfolio/Expense Tracker.jpeg" alt="Expense tracker web app"><span class="project-open">↗</span><small>03 / WEB APP</small></div><div class="project-info"><h3>Expense Tracker</h3><p>Simple personal finance interface with interactive tracking.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></div></a></article>
+          <article class="project-card"><a href="https://priyanshimourya0120x.github.io/Student-Management-/" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="images web portfolio/School Management System.jpeg" alt="Student management dashboard"><span class="project-open">↗</span><small>04 / DASHBOARD</small></div><div class="project-info"><h3>Student Management</h3><p>Clean dashboard for managing student records.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></div></a></article>
+          <article class="project-card"><a href="https://priyanshimourya0120x.github.io/Gym-Website/" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="images web portfolio/gym image.avif" alt="Gym and fitness website"><span class="project-open">↗</span><small>05 / FITNESS</small></div><div class="project-info"><h3>Gym &amp; Fitness</h3><p>Bold fitness landing page focused on energy and conversion.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></div></a></article>
+          <article class="project-card"><a href="https://priyanshimourya0120x.github.io/QR-GEnerator/" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="images web portfolio/QR generator.png" alt="QR code generator"><span class="project-open">↗</span><small>06 / WEB TOOL</small></div><div class="project-info"><h3>QR Code Generator</h3><p>Fast utility interface for generating scannable QR codes.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></div></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section live-section" id="live-website">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-tag">MY LIVE WEBSITE</p><h2>Pihu <span class="gradient-text">Creators.</span></h2></div>
+          <p>Explore my live creative and web development website.</p>
+        </div>
+        <a class="live-card" href="https://www.pihucreators.in/" target="_blank" rel="noopener noreferrer">
+          <div class="live-preview"><img src="images web portfolio/pihucreators.png" alt="Pihu Creators live website preview"><span class="live-badge">● LIVE WEBSITE</span></div>
+          <div class="live-copy"><span class="eyebrow">WEB DEVELOPMENT &amp; DESIGN</span><h3>Pihu Creators</h3><p>A creative digital platform showcasing web development, graphic design and digital services.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div><strong style="color:var(--blue)">Visit Live Website ↗</strong></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="section-tag">04 / WHAT I DO</p><h2>Services I <span class="gradient-text">provide.</span></h2></div>
+          <p>Creative and technical support to help ideas become polished digital experiences.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card"><span>01</span><div class="service-icon">↗</div><h3>Web Development</h3><p>Modern responsive websites built for performance, usability and growth.</p><a href="https://wa.me/919310688455">Explore service →</a></article>
+          <article class="service-card"><span>02</span><div class="service-icon">✦</div><h3>Graphic Design</h3><p>Posters, social media creatives, banners, brochures and digital designs.</p><a href="https://wa.me/919310688455">Explore service →</a></article>
+          <article class="service-card"><span>03</span><div class="service-icon">◈</div><h3>Branding</h3><p>Logo design and visual identities that make businesses recognizable.</p><a href="https://wa.me/919310688455">Explore service →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+          <p class="section-tag">05 / HAVE A PROJECT IN MIND?</p>
+          <h2>Let's create something<br><span class="gradient-text">great.</span></h2>
+          <p>Have a website, design or brand idea? Let's turn it into something people remember.</p>
+          <div class="contact-actions">
+            <a href="https://wa.me/919310688455?text=Hello%20Priyanshi%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start a Conversation ↗</a>
+            <a href="#web-projects" class="btn btn-outline">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pc-footer">
+    <div class="pc-footer-main">
+      <div class="pc-footer-brand">
+        <a href="index.html" class="pc-footer-logo"><img src="images/white2nd.png" alt="Pihu Creators"></a>
+        <p>Creative ideas. Digital solutions. Helping brands build their online presence through design, development and digital growth.</p>
+        <p class="pc-tagline">One step to grow every day.</p>
+        <div class="pc-social-links">
+          <a href="https://www.instagram.com/pihucreators/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/pihucreators" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div class="pc-footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
+        <a href="graphic designs.html">Graphic Portfolio</a><a href="#contact">Contact</a>
+      </div>
+      <div class="pc-footer-column">
+        <h3>Our Services</h3>
+        <a href="services.html#web-development">Website Development</a>
+        <a href="graphic%20designs.html">Graphic Designing</a>
+        <a href="services.html#social-media">Social Media Management</a>
+        <a href="services.html#digital-marketing">Digital Marketing &amp; SEO</a>
+        <a href="services.html#branding">Branding &amp; Content</a>
+      </div>
+      <div class="pc-footer-column pc-footer-contact">
+        <h3>Get In Touch</h3>
+        <a href="mailto:pihucreators083@gmail.com"><span>✉</span> pihucreators083@gmail.com</a>
+        <a href="https://wa.me/919310688455" target="_blank" rel="noopener noreferrer"><span>☏</span> +91 93106 88455</a>
+        <a href="https://www.instagram.com/pihucreators/" target="_blank" rel="noopener noreferrer"><span>◎</span> @pihucreators</a>
+        <a href="https://pihucreators.in"><span>↗</span> pihucreators.in</a>
+        <a class="pc-footer-cta" href="contact.html">Start a Project <span>→</span></a>
+      </div>
+    </div>
+    <div class="pc-footer-bottom">
+      <p>© <span id="pc-current-year"></span> Pihu Creators. All rights reserved.</p>
+      <p>Designed with creativity and purpose.</p>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector(".pc-menu-toggle");
+      const nav = document.querySelector(".pc-navigation");
+      const dropdowns = document.querySelectorAll(".pc-dropdown");
+
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("open");
+          toggle.classList.toggle("active", isOpen);
+          toggle.setAttribute("aria-expanded", String(isOpen));
+          if (!isOpen) {
+            dropdowns.forEach(dropdown => {
+              dropdown.classList.remove("open");
+              dropdown.querySelector(".pc-dropdown-toggle").setAttribute("aria-expanded", "false");
+            });
+          }
+        });
+      }
+
+      dropdowns.forEach(dropdown => {
+        const button = dropdown.querySelector(".pc-dropdown-toggle");
+        button.addEventListener("click", event => {
+          event.stopPropagation();
+          const shouldOpen = !dropdown.classList.contains("open");
+          dropdowns.forEach(item => {
+            item.classList.remove("open");
+            item.querySelector(".pc-dropdown-toggle").setAttribute("aria-expanded", "false");
+          });
+          dropdown.classList.toggle("open", shouldOpen);
+          button.setAttribute("aria-expanded", String(shouldOpen));
+        });
+      });
+
+      document.addEventListener("click", event => {
+        if (!event.target.closest(".pc-dropdown")) {
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove("open");
+            dropdown.querySelector(".pc-dropdown-toggle").setAttribute("aria-expanded", "false");
+          });
+        }
+        if (!event.target.closest(".pc-header") && nav) {
+          nav.classList.remove("open");
+          toggle?.classList.remove("active");
+          toggle?.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      nav?.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          toggle?.classList.remove("active");
+          toggle?.setAttribute("aria-expanded", "false");
+        });
+      });
+    })();
+
+    document.getElementById("pc-current-year").textContent = new Date().getFullYear();
+
+    const backTop = document.getElementById("backTop");
+    window.addEventListener("scroll", () => {
+      backTop.classList.toggle("show", window.scrollY > 450);
+    });
+    backTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>

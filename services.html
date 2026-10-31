@@ -1,0 +1,2397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0756c9">
+
+  <title>Our Services | Pihu Creators — Design, Websites & Digital Growth</title>
+  <meta name="description" content="Explore Pihu Creators services including website development, graphic design, social media management, video editing, branding, SEO and digital marketing support.">
+
+  <link rel="icon" href="images/white2nd.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="CSS%20FOLDER/style.css">
+
+  <style>
+    /* =========================================
+       PIHU CREATORS - SERVICES PAGE
+    ========================================= */
+
+    :root {
+      --blue: #0756c9;
+      --blue-dark: #063b91;
+      --sky: #eaf5ff;
+      --cyan: #20b9ed;
+      --ink: #10233f;
+      --muted: #60718a;
+      --white: #ffffff;
+      --border: #dceafa;
+      --shadow: 0 15px 40px rgba(7, 61, 145, 0.09);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: #f8fbff;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body, button, input, textarea {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .services-page {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(65, 151, 235, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(65, 151, 235, 0.055) 1px, transparent 1px),
+        linear-gradient(180deg, #f5faff 0%, #ffffff 48%, #f5faff 100%);
+      background-size: 34px 34px, 34px 34px, 100% 100%;
+    }
+
+    .services-page::before,
+    .services-page::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .services-page::before {
+      top: 90px;
+      left: -180px;
+      background: #a8d9ff;
+    }
+
+    .services-page::after {
+      top: 550px;
+      right: -180px;
+      background: #c6eaff;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 44px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 85px 0;
+      position: relative;
+    }
+
+    .section-heading {
+      max-width: 740px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue);
+      background: #e7f2ff;
+      border: 1px solid #d4e7ff;
+      border-radius: 50px;
+      padding: 7px 15px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow i {
+      font-size: 12px;
+    }
+
+    .section-heading h2 {
+      margin: 17px 0 12px;
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .section-heading h2 span {
+      color: var(--blue);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 49px;
+      padding: 13px 23px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .primary-btn {
+      color: white;
+      background: linear-gradient(135deg, #0868e5, #0645ad);
+      box-shadow: 0 10px 25px rgba(7, 86, 201, 0.22);
+    }
+
+    .primary-btn:hover {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(7, 86, 201, 0.28);
+    }
+
+    .secondary-btn {
+      color: var(--blue);
+      border: 1px solid #c8def7;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .secondary-btn:hover {
+      color: var(--blue-dark);
+      background: #edf6ff;
+      transform: translateY(-3px);
+    }
+
+    /* HERO */
+
+    .services-hero {
+      padding: 95px 0 72px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .services-hero h1 {
+      max-width: 850px;
+      margin: 22px auto 18px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(38px, 6.5vw, 72px);
+      line-height: 1.06;
+      letter-spacing: -3px;
+      color: #10233f;
+    }
+
+    .services-hero h1 span {
+      color: var(--blue);
+      position: relative;
+    }
+
+    .services-hero > .container > .hero-content > p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 29px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin-top: 32px;
+      color: #506580;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-highlights span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-highlights i {
+      color: var(--blue);
+    }
+
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 58px;
+    }
+
+    .hero-strip-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 19px;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      box-shadow: 0 8px 25px rgba(7, 61, 145, 0.04);
+    }
+
+    .strip-icon {
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      background: #e9f4ff;
+      border-radius: 13px;
+      font-size: 19px;
+    }
+
+    .hero-strip-item strong {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .hero-strip-item small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* SERVICE CARDS */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 29px 26px 25px;
+      border: 1px solid #dce9f8;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.91);
+      box-shadow: 0 8px 28px rgba(13, 65, 133, 0.045);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: #9bc8ff;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card.featured {
+      border-color: #8bbdff;
+      background: linear-gradient(150deg, #ffffff 0%, #edf6ff 100%);
+    }
+
+    .service-icon {
+      width: 57px;
+      height: 57px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 21px;
+      color: #fff;
+      border-radius: 17px;
+      background: linear-gradient(135deg, #1789f7, #0647b7);
+      box-shadow: 0 9px 20px rgba(7, 86, 201, 0.18);
+      font-size: 23px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 10px;
+      color: var(--ink);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .service-card > p {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0 0 24px;
+      list-style: none;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #344a67;
+      font-size: 13px;
+    }
+
+    .service-list i {
+      color: var(--blue);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 17px;
+      border-top: 1px solid #e5eef9;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .service-link i {
+      transition: transform 0.2s ease;
+    }
+
+    .service-link:hover {
+      color: var(--blue-dark);
+    }
+
+    .service-link:hover i {
+      transform: translateX(5px);
+    }
+
+    /* CUSTOM SOLUTIONS BANNER */
+
+    .custom-section {
+      padding-top: 10px;
+    }
+
+    .custom-banner {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+      padding: 43px 45px;
+      border-radius: 27px;
+      background: linear-gradient(120deg, #073b91, #0756c9 60%, #128bde);
+      color: #fff;
+      box-shadow: 0 20px 45px rgba(7, 66, 151, 0.18);
+    }
+
+    .custom-banner::after {
+      content: "";
+      position: absolute;
+      width: 270px;
+      height: 270px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 50%;
+      right: 120px;
+      top: -170px;
+      box-shadow: 0 0 0 30px rgba(255,255,255,0.035),
+                  0 0 0 60px rgba(255,255,255,0.025);
+      pointer-events: none;
+    }
+
+    .custom-copy {
+      max-width: 700px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .custom-copy .eyebrow {
+      color: white;
+      border-color: rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .custom-copy h2 {
+      margin: 16px 0 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(27px, 4vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .custom-copy p {
+      margin: 0;
+      color: rgba(255,255,255,0.83);
+      font-size: 15px;
+      max-width: 650px;
+    }
+
+    .custom-banner .primary-btn {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+      color: var(--blue-dark);
+      background: #fff;
+      box-shadow: none;
+    }
+
+    .custom-banner .primary-btn:hover {
+      background: #eaf5ff;
+      color: var(--blue-dark);
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      background: linear-gradient(180deg, rgba(233, 245, 255, 0.58), rgba(255,255,255,0.75));
+      border-top: 1px solid #e4f0fc;
+      border-bottom: 1px solid #e4f0fc;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 26px 23px;
+      border: 1px solid #dceafa;
+      background: rgba(255,255,255,0.88);
+      border-radius: 20px;
+    }
+
+    .process-number {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: #e7f2ff;
+      color: var(--blue);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .process-card h3 {
+      margin: 0 0 9px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 19px;
+    }
+
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* WHY US */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .why-copy h2 {
+      margin: 17px 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .why-copy h2 span {
+      color: var(--blue);
+    }
+
+    .why-copy > p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .why-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+      margin-top: 26px;
+    }
+
+    .why-point {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      padding: 15px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.85);
+      border-radius: 15px;
+    }
+
+    .why-point i {
+      color: var(--blue);
+      margin-top: 4px;
+    }
+
+    .why-point strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .why-point small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .why-visual {
+      position: relative;
+      padding: 28px;
+      border-radius: 27px;
+      border: 1px solid #d8e9fc;
+      background:
+        linear-gradient(rgba(53, 135, 222, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(53, 135, 222, 0.07) 1px, transparent 1px),
+        linear-gradient(140deg, #eaf5ff, #ffffff);
+      background-size: 25px 25px, 25px 25px, 100% 100%;
+    }
+
+    .visual-window {
+      padding: 25px;
+      border: 1px solid #d9e8fa;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .window-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 19px;
+      border-bottom: 1px solid #e7eff9;
+    }
+
+    .window-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #b8d5f6;
+    }
+
+    .window-label {
+      margin-left: auto;
+      color: #7790ae;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .visual-heading {
+      margin: 22px 0 8px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .visual-heading span {
+      color: var(--blue);
+    }
+
+    .visual-description {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    .visual-bars {
+      display: grid;
+      gap: 12px;
+    }
+
+    .visual-bar {
+      height: 9px;
+      border-radius: 30px;
+      background: #e5f0fc;
+      overflow: hidden;
+    }
+
+    .visual-bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #0b67d9, #35c3ed);
+    }
+
+    .visual-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .visual-mini {
+      padding: 15px 8px;
+      text-align: center;
+      background: #edf6ff;
+      border-radius: 12px;
+    }
+
+    .visual-mini i {
+      color: var(--blue);
+      font-size: 19px;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    .visual-mini span {
+      display: block;
+      color: #3f5877;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 20px 0 95px;
+    }
+
+    .final-cta-box {
+      padding: 55px 28px;
+      text-align: center;
+      border: 1px solid #cfe4fb;
+      border-radius: 27px;
+      background: linear-gradient(135deg, #e9f5ff, #ffffff 55%, #eaf5ff);
+    }
+
+    .final-cta-box h2 {
+      margin: 16px 0 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+    }
+
+    .final-cta-box h2 span {
+      color: var(--blue);
+    }
+
+    .final-cta-box p {
+      max-width: 630px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .final-cta-box .hero-actions {
+      margin-top: 25px;
+    }
+
+    /* REVEAL ANIMATION */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================
+       NAVBAR + FOOTER COMPATIBILITY
+       These rules support the shared site header
+       and footer without changing their structure.
+    ========================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid #e2edf9;
+    }
+
+    .navbar .nav-container {
+      width: min(1200px, calc(100% - 40px));
+      margin: auto;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .navbar .logo img {
+      display: block;
+      width: auto;
+      height: 49px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links > li {
+      position: relative;
+    }
+
+    .nav-links > li > a,
+    .dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 12px 0;
+      border: 0;
+      background: transparent;
+      color: #263d5a;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links > li > a:hover,
+    .dropdown-toggle:hover,
+    .nav-links > li > a.active {
+      color: var(--blue);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: -16px;
+      min-width: 225px;
+      padding: 10px;
+      margin: 0;
+      list-style: none;
+      border: 1px solid #deebfa;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 15px 40px rgba(13, 52, 101, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    }
+
+    .nav-dropdown:hover > .dropdown-menu,
+    .nav-dropdown:focus-within > .dropdown-menu,
+    .nav-dropdown.open > .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 9px;
+      color: #344b68;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .dropdown-menu a:hover {
+      background: #edf6ff;
+      color: var(--blue);
+    }
+
+    .navbar .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+      box-shadow: 0 7px 18px rgba(7,86,201,0.17);
+    }
+
+    .navbar .nav-cta:hover {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
+      border: 1px solid #d7e7f9;
+      border-radius: 11px;
+      background: #f0f7ff;
+      color: var(--blue);
+      font-size: 19px;
+      cursor: pointer;
+    }
+
+    .site-footer {
+      color: #dce9fb;
+      background: linear-gradient(135deg, #071a35, #082b58 65%, #06172d);
+      padding: 65px 0 0;
+    }
+
+    .footer-container {
+      width: min(1160px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr 1fr 1.1fr;
+      gap: 35px;
+      padding-bottom: 42px;
+    }
+
+    .footer-logo {
+      width: auto;
+      height: 52px;
+      max-width: 190px;
+      object-fit: contain;
+      margin-bottom: 17px;
+    }
+
+    .footer-about p {
+      color: #b9cbe3;
+      font-size: 13px;
+      line-height: 1.9;
+      margin: 0 0 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-socials a {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 10px;
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      transition: 0.2s ease;
+    }
+
+    .footer-socials a:hover {
+      background: var(--blue);
+      transform: translateY(-3px);
+    }
+
+    .footer-column h3 {
+      margin: 4px 0 20px;
+      color: #fff;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 16px;
+    }
+
+    .footer-column ul {
+      display: grid;
+      gap: 11px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-column li,
+    .footer-column a {
+      color: #bdcde1;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+      color: #67cfff;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 13px;
+      color: #bdcde1;
+      font-size: 13px;
+    }
+
+    .footer-contact-item i {
+      margin-top: 5px;
+      color: #5bc5ff;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 19px 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: #9fb4d0;
+      font-size: 12px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1050px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .navbar .nav-container {
+        gap: 15px;
+      }
+
+      .hero-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .why-grid {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .container,
+      .footer-container {
+        width: min(100% - 32px, 600px);
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .services-hero {
+        padding: 70px 0 55px;
+      }
+
+      .services-hero h1 {
+        letter-spacing: -1.7px;
+      }
+
+      .navbar .nav-container {
+        width: calc(100% - 30px);
+        min-height: 70px;
+      }
+
+      .navbar .logo img {
+        height: 43px;
+      }
+
+      .menu-toggle {
+        display: inline-grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+
+      .navbar .nav-cta {
+        display: none;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 20px;
+        background: #fff;
+        border-bottom: 1px solid #dceafa;
+        box-shadow: 0 18px 30px rgba(10, 44, 91, 0.1);
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+      }
+
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links > li > a,
+      .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 13px 5px;
+        font-size: 14px;
+      }
+
+      .dropdown-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        padding: 6px;
+        margin: 0 0 8px;
+        border-radius: 12px;
+        background: #f5f9ff;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      .nav-dropdown.open > .dropdown-menu {
+        display: block;
+      }
+
+      .nav-dropdown:hover > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+
+      .hero-strip {
+        margin-top: 38px;
+        gap: 10px;
+      }
+
+      .hero-strip-item {
+        padding: 14px 12px;
+        gap: 10px;
+      }
+
+      .strip-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 16px;
+      }
+
+      .services-grid {
+        gap: 15px;
+      }
+
+      .service-card {
+        padding: 23px 19px;
+      }
+
+      .service-card h3 {
+        font-size: 19px;
+      }
+
+      .custom-banner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 32px 25px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-visual {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .footer-grid {
+        gap: 30px 22px;
+      }
+
+      .site-footer {
+        padding-top: 48px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container,
+      .footer-container {
+        width: calc(100% - 30px);
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-heading h2 {
+        font-size: 31px;
+        letter-spacing: -0.9px;
+      }
+
+      .section-heading p {
+        font-size: 14px;
+      }
+
+      .services-hero {
+        padding: 58px 0 42px;
+      }
+
+      .services-hero h1 {
+        font-size: clamp(36px, 10vw, 48px);
+      }
+
+      .services-hero > .container > .hero-content > p {
+        font-size: 14px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions a {
+        width: 100%;
+      }
+
+      .hero-highlights {
+        gap: 10px 15px;
+        font-size: 12px;
+      }
+
+      .hero-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-strip-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 25px;
+      }
+
+      .service-card h3 {
+        font-size: 21px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-card {
+        padding: 23px;
+      }
+
+      .why-points {
+        grid-template-columns: 1fr;
+      }
+
+      .why-copy h2 {
+        font-size: 33px;
+      }
+
+      .why-visual {
+        padding: 14px;
+        border-radius: 20px;
+      }
+
+      .visual-window {
+        padding: 17px;
+      }
+
+      .visual-heading {
+        font-size: 22px;
+      }
+
+      .visual-mini-grid {
+        gap: 6px;
+      }
+
+      .visual-mini {
+        padding: 12px 5px;
+      }
+
+      .custom-banner {
+        padding: 29px 21px;
+        border-radius: 20px;
+      }
+
+      .custom-copy h2 {
+        font-size: 29px;
+      }
+
+      .final-cta {
+        padding-bottom: 60px;
+      }
+
+      .final-cta-box {
+        padding: 38px 20px;
+        border-radius: 21px;
+      }
+
+      .final-cta-box h2 {
+        font-size: 31px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  
+
+/* Shared navbar and footer styling copied from index page */
+
+
+    .pc-header, .pc-header *, .pc-footer, .pc-footer * { box-sizing: border-box; }
+
+    .pc-header {
+
+      position: sticky; top: 0; z-index: 9999; width: 100%;
+
+      background: rgba(255,255,255,.97); border-bottom: 1px solid #dce8f8;
+
+      box-shadow: 0 5px 25px rgba(14,48,95,.07);
+
+      backdrop-filter: blur(18px); font-family: "DM Sans", sans-serif;
+
+    }
+
+    .pc-header-inner {
+
+      width: min(1320px,92%); min-height: 82px; margin: auto;
+
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+
+    }
+
+    .pc-logo { display: inline-flex; align-items: center; flex-shrink: 0; }
+
+    .pc-logo img { display: block; width: 145px; max-height: 64px; object-fit: contain; }
+
+    .pc-navigation { display: flex; align-items: center; justify-content: flex-end; gap: 5px; }
+
+    .pc-navigation a, .pc-dropdown-toggle { font-family: inherit; text-decoration: none; }
+
+    .pc-nav-link, .pc-dropdown-toggle {
+
+      display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+
+      padding: 12px 13px; color: #10213a; font-size: 14px; font-weight: 700;
+
+      white-space: nowrap; border: 0; border-radius: 9px; background: transparent; cursor: pointer;
+
+      transition: color .2s ease, var(--blue-dark) .2s ease  };
+
+    .pc-nav-link:hover, .pc-dropdown-toggle:hover, .pc-dropdown.open > .pc-dropdown-toggle {
+
+      color: #0756c9; background: #edf5ff;
+
+    }
+
+    .pc-dropdown { position: relative; }
+
+    .pc-chevron { font-size: 18px; transition: transform .2s ease; }
+
+    .pc-dropdown.open .pc-chevron { transform: rotate(180deg); }
+
+    .pc-dropdown-menu {
+
+      position: absolute; top: calc(100% + 10px); left: 0; z-index: 10000;
+
+      width: 315px; padding: 9px; visibility: hidden; opacity: 0; transform: translateY(7px);
+
+      pointer-events: none; background: #fff; border: 1px solid #e2eaf5; border-radius: 15px;
+
+      box-shadow: 0 18px 50px rgba(13,45,89,.16);
+
+      transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+
+    }
+
+    .pc-dropdown:hover > .pc-dropdown-menu, .pc-dropdown:focus-within > .pc-dropdown-menu,
+
+    .pc-dropdown.open > .pc-dropdown-menu {
+
+      visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto;
+
+    }
+
+    .pc-dropdown-menu > a {
+
+      display: flex; align-items: center; gap: 12px; padding: 11px 10px;
+
+      color: #10213a; border-radius: 10px;
+
+    }
+
+    .pc-dropdown-menu > a:hover { background: #edf5ff; }
+
+    .pc-dropdown-menu > a > span:last-child { display: flex; flex-direction: column; gap: 4px; }
+
+    .pc-dropdown-menu strong { font-size: 13px; font-weight: 800; }
+
+    .pc-dropdown-menu small { color: #64748b; font-size: 11px; line-height: 1.5; }
+
+    .pc-menu-icon {
+
+      display: grid; place-items: center; flex-shrink: 0; width: 39px; height: 39px;
+
+      color: #0756c9; background: #eaf3ff; border-radius: 10px; font-size: 19px;
+
+    }
+
+    .pc-header-cta {
+
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+
+      margin-left: 7px; padding: 13px 16px; color: #fff !important;
+
+      background: linear-gradient(135deg,#0756c9,#087fe0); border-radius: 10px;
+
+      font-size: 13px; font-weight: 800; white-space: nowrap;
+
+      box-shadow: 0 8px 20px rgba(7,86,201,.2); transition: transform .2s ease;
+
+    }
+
+    .pc-header-cta:hover { transform: translateY(-2px); }
+
+    .pc-menu-toggle {
+
+      display: none; width: 44px; height: 43px; padding: 10px; align-items: center;
+
+      justify-content: center; flex-direction: column; gap: 5px; border: 1px solid #e2eaf5;
+
+      border-radius: 10px; background: #fff; cursor: pointer;
+
+    }
+
+    .pc-menu-toggle span { width: 21px; height: 2px; background: #07377f; border-radius: 4px; transition: .2s; }
+
+    .pc-menu-toggle.active span:first-child { transform: translateY(7px) rotate(45deg); }
+
+    .pc-menu-toggle.active span:nth-child(2) { opacity: 0; }
+
+    .pc-menu-toggle.active span:last-child { transform: translateY(-7px) rotate(-45deg); }
+
+
+
+    .pc-footer {
+
+      color: #dce8fb;
+
+      background: radial-gradient(circle at 12% 0%,#123d79 0,transparent 36%),
+
+                  linear-gradient(135deg,#07152d,#061023 65%,#0a1d3c);
+
+      font-family: "DM Sans",sans-serif;
+
+    }
+
+    .pc-footer-main {
+
+      width: min(1320px,90%); margin: auto; padding: 68px 0 52px;
+
+      display: grid; grid-template-columns: 1.4fr .8fr 1fr 1.2fr; gap: 40px;
+
+    }
+
+    .pc-footer-logo { display: inline-flex; margin-bottom: 15px; }
+
+    .pc-footer-logo img { display: block; width: 160px; max-height: 75px; object-fit: contain; }
+
+    .pc-footer-brand > p { max-width: 340px; color: #aebed7; font-size: 13px; line-height: 1.9; }
+
+    .pc-footer-brand .pc-tagline { color: #70d4ff; font-weight: 800; }
+
+    .pc-social-links { display: flex; gap: 10px; margin-top: 22px; }
+
+    .pc-social-links a {
+
+      display: grid; place-items: center; width: 39px; height: 39px; color: #fff;
+
+      text-decoration: none; font-size: 13px; font-weight: 800; background: #ffffff12;
+
+      border: 1px solid #ffffff22; border-radius: 10px; transition: .2s;
+
+    }
+
+    .pc-social-links a:hover { background: #0756c9; transform: translateY(-3px); }
+
+    .pc-footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
+
+    .pc-footer-column h3 { margin: 7px 0 10px; color: #fff; font-size: 16px; font-weight: 800; }
+
+    .pc-footer-column > a { color: #b6c5dc; font-size: 12px; line-height: 1.8; text-decoration: none; overflow-wrap: anywhere; }
+
+    .pc-footer-column > a:hover { color: #71d7ff; }
+
+    .pc-footer-contact > a:not(.pc-footer-cta) { display: flex; gap: 9px; align-items: flex-start; }
+
+    .pc-footer-contact > a > span { color: #64cfff; font-weight: 800; }
+
+    .pc-footer-cta { display: inline-flex; gap: 12px; margin-top: 8px; padding: 11px 15px; color: #fff !important; background: #0756c9; border-radius: 9px; }
+
+    .pc-footer-bottom {
+
+      width: min(1320px,90%); margin: auto; padding: 20px 0; display: flex;
+
+      align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid #ffffff20;
+
+    }
+
+    .pc-footer-bottom p { margin: 0; color: #9aacc8; font-size: 11px; line-height: 1.7; }
+
+
+
+    @media (max-width: 1050px) {
+
+      .pc-header-inner { width: 94%; min-height: 74px; }
+
+      .pc-logo img { width: 130px; }
+
+      .pc-menu-toggle { display: flex; flex-shrink: 0; }
+
+      .pc-navigation {
+
+        position: absolute; top: 100%; left: 0; right: 0; display: none; max-height: calc(100vh - 74px);
+
+        overflow-y: auto; padding: 17px 5% 24px; align-items: stretch; flex-direction: column; gap: 5px;
+
+        background: #fff; border-top: 1px solid #e2eaf5; box-shadow: 0 18px 28px #0d2d591f;
+
+      }
+
+      .pc-navigation.open { display: flex; }
+
+      .pc-nav-link, .pc-dropdown-toggle { width: 100%; min-height: 45px; justify-content: space-between; padding: 12px 14px; font-size: 14px; }
+
+      .pc-dropdown { width: 100%; }
+
+      .pc-dropdown-menu {
+
+        position: static; display: none; width: 100%; margin: 0 0 8px; padding: 7px;
+
+        visibility: visible; opacity: 1; transform: none; pointer-events: auto; box-shadow: none; background: #f9fbff;
+
+      }
+
+      .pc-dropdown.open > .pc-dropdown-menu { display: block; }
+
+      .pc-dropdown:hover > .pc-dropdown-menu { display: none; }
+
+      .pc-dropdown.open:hover > .pc-dropdown-menu { display: block; }
+
+      .pc-header-cta { min-height: 45px; margin: 9px 0 0; }
+
+      .pc-footer-main { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 35px; }
+
+    }
+
+    @media (max-width: 560px) {
+
+      .pc-header-inner { min-height: 68px; }
+
+      .pc-logo img { width: 115px; max-height: 53px; }
+
+      .pc-navigation { max-height: calc(100vh - 68px); }
+
+      .pc-footer-main { width: 90%; padding: 48px 0 34px; grid-template-columns: 1fr; gap: 30px; }
+
+      .pc-footer-brand > p { max-width: 100%; }
+
+      .pc-footer-bottom { width: 90%; align-items: flex-start; flex-direction: column; gap: 7px; }
+
+    }
+
+  
+</style>
+
+<style>
+/* Services page mobile refinements */
+@media (max-width: 1050px) {
+  .pc-header-inner { width: 94%; }
+}
+@media (max-width: 760px) {
+  .pc-header-inner { min-height: 74px; }
+  .pc-navigation { max-height: calc(100vh - 74px); }
+}
+@media (max-width: 560px) {
+  .services-hero h1 { overflow-wrap: anywhere; }
+  .hero-strip-item { min-width: 0; }
+  .service-card, .process-card, .why-point { min-width: 0; }
+  .custom-banner .primary-btn { width: 100%; }
+}
+</style>
+
+</head>
+
+<body>
+
+  <!-- =====================================
+       SAME NAVBAR
+  ====================================== -->
+  <header class="pc-header">
+
+    <div class="pc-header-inner">
+
+      <a href="index.html" class="pc-logo" aria-label="Pihu Creators Home">
+
+        <img src="images/white2nd.png" alt="Pihu Creators Logo">
+
+      </a>
+
+
+
+      <button class="pc-menu-toggle" type="button" aria-label="Toggle navigation"
+
+        aria-expanded="false" aria-controls="pc-navigation">
+
+        <span></span><span></span><span></span>
+
+      </button>
+
+
+
+      <nav class="pc-navigation" id="pc-navigation" aria-label="Main navigation">
+
+        <a class="pc-nav-link" href="index.html">Home</a>
+
+        <a class="pc-nav-link" href="about.html">About</a>
+
+
+
+        <div class="pc-dropdown">
+
+          <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+
+            Services <span class="pc-chevron">⌄</span>
+
+          </button>
+
+          <div class="pc-dropdown-menu">
+
+            <a href="services.html"><span class="pc-menu-icon">✦</span><span><strong>All Services</strong><small>Explore our creative solutions</small></span></a>
+
+            <a href="services.html#social-media"><span class="pc-menu-icon">◎</span><span><strong>Social Media Management</strong><small>Content planning and page growth</small></span></a>
+
+            <a href="graphic designs.html"><span class="pc-menu-icon">✎</span><span><strong>Graphic Design</strong><small>Logos, posts, banners and branding</small></span></a>
+
+            <a href="video-content.html"><span class="pc-menu-icon">▶</span><span><strong>Video Editing & Reels</strong><small>Reels, ads and promotional videos</small></span></a>
+
+            <a href="services.html#web-development"><span class="pc-menu-icon">⌘</span><span><strong>Website Development</strong><small>Responsive business websites</small></span></a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="pc-dropdown">
+
+          <button class="pc-dropdown-toggle" type="button" aria-expanded="false">
+
+            Projects <span class="pc-chevron">⌄</span>
+
+          </button>
+
+          <div class="pc-dropdown-menu">
+
+            <a href="graphic%20designs.html"><span class="pc-menu-icon">▧</span><span><strong>Graphic Portfolio</strong><small>Designs and brand creatives</small></span></a>
+
+            <a href="video-content.html"><span class="pc-menu-icon">▷</span><span><strong>Video & Reels Portfolio</strong><small>Explore edited videos</small></span></a>
+
+            <a href="website-portfolio.html"><span class="pc-menu-icon">⌘</span><span><strong>Website Projects</strong><small>Web and digital solutions</small></span></a>
+
+          </div>
+
+        </div>
+
+
+
+        <a class="pc-nav-link" href="contact.html">Contact</a>
+
+        <a class="pc-header-cta" href="https://wa.me/919310688455" target="\_blank" rel="noopener noreferrer">Let's Work Together <span>↗</span></a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="services-page">
+
+    <!-- HERO -->
+    <section class="services-hero">
+      <div class="container">
+        <div class="hero-content reveal">
+
+          <span class="eyebrow">
+            <i class="fa-solid fa-sparkles"></i>
+            What We Do
+          </span>
+
+          <h1>
+            Creative Services for Your
+            <span>Digital Growth.</span>
+          </h1>
+
+          <p>
+            From eye-catching designs and engaging videos to professional websites
+            and social media management — Pihu Creators helps your brand build a
+            stronger and more consistent digital presence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#all-services" class="primary-btn">
+              Explore Our Services <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+            <a href="https://wa.me/919310688455?text=Hi%20Pihu%20Creators%2C%20I%20want%20to%20discuss%20your%20services."
+              target="_blank" rel="noopener" class="secondary-btn">
+              Discuss Your Project <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <span><i class="fa-solid fa-check-circle"></i> Creative Solutions</span>
+            <span><i class="fa-solid fa-check-circle"></i> Responsive Websites</span>
+            <span><i class="fa-solid fa-check-circle"></i> Brand-Focused Work</span>
+          </div>
+
+        </div>
+
+        <div class="hero-strip reveal">
+          <div class="hero-strip-item">
+            <div class="strip-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <strong>Web Development</strong>
+              <small>Websites that work</small>
+            </div>
+          </div>
+
+          <div class="hero-strip-item">
+            <div class="strip-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <div>
+              <strong>Graphic Design</strong>
+              <small>Visuals that connect</small>
+            </div>
+          </div>
+
+          <div class="hero-strip-item">
+            <div class="strip-icon"><i class="fa-solid fa-video"></i></div>
+            <div>
+              <strong>Video & Reels</strong>
+              <small>Content that engages</small>
+            </div>
+          </div>
+
+          <div class="hero-strip-item">
+            <div class="strip-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <strong>Digital Growth</strong>
+              <small>Build your presence</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ALL SERVICES -->
+    <section class="section" id="all-services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Our Expertise</span>
+          <h2>Everything Your Brand Needs, <span>In One Place.</span></h2>
+          <p>
+            Choose the services that match your goals. We help turn your ideas
+            into practical digital experiences and creative content.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- WEBSITE DEVELOPMENT -->
+          <article class="service-card featured reveal" id="web-development">
+            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Website Development</h3>
+            <p>
+              Modern, responsive and user-friendly websites designed to present
+              your business professionally across devices.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Business and portfolio websites</li>
+              <li><i class="fa-solid fa-check"></i> Landing pages and service pages</li>
+              <li><i class="fa-solid fa-check"></i> Responsive HTML, CSS and JavaScript</li>
+              <li><i class="fa-solid fa-check"></i> Website layout and UI improvements</li>
+            </ul>
+            <a class="service-link" href="https://wa.me/919310688455?text=Hi%2C%20I%20am%20interested%20in%20website%20development."
+              target="_blank" rel="noopener">
+              Discuss Website Project <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- GRAPHIC DESIGN -->
+          <article class="service-card reveal" id="graphic-design">
+            <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <h3>Graphic Designing</h3>
+            <p>
+              Creative visual designs that communicate your message and help
+              your business maintain a professional brand identity.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Logo and brand identity design</li>
+              <li><i class="fa-solid fa-check"></i> Social media posts and carousels</li>
+              <li><i class="fa-solid fa-check"></i> Flyers, posters and banners</li>
+              <li><i class="fa-solid fa-check"></i> Visiting cards and brochures</li>
+            </ul>
+            <a class="service-link" href="graphic designs.html">
+              Explore Graphic Portfolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- SOCIAL MEDIA -->
+          <article class="service-card reveal" id="social-media">
+            <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+            <h3>Social Media Management</h3>
+            <p>
+              Build a consistent online presence with planned content,
+              creative posts and organised social media support.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Content planning and calendars</li>
+              <li><i class="fa-solid fa-check"></i> Post and carousel creation</li>
+              <li><i class="fa-solid fa-check"></i> Captions, hashtags and keywords</li>
+              <li><i class="fa-solid fa-check"></i> Scheduling and page support</li>
+            </ul>
+            <a class="service-link" href="https://wa.me/919310688455?text=Hi%2C%20I%20want%20social%20media%20management%20services."
+              target="_blank" rel="noopener">
+              Grow Your Social Presence <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- VIDEO EDITING -->
+          <article class="service-card reveal" id="video-editing">
+            <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+            <h3>Video Editing & Reels</h3>
+            <p>
+              Turn raw footage and ideas into engaging videos for your
+              brand, products, campaigns and social platforms.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Instagram Reels and YouTube videos</li>
+              <li><i class="fa-solid fa-check"></i> Captions and text animations</li>
+              <li><i class="fa-solid fa-check"></i> Transitions, effects and sound design</li>
+              <li><i class="fa-solid fa-check"></i> AI-assisted creative video content</li>
+            </ul>
+            <a class="service-link" href="video-content.html">
+              Explore Video Portfolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- DIGITAL MARKETING -->
+          <article class="service-card reveal" id="digital-marketing">
+            <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <h3>Digital Marketing Support</h3>
+            <p>
+              Support your online campaigns with creative assets and
+              consistent communication that aligns with your business goals.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Campaign creatives and ad designs</li>
+              <li><i class="fa-solid fa-check"></i> Promotional content planning</li>
+              <li><i class="fa-solid fa-check"></i> Brand messaging support</li>
+              <li><i class="fa-solid fa-check"></i> Marketing content coordination</li>
+            </ul>
+            <a class="service-link" href="https://wa.me/919310688455?text=Hi%2C%20I%20need%20digital%20marketing%20support."
+              target="_blank" rel="noopener">
+              Discuss Marketing Needs <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- SEO -->
+          <article class="service-card reveal" id="seo">
+            <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3>SEO & Website Optimisation</h3>
+            <p>
+              Improve the structure and usability of your website with
+              foundational optimisation practices.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Page titles and meta descriptions</li>
+              <li><i class="fa-solid fa-check"></i> Heading and content structure</li>
+              <li><i class="fa-solid fa-check"></i> Mobile usability improvements</li>
+              <li><i class="fa-solid fa-check"></i> Basic on-page SEO support</li>
+            </ul>
+            <a class="service-link" href="https://wa.me/919310688455?text=Hi%2C%20I%20need%20SEO%20and%20website%20optimisation."
+              target="_blank" rel="noopener">
+              Optimise Your Website <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- BRANDING -->
+          <article class="service-card reveal" id="branding">
+            <div class="service-icon"><i class="fa-solid fa-swatchbook"></i></div>
+            <h3>Branding & Identity</h3>
+            <p>
+              Create a recognisable visual identity that keeps your business
+              presentation clear and consistent.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Logo concepts and variations</li>
+              <li><i class="fa-solid fa-check"></i> Brand colours and typography</li>
+              <li><i class="fa-solid fa-check"></i> Brand stationery and assets</li>
+              <li><i class="fa-solid fa-check"></i> Consistent visual direction</li>
+            </ul>
+            <a class="service-link" href="graphic designs.html">
+              View Brand Designs <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- CONTENT WRITING -->
+          <article class="service-card reveal" id="content-writing">
+            <div class="service-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+            <h3>Content Writing</h3>
+            <p>
+              Communicate your brand message with clear, audience-focused
+              content for your website and social media.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Website content and descriptions</li>
+              <li><i class="fa-solid fa-check"></i> Social media captions</li>
+              <li><i class="fa-solid fa-check"></i> Reel scripts and creative copy</li>
+              <li><i class="fa-solid fa-check"></i> Promotional text and headlines</li>
+            </ul>
+            <a class="service-link" href="https://wa.me/919310688455?text=Hi%2C%20I%20need%20content%20writing%20services."
+              target="_blank" rel="noopener">
+              Discuss Content Needs <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- BUSINESS SUPPORT -->
+          <article class="service-card reveal" id="business-support">
+            <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Business & Creative Support</h3>
+            <p>
+              Get help with selected digital and creative tasks that make
+              your day-to-day business communication easier.
+            </p>
+            <ul class="service-list">
+              <li><i class="fa-solid fa-check"></i> Presentations and pitch decks</li>
+              <li><i class="fa-solid fa-check"></i> Digital documents and layouts</li>
+              <li><i class="fa-solid fa-check"></i> Business promotional materials</li>
+              <li><i class="fa-solid fa-check"></i> Data entry and formatting support</li>
+            </ul>
+            <a class="service-link" href="https://wa.me/919310688455?text=Hi%2C%20I%20need%20business%20and%20creative%20support."
+              target="_blank" rel="noopener">
+              Tell Us What You Need <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CUSTOM SOLUTIONS -->
+    <section class="section custom-section">
+      <div class="container">
+        <div class="custom-banner reveal">
+          <div class="custom-copy">
+            <span class="eyebrow">
+              <i class="fa-solid fa-lightbulb"></i>
+              Have Something Different in Mind?
+            </span>
+            <h2>Let's Build a Solution Around Your Idea.</h2>
+            <p>
+              Every project has different requirements. Share your goals,
+              preferred style, deliverables and timeline so we can discuss
+              a suitable creative solution for your business.
+            </p>
+          </div>
+
+          <a class="primary-btn"
+            href="https://wa.me/919310688455?text=Hi%20Pihu%20Creators%2C%20I%20have%20a%20custom%20project%20idea."
+            target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Let's Discuss
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- OUR PROCESS -->
+    <section class="section process-section" id="process">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">How We Work</span>
+          <h2>A Simple Process. <span>Clear Communication.</span></h2>
+          <p>
+            We keep the process organised so you know what happens at every stage
+            of your project.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card reveal">
+            <div class="process-number">01</div>
+            <h3>Understand</h3>
+            <p>
+              We discuss your business, goals, target audience, style preferences
+              and project requirements.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">02</div>
+            <h3>Plan</h3>
+            <p>
+              We outline the scope, deliverables, estimated timeline and quotation
+              for your approval.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">03</div>
+            <h3>Create</h3>
+            <p>
+              Once the project is approved, we work on the design, content,
+              website or video deliverables.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">04</div>
+            <h3>Review & Deliver</h3>
+            <p>
+              We share the work for review, make agreed revisions and deliver
+              the approved project.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WHY PIHU CREATORS -->
+    <section class="section">
+      <div class="container">
+
+        <div class="why-grid">
+
+          <div class="why-copy reveal">
+            <span class="eyebrow">Why Pihu Creators</span>
+
+            <h2>Creative Thinking Meets <span>Practical Solutions.</span></h2>
+
+            <p>
+              We bring design, content and website development together to help
+              businesses present themselves consistently across digital platforms.
+              Our focus is on understanding your requirements and creating work
+              that fits your brand.
+            </p>
+
+            <div class="why-points">
+
+              <div class="why-point">
+                <i class="fa-solid fa-bullseye"></i>
+                <div>
+                  <strong>Goal-Focused</strong>
+                  <small>Work planned around your requirements.</small>
+                </div>
+              </div>
+
+              <div class="why-point">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                  <strong>Multiple Services</strong>
+                  <small>Design, content, video and web support.</small>
+                </div>
+              </div>
+
+              <div class="why-point">
+                <i class="fa-solid fa-comments"></i>
+                <div>
+                  <strong>Clear Communication</strong>
+                  <small>Discuss scope and expectations upfront.</small>
+                </div>
+              </div>
+
+              <div class="why-point">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <div>
+                  <strong>Digital-First</strong>
+                  <small>Content and layouts made for online platforms.</small>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="why-visual reveal" aria-label="Illustration of digital creative services">
+            <div class="visual-window">
+              <div class="window-top">
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+                <span class="window-label">PIHU CREATORS</span>
+              </div>
+
+              <div class="visual-heading">
+                Your Ideas.<br>
+                Our <span>Creative Approach.</span>
+              </div>
+
+              <p class="visual-description">
+                Bringing your digital vision together through design,
+                development and content.
+              </p>
+
+              <div class="visual-bars">
+                <div class="visual-bar"><span style="width: 92%"></span></div>
+                <div class="visual-bar"><span style="width: 75%"></span></div>
+                <div class="visual-bar"><span style="width: 84%"></span></div>
+              </div>
+
+              <div class="visual-mini-grid">
+                <div class="visual-mini">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Web</span>
+                </div>
+                <div class="visual-mini">
+                  <i class="fa-solid fa-pen-nib"></i>
+                  <span>Design</span>
+                </div>
+                <div class="visual-mini">
+                  <i class="fa-solid fa-video"></i>
+                  <span>Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-cta-box reveal">
+
+          <span class="eyebrow">
+            <i class="fa-solid fa-paper-plane"></i>
+            Let's Get Started
+          </span>
+
+          <h2>Ready to Take Your Brand <span>Forward?</span></h2>
+
+          <p>
+            Tell us what you are building and what kind of support you need.
+            Let's discuss your project, requirements and next steps.
+          </p>
+
+          <div class="hero-actions">
+            <a href="contact.html" class="primary-btn">
+              Contact Us <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="https://wa.me/919310688455?text=Hi%20Pihu%20Creators%2C%20I%20want%20to%20start%20a%20project."
+              target="_blank" rel="noopener" class="secondary-btn">
+              Chat on WhatsApp <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       SAME FOOTER
+  ====================================== -->
+  <footer class="pc-footer">
+
+    <div class="pc-footer-main">
+
+      <div class="pc-footer-brand">
+
+        <a href="index.html" class="pc-footer-logo"><img src="images/white2nd.png" alt="Pihu Creators"></a>
+
+        <p>Creative ideas. Digital solutions. Helping brands build their online presence through design, development and digital growth.</p>
+
+        <p class="pc-tagline">One step to grow every day.</p>
+
+        <div class="pc-social-links">
+
+          <a href="https://www.instagram.com/pihucreators/" target="\_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+
+          <a href="https://www.facebook.com/pihucreators" target="\_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+
+          <a href="https://wa.me/919310688455" target="\_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="pc-footer-column">
+
+        <h3>Quick Links</h3>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="graphic designs.html">Graphic Portfolio</a>
+
+        <a href="video-content.html">Video & Reels</a>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+
+
+      <div class="pc-footer-column">
+
+        <h3>Our Services</h3>
+
+        <a href="website-portfolio.html">Website Development</a>
+
+        <a href="graphic%20designs.html">Graphic Designing</a>
+
+        <a href="services.html#social-media">Social Media Management</a>
+
+        <a href="video-content.html">Video Editing & Reels</a>
+
+        <a href="services.html#digital-marketing">Digital Marketing & SEO</a>
+
+        <a href="services.html#branding">Branding & Content</a>
+
+      </div>
+
+
+
+      <div class="pc-footer-column pc-footer-contact">
+
+        <h3>Get In Touch</h3>
+
+        <a href="mailto:pihucreators083@gmail.com"><span>✉</span> pihucreators083@gmail.com</a>
+
+        <a href="https://wa.me/919310688455" target="\_blank" rel="noopener noreferrer"><span>☏</span> +91 93106 88455</a>
+
+        <a href="https://www.instagram.com/pihucreators/" target="\_blank" rel="noopener noreferrer"><span>◎</span> @pihucreators</a>
+
+        <a href="https://pihucreators.in"><span>↗</span> pihucreators.in</a>
+
+        <a class="pc-footer-cta" href="contact.html">Start a Project <span>→</span></a>
+
+      </div>
+
+    </div>
+
+    <div class="pc-footer-bottom">
+
+      <p>© <span id="pc-current-year"></span> Pihu Creators. All rights reserved.</p>
+
+      <p>Designed with creativity and purpose.</p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".pc-menu-toggle");
+  const navigation = document.querySelector(".pc-navigation");
+  const dropdowns = document.querySelectorAll(".pc-dropdown");
+
+  function closeDropdowns(except = null) {
+    dropdowns.forEach((dropdown) => {
+      if (dropdown === except) return;
+      dropdown.classList.remove("open");
+      const button = dropdown.querySelector(".pc-dropdown-toggle");
+      if (button) button.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function closeMobileMenu() {
+    if (!menuToggle || !navigation) return;
+    menuToggle.classList.remove("active");
+    navigation.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    closeDropdowns();
+  }
+
+  if (menuToggle && navigation) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+      menuToggle.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      if (!isOpen) closeDropdowns();
+    });
+  }
+
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector(".pc-dropdown-toggle");
+    if (!button) return;
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const willOpen = !dropdown.classList.contains("open");
+      closeDropdowns(dropdown);
+      dropdown.classList.toggle("open", willOpen);
+      button.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".pc-navigation")) closeDropdowns();
+    if (navigation && menuToggle && !event.target.closest(".pc-header")) closeMobileMenu();
+  });
+
+  document.querySelectorAll(".pc-navigation a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMobileMenu();
+  });
+
+  const year = document.getElementById("pc-current-year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Scroll reveal animation for service-page sections.
+  const revealElements = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          currentObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealElements.forEach((element) => observer.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add("visible"));
+  }
+});
+</script>
+
+</body>
+</html>
