@@ -1178,6 +1178,81 @@
       .about-cta h2 { font-size: 29px; }
       .about-cta p { font-size: 14px; }
     }
+
+    
+/* ABOUT PAGE - MOBILE FOOTER FIX */
+@media (max-width: 560px) {
+
+  .pc-footer .pc-footer-main {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 90% !important;
+    padding: 35px 0 28px !important;
+    gap: 28px 16px !important;
+    align-items: start !important;
+  }
+
+  .pc-footer .pc-footer-brand {
+    grid-column: 1 / -1 !important;
+    min-width: 0;
+  }
+
+  .pc-footer .pc-footer-brand > p {
+    max-width: 100%;
+    line-height: 1.8;
+  }
+
+  .pc-footer .pc-footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .pc-footer .pc-footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .pc-footer .pc-footer-column > a {
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  .pc-footer .pc-footer-contact {
+    grid-column: 1 / -1 !important;
+  }
+
+  .pc-footer .pc-footer-contact > a:not(.pc-footer-cta) {
+    overflow-wrap: anywhere;
+    max-width: 100%;
+  }
+
+  .pc-footer .pc-footer-bottom {
+    width: 90% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pc-footer .pc-footer-main {
+    gap: 24px 12px !important;
+  }
+
+  .pc-footer .pc-footer-column h3 {
+    font-size: 14px;
+  }
+
+  .pc-footer .pc-footer-column > a {
+    font-size: 11px;
+  }
+}
+
   </style>
 </head>
 

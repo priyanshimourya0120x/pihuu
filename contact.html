@@ -1250,6 +1250,57 @@ a {
 
 }
 
+
+/* FORCE FIX: PIHU CREATORS MOBILE FOOTER */
+@media screen and (max-width: 560px) {
+
+  .pc-footer .pc-footer-main {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px 16px !important;
+    width: 90% !important;
+    padding: 35px 0 28px !important;
+  }
+
+  .pc-footer .pc-footer-brand {
+    grid-column: 1 / -1 !important;
+    min-width: 0 !important;
+  }
+
+  .pc-footer .pc-footer-column {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+  }
+
+  .pc-footer .pc-footer-contact {
+    grid-column: 1 / -1 !important;
+    min-width: 0 !important;
+  }
+
+  .pc-footer .pc-footer-column a {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .pc-footer .pc-footer-bottom {
+    width: 90% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pc-footer .pc-footer-main {
+    gap: 24px 12px !important;
+  }
+}
+
+
 </style>
 </head>
 

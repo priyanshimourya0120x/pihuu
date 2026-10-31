@@ -283,6 +283,172 @@ body { background:#f7faff; color:var(--video-ink); }
 @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
 }
+
+
+/* ==========================================
+   PIHU CREATORS - MOBILE FOOTER FIX
+========================================== */
+
+/* Prevent horizontal overflow */
+html,
+body {
+  max-width: 100%;
+}
+
+.pc-footer,
+.pc-footer * {
+  box-sizing: border-box;
+}
+
+.pc-footer-main > *,
+.pc-footer-bottom > * {
+  min-width: 0;
+}
+
+/* Tablet footer */
+@media screen and (min-width: 561px) and (max-width: 1050px) {
+  .pc-footer-main {
+    width: 90% !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+  }
+}
+
+/* Mobile footer */
+@media screen and (max-width: 560px) {
+  .pc-footer-main {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 38px 0 30px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 27px 16px !important;
+    align-items: start !important;
+  }
+
+  /* Logo and description occupy full width */
+  .pc-footer-brand {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+
+  .pc-footer-logo img {
+    width: 145px !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .pc-footer-brand > p {
+    max-width: 100% !important;
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+    margin: 12px 0 !important;
+  }
+
+  .pc-social-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 9px !important;
+    margin-top: 17px !important;
+  }
+
+  .pc-social-links a {
+    width: 35px !important;
+    height: 35px !important;
+    flex-shrink: 0;
+  }
+
+  /* Quick Links and Services in two columns */
+  .pc-footer-column:not(.pc-footer-contact) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+  }
+
+  .pc-footer-column h3 {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin: 0 0 5px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .pc-footer-column > a {
+    max-width: 100% !important;
+    font-size: 11px !important;
+    line-height: 1.8 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Contact details below the two columns */
+  .pc-footer-column.pc-footer-contact {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .pc-footer-contact > a:not(.pc-footer-cta) {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 9px !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .pc-footer-cta {
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin-top: 5px !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* Copyright section */
+  .pc-footer-bottom {
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 16px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .pc-footer-bottom p {
+    font-size: 10px !important;
+    line-height: 1.7 !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* Floating WhatsApp button */
+  .floating-whatsapp {
+    width: 48px !important;
+    height: 48px !important;
+    right: 14px !important;
+    bottom: 17px !important;
+  }
+}
+
+/* Extra-small phones */
+@media screen and (max-width: 360px) {
+  .pc-footer-main {
+    gap: 23px 11px !important;
+  }
+
+  .pc-footer-column h3 {
+    font-size: 12px !important;
+  }
+
+  .pc-footer-column > a {
+    font-size: 10px !important;
+  }
+}
+
 </style>
 </head>
 <body>
